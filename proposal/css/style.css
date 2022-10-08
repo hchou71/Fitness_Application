@@ -1,8 +1,18 @@
+/* TODO:include at least two (2) rules that change at least three (3) different properties total.
+
+ */
+ body {
+    font-family: 'Times New Roman', Times, serif;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+}
+
 h1 {
-    text-align: left;
+    margin-bottom: 40px;
+    text-align: center;
     font-size: 2em;
     font-weight: bold;
-    font-family: 'Times New Roman', Times, serif;
 }
 
 h2 {
