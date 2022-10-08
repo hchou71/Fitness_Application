@@ -1,3 +1,15 @@
 /* TODO:include at least two (2) rules that change at least three (3) different properties total.
 
  */
+h1 {
+    text-align: left;
+    font-size: 2em;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+h2 {
+    display: block;
+    font-size: 1.5em;
+    font-weight: bold;
+}
