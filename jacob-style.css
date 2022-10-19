@@ -1,0 +1,31 @@
+main {
+    margin: auto;
+    border-style: solid;
+    width: 50%;
+    padding: 5rem;
+    border-radius: 15px;
+    margin-bottom: 2rem;
+    background-color: #366575;
+}
+
+.row {
+    padding: 1rem;
+}
+
+.btn {
+    margin: auto;
+    display: grid;
+    background-color: #c89801;
+    color: white;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    color: #001621;
+}
+
+h1 {
+    text-align: center;
+    color: #366575;
+    background-color: #c89801;
+}
