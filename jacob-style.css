@@ -1,18 +1,38 @@
 
 @media (min-width:320px) {
     header {
-        background-color: #366575;
+        background-color: #A0D2DB;
         color: white;
         text-align: center;
         align-items: center;
+        font-family: 'Bebas Neue', sans-serif;
+        font-weight: 400;
+        font-size:larger;
     }
 
-    main {
+    #form-container {
         border-style: solid;
         border-radius: 15px;
-        background-color: #366575;
+        background-color: #BEE7E8;
         justify-content: center;
+        margin-top: 8px;
+        text-align: center;
     }
+
+    .row {
+        padding: 1px;
+        margin-top: 5px;
+    }
+    
+    body {
+        background-color: #7D8CC4;
+    }
+
+    h2 {
+        text-align: center;
+        color: white;
+    }
+
 }
 
 @media (min-width:1025px) {
@@ -26,11 +46,27 @@
         align-items: center;
     }
 
-    main {
+    #form-container {
         border-style: solid;
         border-radius: 15px;
-        background-color: rgb(37, 162, 139);
+        background-color: #BEE7E8;
         justify-content: center;
-        margin: 15px;
+        margin-top: 20px;
+        text-align: center;
     }
+
+    .row {
+        padding: 5px;
+        margin-top: 10px;
+    }
+
+    h2 {
+        text-align: center;
+        color: white;
+    }
+
+    body {
+        background-color: #7D8CC4;
+    }
+
 }
