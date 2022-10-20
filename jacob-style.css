@@ -1,19 +1,18 @@
 
 @media (min-width:320px) {
     header {
-        background-color: #A0D2DB;
+        background-color: #1B263B;
         color: white;
         text-align: center;
         align-items: center;
         font-family: 'Bebas Neue', sans-serif;
         font-weight: 400;
-        font-size:larger;
     }
 
     #form-container {
         border-style: solid;
         border-radius: 15px;
-        background-color: #BEE7E8;
+        background-color: #778DA9;
         justify-content: center;
         margin-top: 8px;
         text-align: center;
@@ -25,7 +24,7 @@
     }
     
     body {
-        background-color: #7D8CC4;
+        background-color: #1B263B;
     }
 
     h2 {
@@ -44,12 +43,14 @@
         display: flex;
         text-align: center;
         align-items: center;
+        font-family: 'Bebas Neue', sans-serif;
+        font-weight: 400;
     }
 
     #form-container {
         border-style: solid;
         border-radius: 15px;
-        background-color: #BEE7E8;
+        background-color: #778DA9;
         justify-content: center;
         margin-top: 20px;
         text-align: center;
@@ -63,10 +64,11 @@
     h2 {
         text-align: center;
         color: white;
+        font-size: medium;
     }
 
     body {
-        background-color: #7D8CC4;
+        background-color: #1B263B;
     }
 
 }
