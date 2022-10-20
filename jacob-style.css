@@ -1,31 +1,36 @@
-main {
-    margin: auto;
-    border-style: solid;
-    width: 50%;
-    padding: 5rem;
-    border-radius: 15px;
-    margin-bottom: 2rem;
-    background-color: #366575;
+
+@media (min-width:320px) {
+    header {
+        background-color: #366575;
+        color: white;
+        text-align: center;
+        align-items: center;
+    }
+
+    main {
+        border-style: solid;
+        border-radius: 15px;
+        background-color: #366575;
+        justify-content: center;
+    }
 }
 
-.row {
-    padding: 1rem;
-}
+@media (min-width:1025px) {
+    header {
+        background-image: url('img/journal-fitness.jpg');
+        background-size: cover;
+        background-position: center;
+        height: 200px;
+        display: flex;
+        text-align: center;
+        align-items: center;
+    }
 
-.btn {
-    margin: auto;
-    display: grid;
-    background-color: #c89801;
-    color: white;
-    border-radius: 5px;
-}
-
-.btn:hover {
-    color: #001621;
-}
-
-h1 {
-    text-align: center;
-    color: #366575;
-    background-color: #c89801;
+    main {
+        border-style: solid;
+        border-radius: 15px;
+        background-color: rgb(37, 162, 139);
+        justify-content: center;
+        margin: 15px;
+    }
 }
