@@ -12,64 +12,114 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand navbar-light bg-light">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#Home"><span aria-label="Home">Fitness 340</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#Tracker">Process Tracker</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#Searcher">Exercise Searcher</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#Discussion">Discussion</a>
-                </li>
-            </ul>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <!-- TODO: put the class "active" on the current page  -->
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-label="Home Page" href="#Home">Fitness 340</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Tracker">Process Tracker</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Searcher">Exercise Searcher</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Discussion">Discussion</a>
+                    </li>
+                </ul>
+            </div>
+
         </div>
+
     </nav>
-    <header>
-        <h1>Fitness 340</h1>
-        <p class="motto">Description</p>
-    </header>
-    <main>
+
+    <main role="main">
         <div class="container">
-            <section class="option-container">
-                <div class="option">
-                    <img src="img/" alt="abstract art">
-                    <p>Your Past Exercise</p>
-                </div>
-                <div class="option">
-                    <img src="img/" alt="abstract art">
-                    <p>Search Your Exercise</p>
-                </div>
-            </section>
+            <h1 class="display-3">Fitness 340</h1>
+            <p>We will help you keep track on your muscle!</p>
+            <p><a class="btn botton-col btn-lg" href="#" role="button">Learn more »</a></p>
         </div>
+        <div class="container">
+            <!-- Example row of columns -->
+            <div class="row">
+                <div class="col-md-4">
+                    <h2>Progress Tracker</h2>
+                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor
+                        mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada
+                        magna
+                        mollis euismod. Donec sed odio dui. </p>
+                    <p><a class="btn botton-col" href="#" role="button">View details »</a></p>
+                </div>
+                <div class="col-md-4">
+                    <h2>Search Your Exercise</h2>
+                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor
+                        mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada
+                        magna
+                        mollis euismod. Donec sed odio dui. </p>
+                    <p><a class="btn botton-col" href="#" role="button">View details »</a></p>
+                </div>
+                <div class="col-md-4">
+                    <h2>Discussion & Chat</h2>
+                    <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id
+                        ligula
+                        porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum
+                        nibh,
+                        ut fermentum massa justo sit amet risus.</p>
+                    <p><a class="btn botton-col" href="#" role="button">View details »</a></p>
+                </div>
+            </div>
+
+            <hr>
+
+        </div> <!-- /container -->
+
     </main>
+    <!-- Footer -->
+    <footer class="text-center text-lg-start bg-white text-muted">
+        <!-- Section: Links  -->
+        <section class="">
+            <div class="container text-center text-md-start mt-5">
+                <!-- Grid row -->
+                <div class="row mt-3">
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                        <!-- Content -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            Company name
+                        </h6>
+                        <p>
+                            Here you can use rows and columns to organize your footer content. Lorem ipsum
+                            dolor sit amet, consectetur adipisicing elit.
+                        </p>
+                    </div>
+                    <!-- Grid column -->
 
-    <footer>
-        <!-- Author Info -->
+                    <!-- Grid column -->
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
 
-        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-            <!-- Links -->
-            <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
-            <p><i class="fas fa-home me-3"></i> New York, NY 10012, US</p>
-            <p>
-                <i class="fas fa-envelope me-3"></i>
-                info@example.com
-            </p>
-            <address class="fas fa-envelope me-4">
-                <a href="mailto:echoi3@uw.edu">echoi3@uw.edu</a>
-                <a href="mailto:hchou71@uw.edu">hchou71@uw.edu</a>
-                <a href="mailto:jck1116@uw.edu">jck1116@uw.edu</a>
-                <a href="mailto:vinliu20@uw.edu">vinliu20@uw.edu</a>
-            </address>
-            <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
-            <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
-        </div>
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+                        <address>
+                            <a href="mailto:echoi3@uw.edu">echoi3@uw.edu</a>
+                            <a href="mailto:hchou71@uw.edu">hchou71@uw.edu</a>
+                            <a href="mailto:jck1116@uw.edu">jck1116@uw.edu</a>
+                            <a href="mailto:vinliu20@uw.edu">vinliu20@uw.edu</a>
+                        </address>
+                        <!-- Grid column -->
+                    </div>
+                    <!-- Grid row -->
+                </div>
+        </section>
+
         <!-- Copyright -->
         <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
             &copy; 2022 Fitness:
