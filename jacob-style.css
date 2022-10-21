@@ -3,10 +3,13 @@
     header {
         background-color: #1B263B;
         color: white;
+    }
+
+    h1 {
         text-align: center;
         align-items: center;
         font-family: 'Bebas Neue', sans-serif;
-        font-weight: 400;
+        font-weight: 200;
     }
 
     #form-container {
@@ -21,10 +24,11 @@
     .row {
         padding: 1px;
         margin-top: 5px;
+        margin-bottom: 5px;
     }
     
     body {
-        background-color: #1B263B;
+        background-color: #415A77;
     }
 
     h2 {
@@ -32,19 +36,34 @@
         color: white;
     }
 
+    .card {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
 }
 
 @media (min-width:1025px) {
-    header {
+    .progress-pg {
         background-image: url('img/journal-fitness.jpg');
         background-size: cover;
         background-position: center;
         height: 200px;
         display: flex;
+    }
+
+    .fitness-track-pg {
+        background-image: url('img/fitness-track.jpg');
+        background-size: cover;
+        background-position: center;
+        height: 200px;
+        display: flex;
+    }
+
+    h1 {
+        font-size: 10vw;
         text-align: center;
         align-items: center;
         font-family: 'Bebas Neue', sans-serif;
-        font-weight: 400;
     }
 
     #form-container {
@@ -58,17 +77,30 @@
 
     .row {
         padding: 5px;
-        margin-top: 10px;
+        margin-top: 20px;
+        margin-bottom: 20px;
     }
 
     h2 {
         text-align: center;
         color: white;
         font-size: medium;
+        margin-top: 10px;
     }
 
     body {
         background-color: #1B263B;
     }
 
+    .card {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+}
+
+.card-body {
+    text-align: center;
+    background-color: #778DA9;
+    color: white;
 }
