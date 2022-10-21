@@ -1,10 +1,77 @@
+* {
+    box-sizing: border-box;
+}
+
+h1{
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: 400;
+    color: white;
+    padding-top: 1rem;
+}
+
+body {
+    background-color: #1B263B;
+}
+
+.filter-bar {
+    /* background-color: #415A77; */
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-radius: 15px;
+}
+
 .card-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
 }
 
 .exercise-card {
+    padding: 1rem;
     margin: 1rem;
-    max-width: 50%;
+    width: 300px;
+    height: 350px;
+    border-color: #415A77;
+    border-width: 2px;
+    border-radius: 15px;
+    box-shadow: 2px 4px 7px 0px rgba(0,0,0,0.71);
+    -webkit-box-shadow: 2px 4px 7px 0px rgba(0,0,0,0.71);
+    -moz-box-shadow: 2px 4px 7px 0px rgba(0,0,0,0.71);
+    display: flex;
+    justify-content: center;
+    background-color: #415A77;
+}
+
+.exercise-card:hover {
+    background-color:  #778DA9;
+    transition: .25s ease-out;
+}
+
+.exercise-card a {
+    padding: .5rem;
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.exercise-card img {
+    max-height: 200px;
+    border-radius: 5px;
+}
+
+.blue-button {
+    color: white;
+    border-color: white;
+}
+
+.blue-button:hover {
+    color: #fff;
+    background-color: #415A77;
+    border-color: #415A77;
+}
+
+footer {
+    background-color: white;
 }
