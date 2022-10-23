@@ -62,6 +62,10 @@ li {
   border: solid black 1px;
 }
 
+.post-container {
+  margin-top: 3vh;
+}
+
 .meta {
   height: 3vh;
   font-size: xx-small;
