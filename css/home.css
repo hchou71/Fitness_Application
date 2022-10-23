@@ -17,6 +17,7 @@ nav {
         background-size: cover;
         text-align: center;
         font-family: 'Bebas Neue', sans-serif;
+        font-weight: 200;
         padding: 40px;
     }
 }
@@ -24,6 +25,12 @@ nav {
 @media (min-width:1025px) {
     .home-header {
         height: 500px;
-        padding: 150px;
+        padding: 100px;
+    }
+
+    h1 {
+        font-size: 9vw;
+        text-align: center;
+        align-items: center;
     }
 }
