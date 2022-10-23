@@ -59,6 +59,14 @@
         display: flex;
     }
 
+    .prev-workout-pg {
+        background-image: url('img/journal.jpg');
+        background-size: cover;
+        background-position: center;
+        height: 200px;
+        display: flex;
+    }
+
     h1 {
         font-size: 10vw;
         text-align: center;
@@ -103,4 +111,30 @@
     text-align: center;
     background-color: #778DA9;
     color: white;
+}
+
+.btn {
+    background-color: #415A77;
+    color: white;
+    border-color: #415A77;
+}
+
+.col-past-content {
+    color: white;
+    border-style: solid;
+    border-color: white;
+    background-color: #778DA9;
+    font-size: larger;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.collapsible {
+    background-color: #415A77;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.workout-desc {
+    display: inline-block;
 }

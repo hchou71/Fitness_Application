@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Fitness Progress</title>
+    <title>Previous Workouts</title>
     <meta charset="UTF-8">
     <meta name="authors" content="Jacob Kim, Vinson Liu, Ethan Chou, Elliot Choi">
     <meta name="description" content="personal fitness information for user">
@@ -41,40 +41,37 @@
         </div>
     </nav>
 
-    <header class="fitness-track-pg">
+    <header class="prev-workout-pg">
         <div class="container-fluid">
-            <h1>Your Fitness Journey</h1>
+            <h1>Your Previous Workouts</h1>
         </div>
     </header>
 
     <main>
-        <h2>Fitness 340 emphasizes a strong importance of health and fitness with the aid of a fitness journal. We believe that our users
-            should have the right to input their workout data and to be able to easily go back and access these past workouts as references.
-        </h2>
+        <h2>View your previous workouts that you logged here!</h2>
 
-        <div class="card-container">
-            <div class="row">
-                <div class="col-6">
-                  <div class="card">
-                    <div class="card-body">
-                      <h3 class="card-title">Log Your Workout</h3>
-                      <p class="card-text">Log your current workout here so you can view it for future workouts!</p>
-                      <a href="new-exercise.html" class="btn btn-primary" role="button">Log</a>
+        <section class="past-content">
+            <div class="container-lg container-sm">
+                <div class="row">
+                    <div class="col-past-content">
+                        <p class="workout-desc">Back and Biceps Workout</p>
+                        <button type="button" class="btn collapsible">View</button>
                     </div>
-                  </div>
                 </div>
-                <div class="col-6">
-                  <div class="card">
-                    <div class="card-body">
-                      <h3 class="card-title">View Past Workouts</h3>
-                      <p class="card-text">Forgot what you worked out earlier this week? Can't remember a killer workout you had in the past?
-                        View your previous workouts with our easy to use workout viewer.</p>
-                      <a href="past-workouts.html" class="btn btn-primary" role="button">View</a>
+                <div class="row">
+                    <div class="col-past-content">
+                        <p class="workout-desc">Chest and Triceps Workout</p>
+                        <button type="button" class="btn collapsible">View</button>
                     </div>
-                  </div>
                 </div>
-              </div>
-        </div>
+                <div class="row">
+                    <div class="col-past-content">
+                        <p class="workout-desc">Legs and Abs Workout</p>
+                        <button type="button" class="btn collapsible">View</button>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         
 
