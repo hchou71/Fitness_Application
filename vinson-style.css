@@ -18,7 +18,7 @@ main {
   margin-top: 5rem;
   width: 95%;
   border-radius: 0.5rem;
-  background-color: #e0e1dd;
+  background-color: #778da9;
   margin-left: auto;
   margin-right: auto;
 }
@@ -62,10 +62,12 @@ main li {
 }
 
 .post {
+  border-radius: .5rem;
   height: 15vh;
   margin-left: auto;
   margin-right: auto;
   width: 75%;
+  background-color: #e0e1dd;
   border: solid black 1px;
 }
 
