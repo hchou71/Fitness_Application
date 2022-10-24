@@ -34,6 +34,10 @@ main nav {
   width: 90%;
 }
 
+.scroll {
+  overflow: hidden;
+}
+
 body {
   background-color: #1b263b;
 }
@@ -77,6 +81,10 @@ main li {
 
 .post-container {
   margin-top: 3vh;
+}
+
+.content {
+  height: 55%;
 }
 
 .content h1 {
