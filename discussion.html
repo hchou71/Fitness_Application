@@ -1,39 +1,327 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <title> Fitness 340 Home Page</title>
-    <meta charset="utf-8">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="vinson-style.css">
+  <title> Fitness 340 Home Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="vinson-style.css">
 </head>
+
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Navbar</a>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <!-- TODO: put the class "active" on the current page  -->
-          <li class="nav-item">
-            <a class="nav-link active" aria-label="Home Page" href="#Home">Fitness 340</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#Tracker">Process Tracker</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#Searcher">Exercise Searcher</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#Discussion">Discussion</a>
-          </li>
-        </ul>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container-fluid">
+          <a class="navbar-brand" href="#">Fitness 340</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+              aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <!-- TODO: put the class "active" on the current page  -->
+                  <li class="nav-item">
+                      <a class="nav-link" aria-label="Home Page" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" aria-label="Progress Page" href="progress.html">Progress Tracker</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" aria-label="Exercise Search Page" href="exercise.html">Exercise Searcher</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link active" aria-label="Discussion page" href="discussion.html">Discussion</a>
+                  </li>
+              </ul>
+          </div>
       </div>
+    </nav>
+  </header>
+
+
+  <main>
+    <div class="nav-container container">
+      <nav class="row-12">
+        <ul class="row subnav col-12">
+          <li class="col-2"> <a href="">Hot</a></li>
+          <li class="col-7"> <a href="">New</a></li>
+          <li class="col-3"> <a href="">Post Your Thoughts</a></li>
+        </ul>
+      </nav>
     </div>
-  </nav>
-  <section class="post-structure">
+
     <div>
-      This is where the posts will go
+      <section class="container scroll">
+        <!-- Post 1 -->
+        <div class="row post-container">
+          <article class="post">
+            <div class="row meta">
+              <div class="col-1">
+                <img src="img/user-icon.png" alt="User Image">
+              </div>
+              <div class="col-8">
+                UserName
+              </div>
+              <div class="col-2">
+
+              </div>
+            </div>
+            <div class="row content">
+              <h1>Motivation to go to the gym</h1>
+              <p>
+                Hi, I am relatively new to the gym and with all the work and stuff going on, I feel
+                rly burt out and am wondering what keeps you guys motivated to go to the gym? Maybe
+                my willpower just insn't strong enough yet. I am wondering is there anything I can do
+                to make myself more motivated to go the gym?
+              </p>
+            </div>
+            <div class="row meta2">
+              <div class="col-2">
+                <a href="#" class="material-icons">favorite_border</a>
+                <span>42</span>
+              </div>
+              <div class="col-2">
+                <a href="#" class="material-icons">question_answer</a>
+                <span>13</span>
+              </div>
+              <div class="col-2">
+                <a href="#" class="material-icons">bookmark_border</a>
+              </div>
+            </div>
+          </article>
+          <br>
+        </div>
+
+        <!-- post 2 -->
+        <div class="row post-container">
+          <article class="post">
+            <div class="row meta">
+              <div class="col-1">
+                <img src="img/user-icon.png" alt="User Image">
+              </div>
+              <div class="col-8">
+                UserName
+              </div>
+              <div class="col-2 save">
+
+              </div>
+            </div>
+            <div class="row content">
+              <h1>Title</h1>
+              <p>
+                post 1
+              </p>
+            </div>
+            <div class="row meta2">
+              <div class="col-2">
+                <a href="#" class="material-icons">favorite_border</a>
+                <span>42</span>
+              </div>
+              <div class="col-2">
+                <a href="#" class="material-icons">question_answer</a>
+                <span>13</span>
+              </div>
+              <div class="col-2">
+                <a href="#" class="material-icons">bookmark_border</a>
+              </div>
+            </div>
+          </article>
+          <br>
+        </div>
+
+        <!-- post 3 -->
+        <div class="row post-container">
+          <article class="post">
+            <div class="row meta">
+              <div class="col-1">
+                <img src="img/user-icon.png" alt="User Image">
+              </div>
+              <div class="col-8">
+                UserName
+              </div>
+              <div class="col-2 save">
+
+              </div>
+            </div>
+            <div class="row content">
+              <h1>Title</h1>
+              <p>
+                post 1
+              </p>
+            </div>
+            <div class="row meta2">
+              <div class="col-2">
+                <a href="#" class="material-icons">favorite_border</a>
+                <span>42</span>
+              </div>
+              <div class="col-2">
+                <a href="#" class="material-icons">question_answer</a>
+                <span>13</span>
+              </div>
+              <div class="col-2">
+                <a href="#" class="material-icons">bookmark_border</a>
+              </div>
+            </div>
+          </article>
+          <br>
+        </div>
+
+        <!-- post 4 -->
+        <div class="row post-container">
+          <article class="post">
+            <div class="row meta">
+              <div class="col-1">
+                <img src="img/user-icon.png" alt="User Image">
+              </div>
+              <div class="col-8">
+                UserName
+              </div>
+              <div class="col-2 save">
+
+              </div>
+            </div>
+            <div class="row content">
+              <h1>Title</h1>
+              <p>
+                post 1
+              </p>
+            </div>
+            <div class="row meta2">
+              <div class="col-2">
+                <a href="#" class="material-icons">favorite_border</a>
+                <span>42</span>
+              </div>
+              <div class="col-2">
+                <a href="#" class="material-icons">question_answer</a>
+                <span>13</span>
+              </div>
+              <div class="col-2">
+                <a href="#" class="material-icons">bookmark_border</a>
+              </div>
+            </div>
+          </article>
+          <br>
+        </div>
+
+        <!-- post 5 -->
+        <div class="row post-container">
+          <article class="post">
+            <div class="row meta">
+              <div class="col-1">
+                <img src="img/user-icon.png" alt="User Image">
+              </div>
+              <div class="col-8">
+                UserName
+              </div>
+              <div class="col-2 save">
+
+              </div>
+            </div>
+            <div class="row content">
+              <h1>Title</h1>
+              <p>
+                post 1
+              </p>
+            </div>
+            <div class="row meta2">
+              <div class="col-2">
+                <a href="#" class="material-icons">favorite_border</a>
+                <span>42</span>
+              </div>
+              <div class="col-2">
+                <a href="#" class="material-icons">question_answer</a>
+                <span>13</span>
+              </div>
+              <div class="col-2">
+                <a href="#" class="material-icons">bookmark_border</a>
+              </div>
+            </div>
+          </article>
+          <br>
+        </div>
+
+        <!-- post 4 -->
+        <div class="row post-container">
+          <article class="post">
+            <div class="row meta">
+              <div class="col-1">
+                <img src="img/user-icon.png" alt="User Image">
+              </div>
+              <div class="col-8">
+                UserName
+              </div>
+              <div class="col-2 save">
+
+              </div>
+            </div>
+            <div class="row content">
+              <h1>Title</h1>
+              <p>
+                post 1
+              </p>
+            </div>
+            <div class="row meta2">
+              <div class="col-2">
+                <a href="#" class="material-icons">favorite_border</a>
+                <span>42</span>
+              </div>
+              <div class="col-2">
+                <a href="#" class="material-icons">question_answer</a>
+                <span>13</span>
+              </div>
+              <div class="col-2">
+                <a href="#" class="material-icons">bookmark_border</a>
+              </div>
+            </div>
+          </article>
+          <br>
+        </div>
+
+      </section>
     </div>
-  </section>
+
+  </main>
+  <footer class="text-center text-lg-start bg-white text-muted">
+    <div class="container text-center text-md-start mt-5">
+        <div class="row mt-3">
+            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                <h6 class="text-uppercase fw-bold mb-3">
+                    Fitness 340
+                </h6>
+                <p>
+                    Our goal is to foster the habits of work out exercises. We look forward to help on people
+                    for all level.
+                </p>
+            </div>
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                <h6 class="text-uppercase fw-bold mb-3">Contact</h6>
+                <ul class=" list-unstyled ">
+                    <li class=" pb-1">
+                        <a class="text-muted text-decoration-none" href="mailto:echoi3@uw.edu">echoi3@uw.edu</a>
+                    </li>
+                    <li class=" pb-1">
+                        <a class="text-muted text-decoration-none" href="mailto:hchou71@uw.edu">hchou71@uw.edu</a>
+                    </li>
+                    <li class=" pb-1">
+                        <a class="text-muted text-decoration-none" href="mailto:jck1116@uw.edu">jck1116@uw.edu</a>
+                    </li>
+                    <li class=" pb-1">
+                        <a class="text-muted text-decoration-none" href="mailto:vinliu20@uw.edu">vinliu20@uw.edu</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+        &copy; 2022 FITNESS 340:
+        <a class="text-reset fw-bold" href="#">fitness340.com</a>
+    </div>
+</footer>
 </body>
 
 </html>
