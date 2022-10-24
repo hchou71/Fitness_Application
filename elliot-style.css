@@ -2,19 +2,46 @@
     box-sizing: border-box;
 }
 
-h1{
-    font-family: 'Bebas Neue', sans-serif;
-    font-weight: 400;
+.exercise-header {
+    background-image: url("img/search_for_exercise.jpg");
+    background-position: center;
     color: white;
-    padding-top: 1rem;
+    background-size: cover;
+    height: 300px;
+    text-align: center;
+    position: relative;
 }
 
-body {
+h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: 400;
+    padding-top: 1rem;
+    text-align: center;
+    font-size: 5rem;
+}
+
+.photo-attribution {
+    position: absolute;
+    top: 0;
+    right: 5px;
+    padding-left: .25rem;
+    padding-right: .25rem;
+    background-color: rgba(0, 0, 0, 0.7);
+    font-size: .75rem;
+    border-radius: 5px;
+}
+
+.photo-attribution a {
+    text-decoration: none;
+    color: white;
+}
+
+.navbar {
     background-color: #1B263B;
 }
 
 .filter-bar {
-    /* background-color: #415A77; */
+    background-color: #415A77;
     margin-top: 1rem;
     padding-top: 1rem;
     border-radius: 15px;
