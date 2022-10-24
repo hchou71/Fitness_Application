@@ -10,48 +10,48 @@ header {
 
 /* This is the styling for shared header */
 header nav {
-  background-color: #145a77;
-}
-
-.nav-container {
-  background-color: #e0e1dd;
-}
-
-body {
-  background-color: #0d1b2a;
+  background-color: #1b263b;
 }
 
 main {
   height: 100vh;
   margin-top: 5rem;
-  width: 50%;
+  width: 95%;
   border-radius: 0.5rem;
   background-color: #e0e1dd;
   margin-left: auto;
   margin-right: auto;
 }
 
-.nav-container {
-  border-top-right-radius: 0.5rem;
-  border-top-left-radius: 0.5rem;
-  position: sticky;
-  top: 4.5rem;
-  height: 8vh;
-  display: flex;
-  align-items: flex-end;
-}
-
 main nav {
   height: 5vh;
   border-top-right-radius: 0.5rem;
   border-top-left-radius: 0.5rem;
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
   align-items: flex-end;
-  width: 100%;
+  width: 90%;
 }
 
-li {
+body {
+  background-color: #1b263b;
+}
+
+main li {
   display: inline;
+}
+
+.nav-container {
+  background-color: #e0e1dd;
+  width: 75;
+  border-top-right-radius: 0.5rem;
+  border-top-left-radius: 0.5rem;
+  position: sticky;
+  top: 3.5rem;
+  height: 8vh;
+  display: flex;
+  align-items: flex-end;
 }
 
 .post {
@@ -62,15 +62,21 @@ li {
   border: solid black 1px;
 }
 
-.post-container {
-  margin-top: 3vh;
-}
-
 .meta {
   height: 3vh;
   font-size: xx-small;
   padding-top: 0.5em;
   padding-bottom: 0.5em;
+}
+
+.meta img {
+  background-color: #e0e1dd;
+  height: 3vh;
+  width: 3vh;
+}
+
+.post-container {
+  margin-top: 3vh;
 }
 
 .content h1 {
@@ -83,3 +89,39 @@ li {
   font-size: 15px;
 }
 
+@media (min-width:576px) {
+  main {
+    width: 85%;
+  }
+
+  main nav {
+    width: 92%;
+  }
+}
+
+@media (min-width:768px) {
+  main {
+    width: 75%;
+  }
+
+}
+
+@media (min-width:992px) {
+  main {
+    width: 65%;
+  }
+
+  main nav {
+    width: 88%;
+  }
+}
+
+@media (min-width:1200px) {
+  main {
+    width: 55%;
+  }
+
+  main nav {
+    width: 83%;
+  }
+}
