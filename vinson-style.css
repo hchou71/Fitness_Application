@@ -212,4 +212,24 @@ main li {
   background-color: white;
 }
 
+.overlay img {
+  height: 2rem;
+  width: 2rem;
+}
 
+.meta-f {
+  margin-top: 2rem;
+  margin-left: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.big-f {
+  border-top: solid 0.5px gray;
+  border-bottom: solid 0.5px gray;
+}
+
+.content-f {
+  margin-left: 3rem;
+  width: 70%;
+  height: 70%;
+}
