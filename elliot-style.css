@@ -2,14 +2,17 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: 'Helvetica', sans-serif;
+}
+
 .exercise-header {
-    background-image: url("img/search_for_exercise.jpg");
-    background-position: center;
+    background-color: #1B263B;
     color: white;
-    background-size: cover;
     height: 300px;
     text-align: center;
     position: relative;
+    padding: 20px;
 }
 
 h1 {
@@ -21,6 +24,7 @@ h1 {
 }
 
 .photo-attribution {
+    display: none;
     position: absolute;
     top: 0;
     right: 5px;
@@ -41,16 +45,26 @@ h1 {
 }
 
 .filter-bar {
-    background-color: #415A77;
     margin-top: 1rem;
     padding-top: 1rem;
-    border-radius: 15px;
+}
+
+.filter-title {
+    font-size: 2rem;
+}
+
+.exercise-title {
+    text-align: left;
+    font-size: 2rem;
+    padding-left: 3rem;
 }
 
 .card-container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
+    padding: 1rem;
 }
 
 .exercise-card {
@@ -88,17 +102,87 @@ h1 {
     border-radius: 5px;
 }
 
-.blue-button {
-    color: white;
+.button-col {
+    color: #fff;
+    background-color: #415a77;
     border-color: white;
 }
 
-.blue-button:hover {
-    color: #fff;
-    background-color: #415A77;
-    border-color: #415A77;
+.exercise-body {
+    display: flex;
+    flex-direction: column;
 }
 
-footer {
-    background-color: white;
+img {
+    max-width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem;
+    background-color: #415a77;
+    border-radius: 15px;
+    box-shadow: 9px 10px 10px 0px rgba(0,0,0,0.6);
+}
+
+.info-body {
+    display: flex;
+    padding: 0 5rem;
+    flex-direction: column;
+}
+
+main {
+    background-color: #E0E1DD;
+}
+
+.save-to-profile {
+    display: flex;
+    justify-content: center;
+}
+
+@media (min-width: 768px) {
+
+    .exercise-body {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .filter-bar {
+        flex: 0 0 auto;
+        width: 16.666667%;
+    }
+
+    .card-container {
+        flex: 0 0 auto;
+        width: 83.3333333%;
+    }
+
+    .exercise-header {
+        background-image: url("img/search_for_exercise.jpg");
+        background-position: center;
+        background-size: cover;
+        padding: 50px;
+    }
+
+    .photo-attribution {
+        display: initial;
+    }
+
+    h1 {
+        font-size: 9vw;
+    }
+
+    .save-to-profile {
+        position: absolute;
+        top: 30px;
+        right: 20px;
+    }
+
+}
+
+@media (min-width: 2000px) {
+
+    h1 {
+        font-size: 180px;
+    }
+
 }

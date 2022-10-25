@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="author" content="co-authored by Elliot Choi, Ethan Chou, Jacob Kim, Vinson Liu">
     <meta name="description" content="Exercises Search Page">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Search for an Exercise</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -16,6 +17,7 @@
 </head>
 
 <body>
+
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Fitness 340</a>
@@ -28,17 +30,16 @@
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <!-- TODO: put the class "active" on the current page  -->
                     <li class="nav-item">
-                        <a class="nav-link " aria-label="Home Page" href="index.html">Home</a>
+                        <a class="nav-link active" aria-label="Home Page" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="progress.html">Progress Tracker</a>
+                        <a class="nav-link" aria-label="Progress Page" href="progress.html">Progress Tracker</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="exercise.html">Exercise Searcher</a>
+                        <a class="nav-link" aria-label="Exercise Search Page" href="exercise.html">Exercise Searcher</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="discussion.html">Discussion</a>
->>>>>>> 25802617f214234daa91ad52180efaf0b791c9ab
+                        <a class="nav-link" aria-label="Discussion page" href="discussion.html">Discussion</a>
                     </li>
                 </ul>
             </div>
@@ -46,7 +47,7 @@
     </nav>
 
     <header class="exercise-header px-5">
-        <h1>Search for Exercises</h1>
+        <h1><strong>Search for Exercises</strong></h1>
         <div class="photo-attribution">
             <p>
                 <a href="https://unsplash.com/@jelmerassink?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Jelmer Assink</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
@@ -54,103 +55,111 @@
         </div>
     </header>
 
-    <main class="d-flex p-5">
+    <main class="p-5">
 
-        <div class="row">
+        <div class="exercise-body"> 
 
             <!-- Filtering Bar-->
-            <section class="filter-bar col-2 px-2">
+            <section class="filter-bar">
+                <h1 class="filter-title">Filter by Body Part</h1>
                 <ul class="nav flex-column">
-                    <li class="btn blue-button">Chest</li>
-                    <li class="btn blue-button">Shoulders</li>
-                    <li class="btn blue-button">Biceps</li>
-                    <li class="btn blue-button">Triceps</li>
-                    <li class="btn blue-button">Forearm</li>
-                    <li class="btn blue-button">Back</li>
-                    <li class="btn blue-button">Abdominals</li>
-                    <li class="btn blue-button">Glutes</li>
-                    <li class="btn blue-button">Quads</li>
-                    <li class="btn blue-button">Hamstrings</li>
-                    <li class="btn blue-button">Calves</li>
+                    <li class="btn button-col">Chest</li>
+                    <li class="btn button-col">Shoulders</li>
+                    <li class="btn button-col">Biceps</li>
+                    <li class="btn button-col">Triceps</li>
+                    <li class="btn button-col">Forearm</li>
+                    <li class="btn button-col">Back</li>
+                    <li class="btn button-col">Abdominals</li>
+                    <li class="btn button-col">Glutes</li>
+                    <li class="btn button-col">Quads</li>
+                    <li class="btn button-col">Hamstrings</li>
+                    <li class="btn button-col">Calves</li>
                 </ul>
             </section>
-
+            
             <!-- Container for Individual Exercise Cards-->
-            <section class="card-container col-10 px-3">
 
-                <div class="exercise-card">
-                    <a href="pullups-detailed.html" target="_blank">
-                        <p>Pullups</p>
-                        <img class="img-thumbnail" src="img/pullups.jpg" alt="pullups">
-                    </a>
+            <section>
+                <div>
+                    <h1 class="exercise-title">Exercises</h1>
                 </div>
+                <section class="card-container">
 
-                <div class="exercise-card">
-                    <a href="">
-                        <p>Barbell Squat</p>
-                        <img class="img-thumbnail" src="img/barbell-squat.jpg" alt="barbell squat">
-                    </a>
-                </div>
+                    <div class="exercise-card">
+                        <a href="pullups-detailed.html" target="_blank">
+                            <p>Pullups</p>
+                            <img class="img-thumbnail" src="img/pullups.jpg" alt="pullups">
+                        </a>
+                    </div>
 
-                <div class="exercise-card">
-                    <a href="">
-                        <p>Bench Press</p>
-                        <img class="img-thumbnail" src="img/bench-press.jpg" alt="bench press">
-                    </a>
-                </div>
+                    <div class="exercise-card">
+                        <a href="">
+                            <p>Barbell Squat</p>
+                            <img class="img-thumbnail" src="img/barbell-squat.jpg" alt="barbell squat">
+                        </a>
+                    </div>
 
-                <div class="exercise-card">
-                    <a href="">
-                        <p>Deadlift</p>
-                        <img class="img-thumbnail" src="img/deadlift.jpg" alt="deadlift">
-                    </a>
-                </div>
+                    <div class="exercise-card">
+                        <a href="">
+                            <p>Bench Press</p>
+                            <img class="img-thumbnail" src="img/bench-press.jpg" alt="bench press">
+                        </a>
+                    </div>
+
+                    <div class="exercise-card">
+                        <a href="">
+                            <p>Deadlift</p>
+                            <img class="img-thumbnail" src="img/deadlift.jpg" alt="deadlift">
+                        </a>
+                    </div>
 
 
-                <div class="exercise-card">
-                    <a href="">
-                        <p>Dumbbell Lateral Raise</p>
-                        <img class="img-thumbnail" src="img/dumbbell-lateral-raise.jpg"
-                            alt="dumbbell lateral raise">
-                    </a>
-                </div>
+                    <div class="exercise-card">
+                        <a href="">
+                            <p>Dumbbell Lateral Raise</p>
+                            <img class="img-thumbnail" src="img/dumbbell-lateral-raise.jpg"
+                                alt="dumbbell lateral raise">
+                        </a>
+                    </div>
 
-                <div class="exercise-card">
-                    <a href="">
-                        <p>Dumbbell Shoulder Press</p>
-                        <img class="img-thumbnail" src="img/dumbbell-shoulder-press.jpg"
-                            alt="dumbbell  shoulder press">
-                    </a>
-                </div>
+                    <div class="exercise-card">
+                        <a href="">
+                            <p>Dumbbell Shoulder Press</p>
+                            <img class="img-thumbnail" src="img/dumbbell-shoulder-press.jpg"
+                                alt="dumbbell  shoulder press">
+                        </a>
+                    </div>
 
-                <div class="exercise-card">
-                    <a href="">
-                        <p>Standing Dumbbell Calf Raise</p>
-                        <img class="img-thumbnail" src="img/dumbbell-standing-calf-raise.jpg"
-                            alt="standing dumbbell calf raise">
-                    </a>
-                </div>
+                    <div class="exercise-card">
+                        <a href="">
+                            <p>Standing Dumbbell Calf Raise</p>
+                            <img class="img-thumbnail" src="img/dumbbell-standing-calf-raise.jpg"
+                                alt="standing dumbbell calf raise">
+                        </a>
+                    </div>
 
-                <div class="exercise-card">
-                    <a href="">
-                        <p>Incline Machine Press</p>
-                        <img class="img-thumbnail" src="img/incline-machine-press.jpg" alt="incline machine press">
-                    </a>
-                </div>
+                    <div class="exercise-card">
+                        <a href="">
+                            <p>Incline Machine Press</p>
+                            <img class="img-thumbnail" src="img/incline-machine-press.jpg" alt="incline machine press">
+                        </a>
+                    </div>
 
-                <div class="exercise-card">
-                    <a href="">
-                        <p>Leg Curls</p>
-                        <img class="img-thumbnail" src="img/leg-curls.jpg" alt="leg curls">
-                    </a>
-                </div>
+                    <div class="exercise-card">
+                        <a href="">
+                            <p>Leg Curls</p>
+                            <img class="img-thumbnail" src="img/leg-curls.jpg" alt="leg curls">
+                        </a>
+                    </div>
 
-                <div class="exercise-card">
-                    <a href="">
-                        <p>Leg Extensions</p>
-                        <img class="img-thumbnail" src="img/leg-extensions.jpg" alt="leg extensions">
-                    </a>
-                </div>
+                    <div class="exercise-card">
+                        <a href="">
+                            <p>Leg Extensions</p>
+                            <img class="img-thumbnail" src="img/leg-extensions.jpg" alt="leg extensions">
+                        </a>
+                    </div>
+
+                </section>
 
             </section>
 
@@ -160,42 +169,37 @@
 
     <!-- Footer -->
     <footer class="text-center text-lg-start bg-white text-muted">
-        <!-- Section: Links  -->
-        <section class="">
-            <div class="container text-center text-md-start mt-5">
-                <!-- Grid row -->
-                <div class="row mt-3">
-                    <!-- Grid column -->
-                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-                        <!-- Content -->
-                        <h6 class="text-uppercase fw-bold mb-4">
-                            Fitness 340
-                        </h6>
-                        <p>
-                            Our goal is to foster the habits of work out exercises. We look forward to help on people
-                            for all level
-                        </p>
-                    </div>
-                    <!-- Grid column -->
-
-                    <!-- Grid column -->
-                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-
-                        <!-- Links -->
-                        <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
-                        <address>
-                            <a class="inline" href="mailto:echoi3@uw.edu">echoi3@uw.edu</a>
-                            <a href="mailto:hchou71@uw.edu">hchou71@uw.edu</a>
-                            <a href="mailto:jck1116@uw.edu">jck1116@uw.edu</a>
-                            <a href="mailto:vinliu20@uw.edu">vinliu20@uw.edu</a>
-                        </address>
-                        <!-- Grid column -->
-                    </div>
-                    <!-- Grid row -->
+        <div class="container text-center text-md-start mt-5">
+            <div class="row mt-3">
+                <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                    <h6 class="text-uppercase fw-bold mb-3">
+                        Fitness 340
+                    </h6>
+                    <p>
+                        Our goal is to foster the habits of work out exercises. We look forward to help on people
+                        for all level.
+                    </p>
                 </div>
-        </section>
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                    <h6 class="text-uppercase fw-bold mb-3">Contact</h6>
+                    <ul class=" list-unstyled ">
+                        <li class=" pb-1">
+                            <a class="text-muted text-decoration-none" href="mailto:echoi3@uw.edu">echoi3@uw.edu</a>
+                        </li>
+                        <li class=" pb-1">
+                            <a class="text-muted text-decoration-none" href="mailto:hchou71@uw.edu">hchou71@uw.edu</a>
+                        </li>
+                        <li class=" pb-1">
+                            <a class="text-muted text-decoration-none" href="mailto:jck1116@uw.edu">jck1116@uw.edu</a>
+                        </li>
+                        <li class=" pb-1">
+                            <a class="text-muted text-decoration-none" href="mailto:vinliu20@uw.edu">vinliu20@uw.edu</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
 
-        <!-- Copyright -->
         <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
             &copy; 2022 FITNESS 340:
             <a class="text-reset fw-bold" href="#">fitness340.com</a>
