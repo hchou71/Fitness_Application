@@ -129,6 +129,83 @@ main li {
   font-size: 15px;
 }
 
+/* For comment section below */
+/* Needs JS to turn off scroll when in overlay */
+.overlay {
+  position: fixed; /* Sit on top of the page content */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+}
+
+.single-container {
+  position: absolute;
+  height: 75%;
+  width: 50%;
+  top: 12.5%;
+  left: 25%;
+  background-color: white;
+}
+
+.meta-f img {
+  height: 2rem;
+  width: 2rem;
+}
+
+.meta-f {
+  margin-top: 2rem;
+  margin-left: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.big-f {
+  border-top: solid 0.5px gray;
+  border-bottom: solid 0.5px gray;
+}
+
+.content-f {
+  margin-left: 3rem;
+  width: 70%;
+  height: 70%;
+  overflow: hidden;
+}
+
+.meta2-f {
+  margin-top: 1rem;
+}
+
+.meta2-f img {
+  height: 1rem;
+  width: 1rem;
+
+}
+
+.sub-f {
+  width: 70%;
+  margin-left: 3rem;
+  border-bottom: solid 0.5px gray ;
+  height: 10%;
+  overflow: hidden;
+}
+
+.comment-meta img{
+  height: 1rem;
+  width: 1rem;
+}
+
+.input {
+  position:absolute;
+  margin-left: 3rem;
+  width: 70%;
+  bottom: 0;
+  border: solid gray 1px;
+}
+
 @media (min-width:320px) {
   .content h2{
     font-size: medium
@@ -136,6 +213,11 @@ main li {
 
   .content p {
     font-size: small;
+  }
+
+  .single-container {
+    width: 75%;
+    left: 12.5%;
   }
 }
 
@@ -163,8 +245,6 @@ main li {
 
   .content h2 {
     height: 2rem;
-    font-weight: 600;
-    font-size: large;
     padding-top: 5px;
     padding-bottom: 0 ;
   }
