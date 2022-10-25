@@ -3,16 +3,19 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="author" content="co-authored by Elliot Choi, Ethan Chou, Jacob Kim, Vinson Liu">
-    <meta name="description" content="Exercises Search Page">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Search for an Exercise</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Bebas+Neue" rel="stylesheet">
+    <link rel="icon" 
+      type="image/png" 
+      href="img/fitness340_icon.png" />
     <link rel="stylesheet" href="elliot-style.css">
 </head>
 
 <body>
+
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Fitness 340</a>
@@ -25,52 +28,59 @@
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <!-- TODO: put the class "active" on the current page  -->
                     <li class="nav-item">
-                        <a class="nav-link " aria-label="Home Page" href="index.html">Home</a>
+                        <a class="nav-link" aria-label="Home Page" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="progress.html">Progress Tracker</a>
+                        <a class="nav-link" aria-label="Progress Page" href="progress.html">Progress Tracker</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="exercise.html">Exercise Searcher</a>
+                        <a class="nav-link active" aria-label="Exercise Search Page" href="exercise.html">Exercise Searcher</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="discussion.html">Discussion</a>
+                        <a class="nav-link" aria-label="Discussion page" href="discussion.html">Discussion</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <header class="px-5">
-        <h1>Fitness 340</h1>
-        <!-- <p class="motto">Description</p> -->
+    <header class="exercise-header px-5">
+        <h1><strong>Search for Exercises</strong></h1>
+        <div class="photo-attribution">
+            <p>
+                <a href="https://unsplash.com/@jelmerassink?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" aria-label="Photo Credits to">Jelmer Assink</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+            </p>
+        </div>
     </header>
 
-    <h1 class="px-5">Search for Exercises</h2>
+    <main class="p-5">
+        <div class="exercise-body"> 
+            
+            <!-- Filtering Bar-->
+            <div class="filter-bar">
+                <h1 class="filter-title">Filter by Body Part</h1>
+                <ul class="nav flex-column">
+                    <li class="btn button-col">Chest</li>
+                    <li class="btn button-col">Shoulders</li>
+                    <li class="btn button-col">Biceps</li>
+                    <li class="btn button-col">Triceps</li>
+                    <li class="btn button-col">Forearm</li>
+                    <li class="btn button-col">Back</li>
+                    <li class="btn button-col">Abdominals</li>
+                    <li class="btn button-col">Glutes</li>
+                    <li class="btn button-col">Quads</li>
+                    <li class="btn button-col">Hamstrings</li>
+                    <li class="btn button-col">Calves</li>
+                </ul>
+            </div>
 
-        <main class="d-flex p-5">
+            <!-- Container for Individual Exercise Cards-->
+            <div>
 
-            <div class="row">
-
-                <!-- Filtering Bar-->
-                <section class="filter-bar col-2 px-2">
-                    <ul class="nav flex-column">
-                        <li class="btn blue-button">Chest</li>
-                        <li class="btn blue-button">Shoulders</li>
-                        <li class="btn blue-button">Biceps</li>
-                        <li class="btn blue-button">Triceps</li>
-                        <li class="btn blue-button">Forearm</li>
-                        <li class="btn blue-button">Back</li>
-                        <li class="btn blue-button">Abdominals</li>
-                        <li class="btn blue-button">Glutes</li>
-                        <li class="btn blue-button">Quads</li>
-                        <li class="btn blue-button">Hamstrings</li>
-                        <li class="btn blue-button">Calves</li>
-                    </ul>
-                </section>
-
-                <!-- Container for Individual Exercise Cards-->
-                <section class="card-container col-10 px-3">
+                <div>
+                    <h1 class="exercise-title">Exercises</h1>
+                </div>
+                <div class="card-container">
 
                     <div class="exercise-card">
                         <a href="pullups-detailed.html" target="_blank">
@@ -145,39 +155,49 @@
                             <img class="img-thumbnail" src="img/leg-extensions.jpg" alt="leg extensions">
                         </a>
                     </div>
-
-                </section>
-
+                </div>
             </div>
+        </div>
+    </main>
 
-        </main>
-
-        <footer>
-            <!-- Author Info -->
-
-            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-                <!-- Links -->
-                <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
-                <p><i class="fas fa-home me-3"></i> New York, NY 10012, US</p>
-                <p>
-                    <i class="fas fa-envelope me-3"></i>
-                    info@example.com
-                </p>
-                <address class="fas fa-envelope me-4">
-                    <a href="mailto:echoi3@uw.edu">echoi3@uw.edu</a>
-                    <a href="mailto:hchou71@uw.edu">hchou71@uw.edu</a>
-                    <a href="mailto:jck1116@uw.edu">jck1116@uw.edu</a>
-                    <a href="mailto:vinliu20@uw.edu">vinliu20@uw.edu</a>
-                </address>
-                <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
-                <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
+    <!-- Footer -->
+    <footer class="text-center text-lg-start bg-white text-muted">
+        <div class="container text-center text-md-start mt-5">
+            <div class="row mt-3">
+                <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                    <h6 class="text-uppercase fw-bold mb-3">
+                        Fitness 340
+                    </h6>
+                    <p>
+                        Our goal is to foster the habits of work out exercises. We look forward to help on people
+                        for all level.
+                    </p>
+                </div>
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                    <h6 class="text-uppercase fw-bold mb-3">Contact</h6>
+                    <ul class=" list-unstyled ">
+                        <li class=" pb-1">
+                            <a class="text-muted text-decoration-none" href="mailto:echoi3@uw.edu">echoi3@uw.edu</a>
+                        </li>
+                        <li class=" pb-1">
+                            <a class="text-muted text-decoration-none" href="mailto:hchou71@uw.edu">hchou71@uw.edu</a>
+                        </li>
+                        <li class=" pb-1">
+                            <a class="text-muted text-decoration-none" href="mailto:jck1116@uw.edu">jck1116@uw.edu</a>
+                        </li>
+                        <li class=" pb-1">
+                            <a class="text-muted text-decoration-none" href="mailto:vinliu20@uw.edu">vinliu20@uw.edu</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <!-- Copyright -->
-            <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-                &copy; 2022 Fitness:
-                <a class="text-reset fw-bold" href="#">website address</a>
-            </div>
-        </footer>
+        </div>
+
+        <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+            &copy; 2022 FITNESS 340:
+            <a class="text-reset fw-bold" href="#">fitness340.com</a>
+        </div>
+    </footer>
 
 
 </body>
