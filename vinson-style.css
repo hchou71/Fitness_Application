@@ -113,6 +113,11 @@ main li {
   padding-bottom: 2px;
 }
 
+.content a {
+  text-decoration: none;
+  color: black;
+}
+
 .content {
   height: 55%;
   overflow: hidden;
