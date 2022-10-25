@@ -186,3 +186,17 @@ main {
     }
 
 }
+
+.login-page {
+    justify-content: center;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.bfont div {
+    font-size: 5vw;
+}
+
+.material-icons.md-48 {
+    font-size: 48px;
+    padding-top: 10vw;
+}
