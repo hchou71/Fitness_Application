@@ -1,3 +1,4 @@
+/* General Styling */
 * {
     box-sizing: border-box;
 }
@@ -6,13 +7,8 @@ body {
     font-family: 'Helvetica', sans-serif;
 }
 
-.exercise-header {
-    background-color: #1B263B;
-    color: white;
-    height: 300px;
-    text-align: center;
-    position: relative;
-    padding: 20px;
+main {
+    background-color: #E0E1DD;
 }
 
 h1 {
@@ -38,6 +34,17 @@ h1 {
 .photo-attribution a {
     text-decoration: none;
     color: white;
+}
+
+
+/* Search for Exercises Page */
+.exercise-header {
+    background-color: #1B263B;
+    color: white;
+    height: 300px;
+    text-align: center;
+    position: relative;
+    padding: 20px;
 }
 
 .navbar {
@@ -113,6 +120,7 @@ h1 {
     flex-direction: column;
 }
 
+/* Exercise Detail Pages */
 img {
     max-width: 100%;
     display: block;
@@ -130,15 +138,12 @@ img {
     flex-direction: column;
 }
 
-main {
-    background-color: #E0E1DD;
-}
-
 .save-to-profile {
     display: flex;
     justify-content: center;
 }
 
+/* Medium to XL Screens */
 @media (min-width: 768px) {
 
     .exercise-body {
@@ -179,10 +184,32 @@ main {
 
 }
 
+/* UltraWide */
 @media (min-width: 2000px) {
 
     h1 {
         font-size: 180px;
     }
 
+}
+
+/* Login Page CSS */
+
+.login-page {
+    justify-content: center;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.bfont div {
+    font-size: 5vw;
+}
+
+.material-icons.md-48 {
+    font-size: 48px;
+    padding-top: 10vw;
+}
+
+.login-content {
+    border-top: 15px solid #1B263B;
+    border-bottom: 15px solid  #1B263B;
 }
