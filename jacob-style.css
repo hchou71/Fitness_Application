@@ -1,4 +1,4 @@
-
+/* Small mobile screens */
 @media (min-width:320px) {
     header {
         background-color: #1B263B;
@@ -42,6 +42,7 @@
     }
 }
 
+/* Large desktop screens*/
 @media (min-width:1025px) {
     .progress-pg {
         background-image: url('img/journal-fitness.jpg');
