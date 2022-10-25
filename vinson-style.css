@@ -6,16 +6,23 @@ header {
   position: fixed;
   width: 100%;
   top: 0;
+  background-color: #1b263b;
 }
 
-/* This is the styling for shared header */
-header nav {
-  background-color: #1b263b;
+.header-bg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('img/fitness-track.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 7rem;
+  color: #e0e1dd;
 }
 
 main {
   height: 100vh;
-  margin-top: 5rem;
+  margin-top: 12rem;
   width: 95%;
   border-radius: 0.5rem;
   background-color: #778da9;
@@ -31,7 +38,6 @@ main nav {
   margin-right: auto;
   display: flex;
   align-items: flex-end;
-  width: 90%;
 }
 
 .scroll {
@@ -49,12 +55,13 @@ main li {
 }
 
 .nav-container {
+  width: 100%;
+  margin-left: 0;
   background-color: #e0e1dd;
-  width: 75;
   border-top-right-radius: 0.5rem;
   border-top-left-radius: 0.5rem;
   position: sticky;
-  top: 3.5rem;
+  top: 10.5rem;
   height: 8vh;
   display: flex;
   align-items: flex-end;
@@ -88,20 +95,26 @@ main li {
   margin-top: 3vh;
 }
 
+.content h2 {
+  height: 1rem;
+  font-weight: 600;
+  font-size: large;
+  padding-top: 5px;
+  padding-bottom: 0 ;
+}
+
+.content p {
+  padding-bottom: 2px;
+}
+
 .content {
-  height: 45%;
+  height: 55%;
   overflow: hidden;
-  margin-bottom: 1.5%;
+  margin-bottom: 2%;
   margin-top: 1%;
 }
 
-.content h1 {
-  margin-top: 0.5em;
-  font-weight: 700;
-  font-size: large;
-}
-
-.material-icons {
+.meta2 .material-icons {
   font-size: 15px;
 }
 
@@ -112,11 +125,30 @@ main li {
   }
 
   main nav {
-    width: 92%;
+    width: 100%
   }
 
   .meta2 span {
     font-size: 13px;
+  }
+
+  .content h2 {
+    height: 1rem;
+    font-weight: 600;
+    font-size: large;
+    padding-top: 5px;
+    padding-bottom: 0 ;
+  }
+
+  .content p {
+    padding-bottom: 2px;
+  }
+
+  .content {
+    height: 50%;
+    overflow: hidden;
+    margin-bottom: 2%;
+    margin-top: 1%;
   }
 
 }
@@ -146,4 +178,38 @@ main li {
   main nav {
     width: 83%;
   }
+
+  .content {
+    height: 45%;
+    overflow: hidden;
+    margin-bottom: 1.5%;
+    margin-top: 1%;
+  }
 }
+
+/* Needs JS to turn off scroll when in overlay */
+.overlay {
+  position: fixed; /* Sit on top of the page content */
+  display: block; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+  overflow: hidden;
+}
+
+.single-container {
+  position: absolute;
+  height: 75%;
+  width: 50%;
+  top: 12.5%;
+  left: 25%;
+  background-color: white;
+}
+
+
