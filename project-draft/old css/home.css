@@ -1,0 +1,38 @@
+nav {
+    background-color: #1B263B;
+}
+
+.botton-col {
+    color: #fff;
+    background-color: #415a77;
+    border-color: #415a77;
+}
+
+@media (min-width:320px) {
+    .home-header {
+        color: #fff;
+        background-color: #1B263B;
+        height: 200px;
+        text-align: center;
+        font-family: 'Bebas Neue', sans-serif;
+        font-weight: 200;
+        padding: 40px;
+    }
+}
+
+@media (min-width:1025px) {
+    .home-header {
+        height: 500px;
+        padding: 100px;
+        background-image: url('../img/home.jpg');
+        background-position: center;
+        background-size: cover;
+    } 
+
+    h1 {
+        font-size: 10vw;
+        text-align: center;
+        align-items: center;
+        font-family: 'Bebas Neue', sans-serif;
+    }
+}
