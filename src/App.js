@@ -5,7 +5,7 @@ import { DiscussionPage } from './discussion.js';
 import { ExercisePage } from './exercise';
 import { DetailsPage } from './exercise-details';
 
-function App(props) {
+function App() {
   return (
     <div>
       <Navbar />
