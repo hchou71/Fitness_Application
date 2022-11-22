@@ -1,7 +1,7 @@
 import React from 'react';
 import { Header, Features, Footer } from './Home';
 import { NewExercise } from './new-exercise.js';
-import { DiscusionPage } from './discussion.js';
+import { DiscussionPage } from './discussion.js';
 import { ExercisePage } from './exercise';
 import { DetailsPage } from './exercise-details';
 

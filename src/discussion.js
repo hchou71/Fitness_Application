@@ -1,6 +1,6 @@
 import React from 'react';
 
-export function DiscusionPage(props) {
+export function DiscussionPage(props) {
   return(
     <main className="discussion-main">
       <div className="nav-container">
