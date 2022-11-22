@@ -2,22 +2,14 @@ import React from 'react';
 import { Header, Features, Footer } from './Home';
 import { NewExercise } from './new-exercise.js';
 import { DisccusionPage } from './discussion.js';
-import {NewExercise} from './new-exercise.js';
 import { ExercisePage } from './exercise';
 import { DetailsPage } from './exercise-details';
 
 function App(props) {
   return (
     <div>
-    <Header/>
-
-    <Features/>
-    {/* <NewExercise/> */}
-
-    <DisccusionPage/>
-
-    <Footer/>
-
+    <ExercisePage exercises={props.exercises}/>
+      
     </div>
     )
 }
