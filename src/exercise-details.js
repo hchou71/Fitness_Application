@@ -15,7 +15,7 @@ export function DetailsPage(props) {
                 </div>
             </div>
 
-            <div>
+            <div className='exer'>
                 <h1>{name}</h1>
                 <img className="py-3 exercise-img" src={img} alt={name} />
                 <div className="py-3">

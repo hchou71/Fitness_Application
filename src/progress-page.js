@@ -2,7 +2,7 @@ import React from 'react';
 
 export function ProgressPage () {
     return (
-        <div>
+        <div className='back-main'>
             <header className="fitness-track-pg">
                 <div className="container-fluid">
                     <h1>Your Fitness Journey</h1>

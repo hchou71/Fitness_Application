@@ -15,7 +15,7 @@ export function NewExercise (props) {
     }
 
     return (
-        <div>
+        <div className='back-main'>
             <header className="progress-pg">
                 <div className="container-fluid">
                     <h1>Log Your Workout</h1>
@@ -37,13 +37,13 @@ export function NewExercise (props) {
             <Table numRows={numRows}/>
             <div className="row progress-row">
                 <div className="col-4">
-                    <button className="btn btn-primary" id='form-button' type="button" onClick={handleAddClick}>Add Row</button>
+                    <button className="btn btn-primary" type="button" onClick={handleAddClick}>Add Row</button>
                 </div>
                 <div className="col-4">
-                    <button className="btn btn-primary" id='form-button' type="button" onClick={handleDeleteClick}>Delete Row</button>
+                    <button className="btn btn-danger" type="button" onClick={handleDeleteClick}>Delete Row</button>
                 </div>
                 <div className="col-4">
-                    <button className="btn btn-success" id='form-button' type="button">Submit</button>
+                    <button className="btn btn-success" type="button">Submit</button>
                 </div>
             </div>
         </form>

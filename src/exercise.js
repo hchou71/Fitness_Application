@@ -24,10 +24,10 @@ export function ExercisePage(props) {
 
     return (
         <div>
-            <header className="exercise-header px-5">
-                <h1><em>Search for Exercises</em></h1>
+            <header className="exercise-header px-5 container-fluid">
+                <h1>Search for Exercises</h1>
             </header>
-            <main className="p-5">
+            <main className="p-5 back-main">
                 <div className="exercise-body">
                     <FilterBar exercises={exercises} sortByCallback={sortBy}/>
                     <ExerciseBody displayedExercises={displayedExercises}/>

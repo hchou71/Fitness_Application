@@ -3,12 +3,11 @@ import React from 'react';
 export function LoginPage(props) {
 
     return (
-        <div>
-            <h1>Fitness 340</h1>
+        <div className='login-page'>
+            <h1 className='header'>Fitness 340</h1>
 
             <main className="login-content">
                 <div className="container">
-
                     <div className="d-flex login-page">
                         {/* Sign up button */}
                         <div className="d-flex bfont btn button-col btn-lg my-5 px-5">
@@ -36,7 +35,7 @@ export function LoginPage(props) {
                                     <input type="password" className="form-control" id="inputPassword" />
                                 </div>
                             </div>
-                            <div>
+                            <div className='login-page'>
                                 <a href="index.html" className="btn button-col btn-lg my-5">Log-in <span className="material-icons" aria-label="Save to Profile">login</span></a>
                             </div>
                         </div>
