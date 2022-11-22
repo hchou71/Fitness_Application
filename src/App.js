@@ -1,20 +1,13 @@
 import React from 'react';
-<<<<<<< HEAD
-import {NewExercise} from './new-exercise.js';
-import { ExercisePage } from './exercise';
-import { DetailsPage } from './exercise-details';
-=======
 import { Header, Features, Footer } from './Home';
 import { NewExercise } from './new-exercise.js';
 import { DisccusionPage } from './discussion.js';
->>>>>>> bdc24dab58b2a72798ffcae2df8d438ed08df244
+import {NewExercise} from './new-exercise.js';
+import { ExercisePage } from './exercise';
+import { DetailsPage } from './exercise-details';
 
 function App(props) {
   return (
-<<<<<<< HEAD
-    <ExercisePage exercises={props.exercises}/> // JUST COMMENT OUT UR COMPONENT WHEN DONE TESTING!! @ETHAN, VINSON, ELLIOT
-  )
-=======
     <div>
     <Header/>
 
@@ -27,7 +20,6 @@ function App(props) {
 
     </div>
     )
->>>>>>> bdc24dab58b2a72798ffcae2df8d438ed08df244
 }
 
 export default App;
