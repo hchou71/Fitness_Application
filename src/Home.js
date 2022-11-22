@@ -31,7 +31,7 @@ export function Navbar(props) {
     )
 }
 
-export function HomePage(props) {
+export function HomePage() {
     return (
         <div>
             <header className="home-header">
@@ -49,7 +49,7 @@ export function HomePage(props) {
     )
 }
 
-function Header(props) {
+function Header() {
     return (
         <div className="container-fluid">
             <h1>FITNESS 340</h1>
@@ -59,7 +59,7 @@ function Header(props) {
     )
 }
 
-export function Features(props) {
+function Features() {
     return (
         < div className="row" >
             < div className=" col-lg-4 col-12 p-2 border rounded" >

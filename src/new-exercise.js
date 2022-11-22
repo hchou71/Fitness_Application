@@ -1,4 +1,3 @@
-import { Tab } from 'bootstrap';
 import React, { useState } from 'react';
 
 export function NewExercise (props) {
@@ -16,6 +15,19 @@ export function NewExercise (props) {
     }
 
     return (
+        <div>
+            <header className="progress-pg">
+                <div className="container-fluid">
+                    <h1>Log Your Workout</h1>
+                </div>
+            </header>
+
+            <main>
+                <h2>Track your workout progress by entering the exercise you did and inputting the amount of sets and
+                    repetitions for each exercise.</h2>
+            </main>
+
+
         <form className="container form-container">
             <div className="row progress-row">
                 <div className="col-12">
@@ -34,7 +46,8 @@ export function NewExercise (props) {
                     <button className="btn btn-success" id='form-button' type="button">Submit</button>
                 </div>
             </div>
-    </form>
+        </form>
+    </div>
     )
 } 
 
