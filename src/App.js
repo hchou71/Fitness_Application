@@ -10,8 +10,9 @@ function App(props) {
     <div>
     <Header/>
 
-    <NewExercise/>
+    <ExercisePage exercises={props.exercises}/>
 
+    <NewExercise/>    
 
     <Footer/>
 
