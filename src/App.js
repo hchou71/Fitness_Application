@@ -5,13 +5,15 @@ import { DiscussionPage } from './discussion.js';
 import { ExercisePage } from './exercise';
 import { DetailsPage } from './exercise-details';
 import { PrvWorkout } from './PrvWorkout';
-import {ProgressPage} from './progress-page.js';
+import { ProgressPage } from './progress-page.js';
+import { LoginPage } from './login';
 
 function App(props) {
   return (
     <div>
       <Navbar />
       
+      {/* <LoginPage /> */}
       {/* <HomePage /> */}
       {/* <ProgressPage/> */}
       {/* <DiscussionPage/> */}
