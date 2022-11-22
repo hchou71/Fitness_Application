@@ -11,13 +11,13 @@ export function FilterBar(props) {
       }, []))].sort();
 
     const buttonList = bodyPartArray.map((bodyPart) => {
-        return <li className="btn button-col" key={bodyPart} onClick={handleClick} id={bodyPart}>{bodyPart}</li>
+        return <li className="btn button-col" key={bodyPart} onClick={handleClick}>{bodyPart}</li>
     });
 
-    buttonList.unshift(<li className="btn button-col" key="all" onClick={handleClick} id="">All</li>)
+    buttonList.unshift(<li className="btn button-col" key="all" onClick={handleClick}>All</li>)
 
     function handleClick(event) {
-        props.sortByCallback(event.target.id);
+        props.sortByCallback(event.target.innerHTML);
     }
 
     return (

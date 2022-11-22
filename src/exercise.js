@@ -5,16 +5,16 @@ import { ExerciseBody } from './exercise-body';
 
 export function ExercisePage(props) {
 
-    const [sortByMuscle, setSortByMuscle] = useState("");
+    const [sortByMuscle, setSortByMuscle] = useState("All");
     const exercises = props.exercises;
 
     const displayedExercises = exercises.filter((exerciseObj) => {
-        if (sortByMuscle === '') {
+        if (sortByMuscle === "All") {
             return exerciseObj;
         } else if (exerciseObj.muscleWorked === sortByMuscle) {
             return exerciseObj;
         } else {
-            return;
+            return undefined;
         }
     });
 
