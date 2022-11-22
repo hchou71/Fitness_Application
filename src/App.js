@@ -18,11 +18,9 @@ function App(props) {
       {/* <ProgressPage/> */}
       {/* <DiscussionPage/> */}
       {/* <NewExercise /> */}
-      <DiscussionPage messageData={props.messageData}/>
-      <PrvWorkout />
-      <ExercisePage exercises={props.exercises}/>
-
-      <NewExercise/>
+      {/* <DiscussionPage messageData={props.messageData}/> */}
+      {/* <PrvWorkout /> */}
+      {/* <ExercisePage exercises={props.exercises}/> */}
 
       <Footer />
 
