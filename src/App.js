@@ -5,20 +5,9 @@ import { DiscussionPage } from './discussion.js';
 import { ExercisePage } from './exercise';
 import { DetailsPage } from './exercise-details';
 
-function App() {
+function App(props) {
   return (
-    <div>
-      <Navbar />
-      {/* <Header /> */}
-      {/* <Features /> */}
-
-    <ExercisePage exercises={props.exercises}/>
-
-    <NewExercise/>    
-
-      <Footer />
-
-    </div>
+    <NewExercise />
   )
 }
 
