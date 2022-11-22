@@ -25,13 +25,13 @@ export function LoginPage(props) {
                         {/* Login button */}
                         <div className="flex-column p-5">
                             <div className="mb-3 row">
-                                <label for="inputEmail" className="col-sm-10 col-form-label">Email</label>
+                                <label htmlFor="inputEmail" className="col-sm-10 col-form-label">Email</label>
                                 <div className="col-sm-10">
                                     <input type="email" className="form-control" id="exampleFormControlInput1" placeholder="youremail@email.com" />
                                 </div>
                             </div>
                             <div className="mb-3 row">
-                                <label for="inputPassword" className="col-sm-10 col-form-label">Password</label>
+                                <label htmlFor="inputPassword" className="col-sm-10 col-form-label">Password</label>
                                 <div className="col-sm-10">
                                     <input type="password" className="form-control" id="inputPassword" />
                                 </div>

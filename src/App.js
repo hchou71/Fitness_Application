@@ -13,11 +13,11 @@ function App(props) {
     <div>
       <Navbar />
       
-      {/* <LoginPage /> */}
+      <LoginPage />
       {/* <HomePage /> */}
       {/* <ProgressPage/> */}
       {/* <DiscussionPage/> */}
-      <NewExercise />
+      {/* <NewExercise /> */}
       {/* <PrvWorkout /> */}
       {/* <ExercisePage exercises={props.exercises}/> */}
       {/* <DetailsPage exerciseObj={props.exercises[0]}/> */}
