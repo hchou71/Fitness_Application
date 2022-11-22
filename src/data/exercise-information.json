@@ -1,0 +1,92 @@
+[
+    {
+        "name": "Pullups",
+        "img": "img/pullups.jpg",
+        "link": "",
+        "muscleWorked": "Back",
+        "equipment": "Pullup bar or something similar",
+        "summary": "Pullups are an excellent compound back exercise for developing muslce. Pullups primarily utilize lats and biceps, with secondary muscles including deltoids, rhomboids, and core.",
+        "howTo": "How to do a pullup: Start with your hands on the bar approximately shoulder-width apart with your palms facing forward. With arms extended above you, stick your chest out and curve your back slightly. That is your starting position. Pull yourself up towards the bar using your back until the bar is at chest level while breathing out. Slowly lower yourself to the starting position while breathing in. That is one rep."
+    },
+    {
+        "name": "Barbell Squat",
+        "img": "img/barbell-squat.jpg",
+        "link": "",
+        "muscleWorked": "Quads",
+        "equipment": "",
+        "summary": "",
+        "howTo": ""
+    },
+    {
+        "name": "Bench Press",
+        "img": "img/bench-press.jpg",
+        "link": "",
+        "muscleWorked": "Chest",
+        "equipment": "",
+        "summary": "",
+        "howTo": ""
+    },
+    {
+        "name": "Deadlift",
+        "img": "img/deadlift.jpg",
+        "link": "",
+        "muscleWorked": "Quads",
+        "equipment": "",
+        "summary": "",
+        "howTo": ""
+    },
+    {
+        "name": "Dumbbell Lateral Raise",
+        "img": "img/dumbbell-lateral-raise.jpg",
+        "link": "",
+        "muscleWorked": "Shoulders",
+        "equipment": "",
+        "summary": "",
+        "howTo": ""
+    },
+    {
+        "name": "Dumbbell Shoulder Press",
+        "img": "img/dumbbell-shoulder-press.jpg",
+        "link": "",
+        "muscleWorked": "Shoulders",
+        "equipment": "",
+        "summary": "",
+        "howTo": ""
+    },
+    {
+        "name": "Standing Dumbbell Calf Raise",
+        "img": "img/dumbbell-standing-calf-raise.jpg",
+        "link": "",
+        "muscleWorked": "Calves",
+        "equipment": "",
+        "summary": "",
+        "howTo": ""
+    },
+    {
+        "name": "Incline Machine Press",
+        "img": "img/incline-machine-press.jpg",
+        "link": "",
+        "muscleWorked": "Chest",
+        "equipment": "",
+        "summary": "",
+        "howTo": ""
+    },
+    {
+        "name": "Leg Curls",
+        "img": "img/leg-curls.jpg",
+        "link": "",
+        "muscleWorked": "Hamstrings",
+        "equipment": "",
+        "summary": "",
+        "howTo": ""
+    },
+    {
+        "name": "Leg Extensions",
+        "img": "img/leg-extensions.jpg",
+        "link": "",
+        "muscleWorked": "Quads",
+        "equipment": "",
+        "summary": "",
+        "howTo": ""
+    }
+]

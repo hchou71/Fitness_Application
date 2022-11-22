@@ -2,8 +2,10 @@ import React from 'react';
 import { Header, Features, Footer } from './Home';
 import { NewExercise } from './new-exercise.js';
 import { DiscusionPage } from './discussion.js';
+import { ExercisePage } from './exercise';
+import { DetailsPage } from './exercise-details';
 
-function App() {
+function App(props) {
   return (
     <div>
     <Header/>
