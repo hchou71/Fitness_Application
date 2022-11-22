@@ -10,15 +10,16 @@ function App(props) {
   return (
     <div>
       <Navbar />
-      <Header />
+      <HomePage />
       {/*<Features />*/}
 
 
       {/* <NewExercise /> */}
+      <DiscussionPage messageData={props.messageData}/>
       <PrvWorkout />
       <ExercisePage exercises={props.exercises}/>
 
-      <NewExercise/>    
+      <NewExercise/>
 
       <Footer />
 

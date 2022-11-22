@@ -11,31 +11,28 @@ function ChatCard(props) {
 
 
   return(
-    <div className="row post-container">
+    <div className="post-container">
           <article className="post">
-            <div className="row meta">
+            <div className="post-row meta">
               <div className="col-1">
-                <img src="./public/img/user-icon.png" alt="User Image"/>
+                <img src={imgUrl} alt={imgAlt}/>
               </div>
               <div className="col-8">
-                UserName
+                {userName}
               </div>
               <div className="col-2">
 
               </div>
             </div>
-            <div className="row content">
-              <h2>Motivation to go to the gym</h2>
+            <div className="post-row content">
+              <h2>{title}</h2>
               <a href="full-post.html">
                 <p>
-                  Hi, I am relatively new to the gym and with all the work and stuff going on, I feel
-                  rly burt out and am wondering what keeps you guys motivated to go to the gym? Maybe
-                  my willpower just insn't strong enough yet. I am wondering is there anything I can do
-                  to make myself more motivated to go the gym?
+                  {post}
                 </p>
               </a>
             </div>
-            <div className="row meta2">
+            <div className="post-row meta2">
               <div className="col-4 col-sm-2">
                 <a href="#" className="material-icons">favorite_border</a>
                 <span>42</span>
@@ -54,5 +51,17 @@ function ChatCard(props) {
 }
 
 export function ChatList(props) {
+  const ChatList = props.messageData.map(element => {
+    const post = (
+      <ChatCard
+        messageData={element}
+        key={element.name}
+      />
+    )
+    return post;
+  });
 
+  return (
+    ChatList
+  )
 }

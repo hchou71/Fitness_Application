@@ -1,11 +1,12 @@
 import React from 'react';
+import { ChatList } from './ChatList.js';
 
 export function DiscussionPage(props) {
   return(
     <div>
       <header>
-        <div class="header-bg">
-          <h1 class="py-5">Discussion Page</h1>
+        <div className="header-bg">
+          <h1 className="py-5">Discussion Page</h1>
         </div>
       </header>
 
@@ -37,7 +38,7 @@ export function DiscussionPage(props) {
             <article className="post">
               <div className="post-row meta">
                 <div className="col-1">
-                  <img src="./public/img/user-icon.png" alt="User Image"/>
+                  <img src="img/user-icon.png" alt="User Image"/>
                 </div>
                 <div className="col-8">
                   UserName
@@ -72,6 +73,8 @@ export function DiscussionPage(props) {
               </div>
             </article>
           </div>
+
+          <ChatList messageData={props.messageData}/>
 
           </section>
         </div>

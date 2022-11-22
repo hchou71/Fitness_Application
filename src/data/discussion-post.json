@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Joel",
+    "img": "img/user-icon.png",
+    "title": "Going to the Gym",
+    "post": "Hi are there any gym recommendations around UW other then IMA?"
+  },
+  {
+    "name": "SpongeBob",
+    "img": "img/user-icon.png",
+    "title": "Going to the Gym",
+    "post": "Hi are there any gym recommendations around UW other then IMA?"
+  },
+  {
+    "name": "Patrick",
+    "img": "img/user-icon.png",
+    "title": "Going to the Gym",
+    "post": "Hi are there any gym recommendations around UW other then IMA?"
+  },
+  {
+    "name": "Sandy",
+    "img": "img/user-icon.png",
+    "title": "Going to the Gym",
+    "post": "Hi are there any gym recommendations around UW other then IMA?"
+  },
+  {
+    "name": "Plankton",
+    "img": "img/user-icon.png",
+    "title": "Going to the Gym",
+    "post": "Hi are there any gym recommendations around UW other then IMA?"
+  },
+  {
+    "name": "Squidward",
+    "img": "img/user-icon.png",
+    "title": "Going to the Gym",
+    "post": "Hi are there any gym recommendations around UW other then IMA?"
+  }
+]
