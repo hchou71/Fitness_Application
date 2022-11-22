@@ -10,19 +10,20 @@ import { LoginPage } from './login';
 
 function App(props) {
   return (
-    <div>
+    <div className='home-exa'>
       <Navbar />
 
-      <LoginPage />
+      {/* <LoginPage /> */}
+
       {/* <HomePage /> */}
-      {/* <ProgressPage/> */}
-      {/* <DiscussionPage/> */}
-      {/* <NewExercise /> */}
-      {/* <DiscussionPage messageData={props.messageData}/> */}
+      {/* <DetailsPage exerciseObj={props.exercises[0]}/> */}
       {/* <PrvWorkout /> */}
       {/* <ExercisePage exercises={props.exercises}/> */}
+      {/* <NewExercise /> */}
+      {/* <DiscussionPage messageData={props.messageData}/> */}
+      {/* <ProgressPage/> */}
 
-      <Footer />
+      <Footer/>
 
     </div>
   )

@@ -4,9 +4,9 @@ import { ChatList } from './ChatList.js';
 export function DiscussionPage(props) {
   return(
     <div>
-      <header>
-        <div className="header-bg">
-          <h1 className="py-5">Discussion Page</h1>
+      <header className='discussion-pg'>
+        <div className="container-fluid">
+          <h1>Discussion Page</h1>
         </div>
       </header>
 
