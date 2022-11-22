@@ -1,5 +1,5 @@
 import React from 'react';
-import { Header, Features, Footer } from './Home';
+import { Navbar, Header, Features, Footer } from './Home';
 import { NewExercise } from './new-exercise.js';
 import { DiscussionPage } from './discussion.js';
 import { ExercisePage } from './exercise';
@@ -8,21 +8,23 @@ import { DetailsPage } from './exercise-details';
 function App(props) {
   return (
     <div>
-    <Header/>
+      <Navbar />
+      {/* <Header /> */}
+      {/* <Features /> */}
 
-    <NewExercise/>
+      <NewExercise />
 
 
-    <Footer/>
+      <Footer />
 
     </div>
-    )
+  )
 }
 
 export default App;
 
 
- {/*
+{/*
     <body>
       <nav className="navbar navbar-expand-lg navbar-dark" >
         <div className="container-fluid">
