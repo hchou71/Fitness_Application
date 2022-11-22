@@ -11,11 +11,11 @@ function App(props) {
   return (
     <div>
       <Navbar />
-      
+
       {/* <HomePage /> */}
       {/* <ProgressPage/> */}
       {/* <DiscussionPage/> */}
-      {/* <NewExercise /> */}
+      <NewExercise />
       {/* <PrvWorkout /> */}
       {/* <ExercisePage exercises={props.exercises}/> */}
       {/* <DetailsPage exerciseObj={props.exercises[0]}/> */}

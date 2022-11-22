@@ -1,4 +1,3 @@
-import { Tab } from 'bootstrap';
 import React, { useState } from 'react';
 
 export function NewExercise (props) {
