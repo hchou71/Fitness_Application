@@ -1,17 +1,15 @@
 import React from 'react';
 import { Header, Features, Footer } from './Home';
 import { NewExercise } from './new-exercise.js';
-import { DisccusionPage } from './discussion.js';
+import { DiscusionPage } from './discussion.js';
 
 function App() {
   return (
     <div>
     <Header/>
 
-    <Features/>
-    {/* <NewExercise/> */}
+    <NewExercise/>
 
-    <DisccusionPage/>
 
     <Footer/>
 
@@ -69,4 +67,4 @@ export default App;
         </div>
       </footer>
     </body>
-  */}
+*/}
