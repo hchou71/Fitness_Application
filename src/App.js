@@ -9,8 +9,8 @@ function App(props) {
   return (
     <div>
       <Navbar />
-      {/* <Header /> */}
-      {/* <Features /> */}
+      <Header />
+      {/*<Features />*/}
 
     <ExercisePage exercises={props.exercises}/>
 
