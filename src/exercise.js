@@ -25,7 +25,7 @@ export function ExercisePage(props) {
     return (
         <div>
             <header className="exercise-header px-5">
-                <h1><strong>Search for Exercises</strong></h1>
+                <h1><em>Search for Exercises</em></h1>
             </header>
             <main className="p-5">
                 <div className="exercise-body">
