@@ -1,31 +1,17 @@
-import React from 'react';
+import React from "react";
 
-export function DisccusionPage(props) {
+function ChatCard(props) {
+
+  const messageData = props.messageData;
+  const userName = messageData.name;
+  const imgUrl = messageData.img;
+  const imgAlt = userName + 'photo';
+  const title = messageData.title;
+  const post = messageData.post;
+
+
   return(
-    <main className="discussion-main">
-      <div className="nav-container">
-          <nav className="row-12 nav-content">
-            <ul className="row col-12">
-              <li className="col-3 main-li">
-                <a href="#" className="material-icons">local_fire_department</a>
-                <span>Hot</span>
-              </li>
-              <li className="col-5 main-li">
-                <a href="#" className="material-icons">schedule</a>
-                <span>Recent</span>
-              </li>
-              <li className="col-4 main-li">
-                <a href="#" className="material-icons">create</a>
-                <span>New Post</span>
-              </li>
-            </ul>
-          </nav>
-      </div>
-
-      <div>
-        <section className="scroll">
-
-        <div className="row post-container">
+    <div className="row post-container">
           <article className="post">
             <div className="row meta">
               <div className="col-1">
@@ -64,10 +50,9 @@ export function DisccusionPage(props) {
             </div>
           </article>
         </div>
-
-        </section>
-      </div>
-
-  </main>
   )
+}
+
+export function ChatList(props) {
+
 }

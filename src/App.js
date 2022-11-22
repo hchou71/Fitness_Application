@@ -1,12 +1,83 @@
 import React from 'react';
+<<<<<<< HEAD
 import {NewExercise} from './new-exercise.js';
 import { ExercisePage } from './exercise';
 import { DetailsPage } from './exercise-details';
+=======
+import { Header, Features, Footer } from './Home';
+import { NewExercise } from './new-exercise.js';
+import { DisccusionPage } from './discussion.js';
+>>>>>>> bdc24dab58b2a72798ffcae2df8d438ed08df244
 
 function App(props) {
   return (
+<<<<<<< HEAD
     <ExercisePage exercises={props.exercises}/> // JUST COMMENT OUT UR COMPONENT WHEN DONE TESTING!! @ETHAN, VINSON, ELLIOT
   )
+=======
+    <div>
+    <Header/>
+
+    <Features/>
+    {/* <NewExercise/> */}
+
+    <DisccusionPage/>
+
+    <Footer/>
+
+    </div>
+    )
+>>>>>>> bdc24dab58b2a72798ffcae2df8d438ed08df244
 }
 
 export default App;
+
+
+ {/*
+    <body>
+      <nav className="navbar navbar-expand-lg navbar-dark" >
+        <div className="container-fluid">
+          <a className="navbar-brand" href="#">Fitness 340</a>
+          <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div className="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+              <li className="nav-item">
+                <a className="nav-link active" aria-label="Home Page" href="index.html">Home</a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" aria-label="Progress Page" href="progress.html">Progress Tracker</a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" aria-label="Exercise Search Page" href="exercise.html">Exercise Searcher</a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" aria-label="Discussion page" href="discussion.html">Discussion</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav >
+
+      <header className="home-header">
+        <Header />
+      </header>
+
+      <main className="home-main mt-5">
+        <div className="container container-progress">
+          <Features />
+        </div>
+      </main>
+
+      <footer className="text-center text-lg-start bg-white text-muted">
+        <Footer />
+        <div className="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+          &copy; 2022 FITNESS 340:
+          <a className="text-reset fw-bold" href="#">fitness340.com</a>
+        </div>
+      </footer>
+    </body>
+  */}
