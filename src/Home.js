@@ -1,5 +1,36 @@
 import React from 'react';
 
+export function Navbar(props) {
+    return (
+        <nav className="navbar navbar-expand-lg navbar-dark" >
+            <div className="container-fluid">
+                <a className="navbar-brand" href="#">Fitness 340</a>
+                <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span className="navbar-toggler-icon"></span>
+                </button>
+                <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li className="nav-item">
+                            <a className="nav-link active" aria-label="Home Page" href="index.html">Home</a>
+                        </li>
+                        <li className="nav-item">
+                            <a className="nav-link" aria-label="Progress Page" href="progress.html">Progress Tracker</a>
+                        </li>
+                        <li className="nav-item">
+                            <a className="nav-link" aria-label="Exercise Search Page" href="exercise.html">Exercise Searcher</a>
+                        </li>
+                        <li className="nav-item">
+                            <a className="nav-link" aria-label="Discussion page" href="discussion.html">Discussion</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav >
+    )
+}
+
 export function Header(props) {
     return (
         <div className="container-fluid">
@@ -40,35 +71,41 @@ export function Features(props) {
 
 export function Footer(props) {
     return (
-        <div className="text-center text-md-start mt-5">
-            <div className="row mt-3">
-                <div className="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-                    <h3 className="text-uppercase fw-bold mb-3">
-                        Fitness 340
-                    </h3>
-                    <p>
-                        Our goal is to foster the habits of work out exercises. We look forward to help on people
-                        for all level.
-                    </p>
-                </div>
-                <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-                    <h6 className="text-uppercase fw-bold mb-3">Contact</h6>
-                    <ul className=" list-unstyled ">
-                        <li className=" pb-1">
-                            <a className="text-muted text-decoration-none" href="mailto:echoi3@uw.edu">echoi3@uw.edu</a>
-                        </li>
-                        <li className=" pb-1">
-                            <a className="text-muted text-decoration-none" href="mailto:hchou71@uw.edu">hchou71@uw.edu</a>
-                        </li>
-                        <li className=" pb-1">
-                            <a className="text-muted text-decoration-none" href="mailto:jck1116@uw.edu">jck1116@uw.edu</a>
-                        </li>
-                        <li className=" pb-1">
-                            <a className="text-muted text-decoration-none" href="mailto:vinliu20@uw.edu">vinliu20@uw.edu</a>
-                        </li>
-                    </ul>
+        <div>
+            <div className="text-center text-md-start mt-5">
+                <div className="row mt-3">
+                    <div className="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                        <h3 className="text-uppercase fw-bold mb-3">
+                            Fitness 340
+                        </h3>
+                        <p>
+                            Our goal is to foster the habits of work out exercises. We look forward to help on people
+                            for all level.
+                        </p>
+                    </div>
+                    <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                        <h4 className="text-uppercase fw-bold mb-3">Contact</h4>
+                        <ul className=" list-unstyled ">
+                            <li className=" pb-1">
+                                <a className="text-muted text-decoration-none" href="mailto:echoi3@uw.edu">echoi3@uw.edu</a>
+                            </li>
+                            <li className=" pb-1">
+                                <a className="text-muted text-decoration-none" href="mailto:hchou71@uw.edu">hchou71@uw.edu</a>
+                            </li>
+                            <li className=" pb-1">
+                                <a className="text-muted text-decoration-none" href="mailto:jck1116@uw.edu">jck1116@uw.edu</a>
+                            </li>
+                            <li className=" pb-1">
+                                <a className="text-muted text-decoration-none" href="mailto:vinliu20@uw.edu">vinliu20@uw.edu</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
+            <div className="text-center p-4" style={{ backgroundColor: "rgba(0, 0, 0, 0.05) " }}>
+                &copy; 2022 FITNESS 340:
+                <a className="text-reset fw-bold" href="#">fitness340.com</a>
+            </div>
+        </div >
     )
 }
