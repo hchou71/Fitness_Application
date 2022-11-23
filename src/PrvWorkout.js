@@ -12,7 +12,7 @@ function Header(props) {
 
 export function PrvWorkout(props) {
     return (
-        <div className='back-main'>
+        <div className='back-main d-flex flex-column min-vh-100'>
             <Header />
             <main>
                 <h2>View your previous workouts that you logged here!</h2>

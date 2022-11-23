@@ -3,11 +3,11 @@ import React from 'react';
 export function DetailsPage(props) {
 
     const exerciseObj = props.exerciseObj;
-    
-    const {name, img, equipment, summary, howTo} = exerciseObj;
+
+    const { name, img, equipment, summary, howTo } = exerciseObj;
 
     return (
-        <main className="info-body">
+        <main className="info-body d-flex flex-column min-vh-100">
             <div className="save-to-profile btn button-col btn-lg my-5">
                 <div>
                     <p>Save to Profile</p>

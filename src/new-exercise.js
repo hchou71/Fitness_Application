@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-export function NewExercise (props) {
+export function NewExercise(props) {
 
     const [numRows, setNumRows] = useState(1);
 
@@ -15,7 +15,7 @@ export function NewExercise (props) {
     }
 
     return (
-        <div className='back-main'>
+        <div className='back-main d-flex flex-column min-vh-100'>
             <header className="progress-pg">
                 <div className="container-fluid">
                     <h1>Log Your Workout</h1>
@@ -28,34 +28,34 @@ export function NewExercise (props) {
             </main>
 
 
-        <form className="container form-container">
-            <div className="row progress-row">
-                <div className="col-12">
-                    <input type="text" className="form-control" placeholder="Workout Name" aria-label="Workout"/>
+            <form className="container form-container">
+                <div className="row progress-row">
+                    <div className="col-12">
+                        <input type="text" className="form-control" placeholder="Workout Name" aria-label="Workout" />
+                    </div>
                 </div>
-            </div>
-            <Table numRows={numRows}/>
-            <div className="row progress-row">
-                <div className="col-4">
-                    <button className="btn btn-primary" type="button" onClick={handleAddClick}>Add Row</button>
+                <Table numRows={numRows} />
+                <div className="row progress-row">
+                    <div className="col-4">
+                        <button className="btn btn-primary" type="button" onClick={handleAddClick}>Add Row</button>
+                    </div>
+                    <div className="col-4">
+                        <button className="btn btn-danger" type="button" onClick={handleDeleteClick}>Delete Row</button>
+                    </div>
+                    <div className="col-4">
+                        <button className="btn btn-success" type="button">Submit</button>
+                    </div>
                 </div>
-                <div className="col-4">
-                    <button className="btn btn-danger" type="button" onClick={handleDeleteClick}>Delete Row</button>
-                </div>
-                <div className="col-4">
-                    <button className="btn btn-success" type="button">Submit</button>
-                </div>
-            </div>
-        </form>
-    </div>
+            </form>
+        </div>
     )
-} 
+}
 
 function Table(props) {
     const numRows = props.numRows;
 
     const allRows = [...Array(numRows)].map((e, i) => {
-        return <TableRow key={i}/>;
+        return <TableRow key={i} />;
     })
 
     return allRows;
@@ -63,16 +63,16 @@ function Table(props) {
 
 function TableRow() {
 
-    return(
+    return (
         <div className="row progress-row">
             <div className="col-8">
-                <input type="text" className="form-control" placeholder="Exercise" aria-label="Exercise"/>
+                <input type="text" className="form-control" placeholder="Exercise" aria-label="Exercise" />
             </div>
             <div className="col-2">
-                <input type="number" className="form-control" placeholder="Sets" aria-label="Sets" min="0"/>
+                <input type="number" className="form-control" placeholder="Sets" aria-label="Sets" min="0" />
             </div>
             <div className="col-2">
-                <input type="number" className="form-control" placeholder="Reps" aria-label="Reps" min="0"/>
+                <input type="number" className="form-control" placeholder="Reps" aria-label="Reps" min="0" />
             </div>
         </div>
     );

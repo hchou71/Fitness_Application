@@ -23,14 +23,14 @@ export function ExercisePage(props) {
     }
 
     return (
-        <div>
+        <div className='d-flex flex-column min-vh-100'>
             <header className="exercise-header px-5 container-fluid">
                 <h1>Search for Exercises</h1>
             </header>
             <main className="p-5 back-main">
                 <div className="exercise-body">
-                    <FilterBar exercises={exercises} sortByCallback={sortBy}/>
-                    <ExerciseBody displayedExercises={displayedExercises}/>
+                    <FilterBar exercises={exercises} sortByCallback={sortBy} />
+                    <ExerciseBody displayedExercises={displayedExercises} />
                 </div>
             </main>
         </div>

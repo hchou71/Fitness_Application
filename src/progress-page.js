@@ -1,8 +1,8 @@
 import React from 'react';
 
-export function ProgressPage () {
+export function ProgressPage() {
     return (
-        <div className='back-main'>
+        <div className='back-main d-flex flex-column min-vh-100'>
             <header className="fitness-track-pg">
                 <div className="container-fluid">
                     <h1>Your Fitness Journey</h1>
@@ -11,9 +11,9 @@ export function ProgressPage () {
 
             <main>
                 <h2>Fitness 340 emphasizes a strong importance of health and fitness with the aid of a fitness journal. We
-                believe that our users
-                should have the right to input their workout data and to be able to easily go back and access these past
-                workouts as references.
+                    believe that our users
+                    should have the right to input their workout data and to be able to easily go back and access these past
+                    workouts as references.
                 </h2>
 
                 <div className="option-container">

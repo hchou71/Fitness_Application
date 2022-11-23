@@ -3,7 +3,7 @@ import React from 'react';
 export function LoginPage(props) {
 
     return (
-        <div className='login-page'>
+        <div className='login-page d-flex flex-column min-vh-100'>
             <h1 className='header'>Fitness 340</h1>
 
             <main className="login-content">
