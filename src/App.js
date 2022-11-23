@@ -13,17 +13,17 @@ function App(props) {
     <div className='home-exa'>
       <Navbar />
 
-      {/* <LoginPage /> */}
-
+      <LoginPage />
       {/* <HomePage /> */}
-      {/* <DetailsPage exerciseObj={props.exercises[0]}/> */}
+      {/* <DetailsPage exerciseObj={props.exercises[0]} /> */}
+      {/* <ProgressPage /> */}
       {/* <PrvWorkout /> */}
-      {/* <ExercisePage exercises={props.exercises}/> */}
+      {/* <ExercisePage exercises={props.exercises} /> */}
       {/* <NewExercise /> */}
-      {/* <DiscussionPage messageData={props.messageData}/> */}
-      {/* <ProgressPage/> */}
+      {/* <DiscussionPage messageData={props.messageData} /> */}
 
-      <Footer/>
+
+      <Footer />
 
     </div>
   )
