@@ -13,13 +13,13 @@ function App(props) {
     <div className='home-exa'>
       <Navbar />
 
-      <LoginPage />
-      {/* <HomePage /> */}
+      {/*<LoginPage />*/}
+      {/*<HomePage />*/}
       {/* <DetailsPage exerciseObj={props.exercises[0]} /> */}
-      {/* <ProgressPage /> */}
-      {/* <PrvWorkout /> */}
+      {/*<ProgressPage /> /*}
+      {/*<PastExercises />*/}
       {/* <ExercisePage exercises={props.exercises} /> */}
-      {/* <NewExercise /> */}
+      <NewExercise />
       {/* <DiscussionPage messageData={props.messageData} /> */}
 
 
