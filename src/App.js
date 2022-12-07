@@ -15,11 +15,11 @@ function App(props) {
 
       {/*<LoginPage />*/}
       {/*<HomePage />*/}
-      {/* <DetailsPage exerciseObj={props.exercises[0]} /> */}
-      {/*<ProgressPage /> /*}
+      <DetailsPage exerciseObj={props.exercises[0]} />
+      {/*<ProgressPage /> */}
       {/*<PastExercises />*/}
       {/* <ExercisePage exercises={props.exercises} /> */}
-      <NewExercise />
+      {/*<NewExercise /> */}
       {/* <DiscussionPage messageData={props.messageData} /> */}
 
 

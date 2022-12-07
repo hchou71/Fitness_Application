@@ -562,7 +562,7 @@
   }
 
   .login-page>.header {
-    font-size: 10vw;
+    font-size: 10rem;
     text-align: center;
     align-items: center;
     font-family: 'Bebas Neue', sans-serif;
@@ -576,7 +576,7 @@
   }
 
   .exer>h1 {
-    font-size: 10vw;
+    font-size: 10rem;
     text-align: center;
     align-items: center;
     font-family: 'Bebas Neue', sans-serif;
