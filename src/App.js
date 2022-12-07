@@ -14,8 +14,8 @@ function App(props) {
       <Navbar />
 
       {/*<LoginPage />*/}
-      {/*<HomePage />*/}
-      <DetailsPage exerciseObj={props.exercises[0]} />
+      <HomePage />
+      {/*<DetailsPage exerciseObj={props.exercises[0]} />*/}
       {/*<ProgressPage /> */}
       {/*<PastExercises />*/}
       {/* <ExercisePage exercises={props.exercises} /> */}
