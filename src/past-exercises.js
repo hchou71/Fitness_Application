@@ -10,7 +10,7 @@ function Header(props) {
     )
 }
 
-export function PrvWorkout(props) {
+export function PastExercises(props) {
     return (
         <div className='back-main d-flex flex-column min-vh-100'>
             <Header />

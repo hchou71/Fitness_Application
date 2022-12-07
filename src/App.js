@@ -4,7 +4,7 @@ import { NewExercise } from './new-exercise.js';
 import { DiscussionPage } from './discussion.js';
 import { ExercisePage } from './exercise';
 import { DetailsPage } from './exercise-details';
-import { PrvWorkout } from './PrvWorkout';
+import { PastExercises } from './past-exercises';
 import { ProgressPage } from './progress-page.js';
 import { LoginPage } from './login';
 
