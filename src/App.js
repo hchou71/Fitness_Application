@@ -21,10 +21,9 @@ function App(props) {
         <Route path="login" element={<LoginPage />} />
         <Route path="" element={<HomePage />} />
         <Route path="exercise-details" element={<DetailsPage exerciseObj={props.exercises[0]} />} />
-        <Route path="track-progress" element={<ProgressPage />} > 
-          <Route path="previous-workouts" element={<PastExercises />} />
-          <Route path="new-exercise" element={<NewExercise />} />
-        </Route>
+        <Route path="track-progress" element={<ProgressPage />} /> 
+        <Route path="previous-workouts" element={<PastExercises />} />
+        <Route path="new-exercise" element={<NewExercise />} />
         <Route path="search" element={<ExercisePage exercises={props.exercises} />} />
         <Route path="discussion" element={<DiscussionPage messageData={props.messageData} />} />
       </Routes>

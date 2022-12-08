@@ -25,7 +25,7 @@ export function ProgressPage() {
                                     <h3 className="card-title">Log Your Workout</h3>
                                     <p className="card-text">Log your current workout here so you can view it for future workouts!
                                     </p>
-                                    <Link to="new-exercise" className="btn btn-primary" role="button">Log</Link>
+                                    <Link to="/new-exercise" className="btn btn-primary" role="button">Log</Link>
                                 </div>
                             </div>
                         </div>
@@ -36,7 +36,7 @@ export function ProgressPage() {
                                     <p className="card-text">Forgot what you worked out earlier this week? Can't remember a killer
                                         workout you had in the past?
                                         View your previous workouts with our easy to use workout viewer.</p>
-                                    <Link to="previous-workouts" className="btn btn-primary" role="button">View</Link>
+                                    <Link to="/previous-workouts" className="btn btn-primary" role="button">View</Link>
                                 </div>
                             </div>
                         </div>
