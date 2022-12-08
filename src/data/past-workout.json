@@ -1,0 +1,46 @@
+[
+  {
+    "UserID": "Sponge Bob",
+    "Past-exercise": [
+      {
+        "workout-name": "pullup",
+        "sets": 3,
+        "reps": 5
+      },
+      {
+        "workout-name": "pushup",
+        "sets": 3,
+        "reps": 15
+      }]
+  },
+  {
+    "UserID": "Plankton",
+    "Past-exercise": [
+      {
+        "workout-name": "pullup",
+        "sets": 3,
+        "reps": 5
+      },
+      {
+        "workout-name": "pushup",
+        "sets": 3,
+        "reps": 15
+      }]
+  },
+  {
+    "UserID": "Sandy",
+    "Past-exercise": [
+      {
+        "workout-name": "benchpress",
+        "sets": 3,
+        "reps": 12,
+        "weight(lb)": 110
+      },
+      {
+        "workout-name": "hammer curls",
+        "sets": 3,
+        "reps": 15,
+        "weight(lb)": 40
+      }]
+  }
+]
