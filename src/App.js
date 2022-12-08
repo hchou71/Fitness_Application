@@ -1,7 +1,7 @@
 import React from 'react';
 import { Navbar, HomePage, Footer } from './Home';
 import { NewExercise } from './new-exercise.js';
-import { DiscussionPage } from './discussion.js';
+import { DiscussionPage } from './DiscussionPage.js';
 import { ExercisePage } from './exercise';
 import { DetailsPage } from './exercise-details';
 import { PastExercises } from './past-exercises';
