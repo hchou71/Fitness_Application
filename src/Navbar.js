@@ -1,10 +1,11 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 
 export function Navbar(props) {
     return (
         <nav className="navbar navbar-expand-lg navbar-dark" >
             <div className="container-fluid">
-                <a className="navbar-brand" href="#">Fitness 340</a>
+                <Link className="navbar-brand" href="#">Fitness 340</Link>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -13,16 +14,16 @@ export function Navbar(props) {
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                         <li className="nav-item ">
-                            <a className="nav-link" aria-label="Home Page" href="index.html">Home</a>
+                            <Link className="nav-link" aria-label="Home Page" to="">Home</Link>
                         </li>
                         <li className="nav-item ">
-                            <a className="nav-link" aria-label="Progress Page" href="progress.html">Progress Tracker</a>
+                            <Link className="nav-link" aria-label="Progress Page" to="track-progress">Progress Tracker</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" aria-label="Exercise Search Page" href="exercise.html">Exercise Searcher</a>
+                            <Link className="nav-link" aria-label="Exercise Search Page" to="search">Exercise Searcher</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" aria-label="Discussion page" href="discussion.html">Discussion</a>
+                            <Link className="nav-link" aria-label="Discussion page" to="discussion">Discussion</Link>
                         </li>
                     </ul>
                 </div>

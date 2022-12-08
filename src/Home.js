@@ -1,5 +1,6 @@
 import React from 'react';
 import { Header } from './Header';
+import { Link } from 'react-router-dom';
 
 export function HomePage() {
     return (
@@ -27,23 +28,23 @@ function Features() {
             < div className=" col-lg-4 col-12 p-2 border rounded" >
                 <h2 className="text-dark">Progress Tracker</h2>
                 <p>Track your fitness progress here with our easy to use Fitness Tracker.</p>
-                <a className="btn" href="progress.html" role="button">Track »</a>
+                <Link className="btn" to="track-progress" role="button">Track »</Link>
             </div >
 
             <div className="col-lg-4 col-12 p-2 border rounded">
                 <h2 className="text-dark">Search Your Exercise</h2>
                 <p>Not sure which muscle group to target today? Use our Exercise Search feature to find the
                     perfect workout for you! </p>
-                <a className="btn" href="exercise.html" role="button">Find Exercises »</a>
+                <Link className="btn" to="search" role="button">Find Exercises »</Link>
             </div>
 
             <div className=" col-lg-4 col-12 p-2 border rounded">
                 <h2 className="text-dark">Discussion & Chat</h2>
-                <p>Have questions about fitness and living a healthy lifestyle? Post a question and
+                <p>Have questions about fitness and living Link healthy lifestyle? Post Link question and
                     discuss
                     with fellow Fitness 340 members today!
                 </p>
-                <a className="btn" href="discussion.html" role="button">Discuss »</a>
+                <Link className="btn" to="discussion" role="button">Discuss »</Link>
             </div>
         </div >
     )

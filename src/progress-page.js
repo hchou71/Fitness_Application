@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link, Outlet, Navigate } from 'react-router-dom';
 
 export function ProgressPage() {
     return (
@@ -24,7 +25,7 @@ export function ProgressPage() {
                                     <h3 className="card-title">Log Your Workout</h3>
                                     <p className="card-text">Log your current workout here so you can view it for future workouts!
                                     </p>
-                                    <a href="new-exercise.html" className="btn btn-primary" role="button">Log</a>
+                                    <Link to="new-exercise" className="btn btn-primary" role="button">Log</Link>
                                 </div>
                             </div>
                         </div>
@@ -35,13 +36,15 @@ export function ProgressPage() {
                                     <p className="card-text">Forgot what you worked out earlier this week? Can't remember a killer
                                         workout you had in the past?
                                         View your previous workouts with our easy to use workout viewer.</p>
-                                    <a href="past-workouts.html" className="btn btn-primary" role="button">View</a>
+                                    <Link to="previous-workouts" className="btn btn-primary" role="button">View</Link>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </main>
+
+            <Outlet />
         </div>
     )
 }
