@@ -267,34 +267,9 @@
 }
 
 .nav-container {
-  width: 100%;
-  margin-left: 0;
-  background-color: #e0e1dd;
-  border-top-right-radius: 0.5rem;
-  border-top-left-radius: 0.5rem;
-  position: sticky;
-  top: 0;
-  height: 8vh;
-  display: flex;
-  align-items: flex-end;
-  border-bottom: solid 0.5px #54627c;
-}
 
-.nav-content {
-  width: 70vw;
-  height: 5vh;
-  border-top-right-radius: 0.5rem;
-  border-top-left-radius: 0.5rem;
-  margin-left: auto;
-  margin-right: auto;
-  display: flex;
-  align-items: flex-end;
-  font-size: large;
-  background-color: #e0e1dd;
-}
+  background-color: #1B263B;
 
-.nav-content .material-icons {
-  font-size: 15px;
 }
 
 .post {
@@ -631,10 +606,6 @@
     background-position: center;
     background-size: cover;
     font-family: 'Bebas Neue', sans-serif;
-  }
-
-  nav {
-    background-color: #1B263B;
   }
 
   .container {
