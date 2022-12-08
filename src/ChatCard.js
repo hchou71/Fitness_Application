@@ -24,13 +24,17 @@ export function ChatCard(props) {
 
           </div>
         </div>
-        <div className="post-row content">
-          <h2>{title}</h2>
-          <a href="full-post.html">
-            <p>
-              {post}
-            </p>
-          </a>
+        <div className="post-row content chat-body">
+          <div>
+            <h2>{title}</h2>
+          </div>
+          <div>
+            <a href="full-post.html">
+              <p>
+                {post}
+              </p>
+            </a>
+          </div>
         </div>
         <div className="post-row meta2">
           <div className="col-4 col-sm-2">

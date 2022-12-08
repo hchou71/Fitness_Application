@@ -309,7 +309,10 @@
 
 .post-row {
   display: flex;
-  flex-wrap: wrap;
+}
+
+.chat-body {
+  flex-direction: column;
 }
 
 .meta {
@@ -337,6 +340,7 @@
   font-size: large;
   padding-top: 5px;
   overflow: hidden;
+  float: left;
 }
 
 .content p {
