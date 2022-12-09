@@ -4,16 +4,17 @@ import './index.css';
 import App from './App';
 import 'bootstrap/dist/css/bootstrap.css';
 import { BrowserRouter } from 'react-router-dom';
+import 'whatwg-fetch';
 
 import SAMPLE_EXERCISES from './data/exercise-information.json';
-import SAMPLE_DISCUSSION from './data/discussion-post.json';
+const SAMPLE_PAST = '../public/past-workout.json';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
     <React.StrictMode>
-      <App exercises={SAMPLE_EXERCISES} messageData={SAMPLE_DISCUSSION}/>
+      <App exercises={SAMPLE_EXERCISES} url={SAMPLE_PAST}/>
     </React.StrictMode>
   </BrowserRouter>
 );

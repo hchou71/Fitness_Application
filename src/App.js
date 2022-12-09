@@ -4,7 +4,7 @@ import { NavBar } from './Navbar';
 import { Footer } from './Footer';
 import { HomePage } from './Home';
 import { NewExercise } from './new-exercise.js';
-import { DiscussionPage } from './DiscussionPage.js';
+import { PastWorkoutTest } from './PastWorkoutTest';
 import { ExercisePage } from './exercise';
 import { DetailsPage } from './exercise-details';
 import { PastExercises } from './past-exercises';
@@ -26,7 +26,7 @@ function App(props) {
         <Route path="previous-workouts" element={<PastExercises />} />
         <Route path="new-exercise" element={<NewExercise />} />
         <Route path="search" element={<ExercisePage exercises={props.exercises} />} />
-        <Route path="discussion" element={<DiscussionPage messageData={props.messageData} />} />
+        <Route path="discussion" element={<PastWorkoutTest url={props.url} />} />
       </Routes>
 
       <Footer />

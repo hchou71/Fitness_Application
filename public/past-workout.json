@@ -1,6 +1,7 @@
 [
   {
     "UserID": "Sponge Bob",
+    "Workout": "Bicept + Triceps",
     "Past-exercise": [
       {
         "workout-name": "pullup",
@@ -15,32 +16,36 @@
   },
   {
     "UserID": "Plankton",
+    "Workout": "Leg Killer",
     "Past-exercise": [
       {
-        "workout-name": "pullup",
+        "workout-name": "Leg Press",
         "sets": 3,
-        "reps": 5
+        "reps": 8,
+        "weight": 400
       },
       {
-        "workout-name": "pushup",
+        "workout-name": "Squats",
         "sets": 3,
-        "reps": 15
+        "reps": 10,
+        "weight": 220
       }]
   },
   {
     "UserID": "Sandy",
+    "Workout": "UpperBody",
     "Past-exercise": [
       {
         "workout-name": "benchpress",
         "sets": 3,
         "reps": 12,
-        "weight(lb)": 110
+        "weight": 110
       },
       {
         "workout-name": "hammer curls",
         "sets": 3,
         "reps": 15,
-        "weight(lb)": 40
+        "weight": 40
       }]
   }
 ]
