@@ -11,6 +11,7 @@ import { PastExercises } from './past-exercises';
 import { ProgressPage } from './progress-page.js';
 import { LoginPage } from './login.js';
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
+import { getDatabase, ref, set as firebaseSet, onValue, push as firebasePush } from 'firebase/database'; //realtime
 
 function App(props) {
 
@@ -21,14 +22,19 @@ function App(props) {
     onAuthStateChanged(auth, (firebaseUser) => {
       if(firebaseUser) {
         firebaseUser.userId = firebaseUser.uid;
-        firebaseUser.userName = firebaseUser.displayName;
+        firebaseUser.userName = firebaseUser.displayName;;
         setCurrentUser(firebaseUser);
+        const db = getDatabase(); //"the database"
+        const UserRef = ref(db, "Users");
+        firebaseSet(UserRef, );
       } else {
         console.log("Logged Out");
         setCurrentUser(null);
       }
     })
   })
+
+  console.log(currentUser);
 
   function RequireAuth() {
     if (currentUser === null) {
