@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-
+import { getDatabase } from 'firebase/database';
 
 export function NewExercise(props) {
 
     const [numRows, setNumRows] = useState(1);
     // const [workoutName, setWorkoutName] = useState({});
     // const [rowObj, setRowObj] = useState(null);
-
+    const db = getDatabase();
 
     function handleAddClick(event) {
         setNumRows(numRows + 1);
@@ -29,7 +29,7 @@ export function NewExercise(props) {
     const handleSubmit = (event) => {
         event.preventDefault();
         const Length = event.target.length;
-        for(let i = 1; i < Length - 3; i++){
+        for (let i = 1; i < Length - 3; i++) {
             console.log(event.target[i].value);
         }
     }
@@ -51,10 +51,11 @@ export function NewExercise(props) {
             <form className="container form-container" onSubmit={handleSubmit}>
                 <div className="row progress-row">
                     <div className="col-12">
-                        <input type="text" className="form-control" placeholder="Workout Name" aria-label="Workout" /> {/*name='workout' onChange={handleWorkoutName} value={workoutName.workout} */}
+                        <label htmlFor='workoutText'>Workout Name: </label>
+                        <input id='workoutText' type="text" className="form-control" placeholder="Workout Name" aria-label="Workout" /> {/*name='workout' onChange={handleWorkoutName} value={workoutName.workout} */}
                     </div>
                 </div>
-                <Table numRows={numRows} exercises={props.exercises}/> {/* setRowObj={setRowObj}*/}
+                <Table numRows={numRows} exercises={props.exercises} /> {/* setRowObj={setRowObj}*/}
                 <div className="row progress-row">
                     <div className="col-4">
                         <button className="btn btn-primary" type="button" onClick={handleAddClick}>Add Exercise</button>
@@ -75,7 +76,7 @@ function Table(props) {
     const numRows = props.numRows;
 
     const allRows = [...Array(numRows)].map((e, i) => {
-        return <TableRow key={i} setRowObj={props.setRowObj} exercises={props.exercises}/>;
+        return <TableRow key={i} setRowObj={props.setRowObj} exercises={props.exercises} />;
     })
 
     return allRows;
@@ -102,7 +103,7 @@ function TableRow(props) {
     return (
         <div className="row progress-row">
             <div className="col-8">
-                <input type="text" className="form-control" placeholder="Exercise" aria-label="Exercise" list='pre-exer'/> {/* onChange={handleChange} name='exercise' value={workoutInput.exercise}*/}
+                <input type="text" className="form-control" placeholder="Exercise" aria-label="Exercise" list='pre-exer' /> {/* onChange={handleChange} name='exercise' value={workoutInput.exercise}*/}
                 <datalist id="pre-exer">
                     {dummyData}
                 </datalist>
