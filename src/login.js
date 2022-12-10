@@ -1,16 +1,32 @@
 import React from 'react';
+import { StyledFirebaseAuth } from 'react-firebaseui';
+import { getAuth, EmailAuthProvider, GoogleAuthProvider} from 'firebase/auth';
 
 export function LoginPage(props) {
+
+    const auth = getAuth();
+    const uiConfigObj = {
+        signInOptions: [ 
+            { provider: EmailAuthProvider.PROVIDER_ID, requireDisplayName: true}, 
+            { provider: GoogleAuthProvider.PROVIDER_ID}
+        ],
+        signInFlow: 'popup',
+        callbacks: {
+            signInSuccessWithAuthResult: () => false
+        },
+        credentialHelper: 'none'
+    };
 
     return (
         <div className='login-page d-flex flex-column min-vh-100'>
             <h1 className='header'>Fitness 340</h1>
 
-            <main className="login-content">
+            <StyledFirebaseAuth firebaseAuth={auth} uiConfig={uiConfigObj} />
+            {/* <main className="login-content">
                 <div className="container">
                     <div className="d-flex login-page">
                         {/* Sign up button */}
-                        <div className="d-flex bfont btn button-col btn-lg my-5 px-5">
+                        {/* <div className="d-flex bfont btn button-col btn-lg my-5 px-5">
                             <div>
                                 <span className="material-icons md-48" aria-label="Sign Up">how_to_reg</span>
                             </div>
@@ -19,10 +35,10 @@ export function LoginPage(props) {
                                 <div>Up</div>
                                 <div>Now</div>
                             </div>
-                        </div>
+                        </div> */}
 
                         {/* Login button */}
-                        <div className="flex-column p-5">
+                        {/* <div className="flex-column p-5">
                             <div className="mb-3 row">
                                 <label htmlFor="inputEmail" className="col-sm-10 col-form-label">Email</label>
                                 <div className="col-sm-10">
@@ -41,7 +57,7 @@ export function LoginPage(props) {
                         </div>
                     </div>
                 </div>
-            </main>
+            </main> */}
         </div>
     );
 }
