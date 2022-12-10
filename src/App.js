@@ -10,8 +10,24 @@ import { DetailsPage } from './exercise-details';
 import { PastExercises } from './past-exercises';
 import { ProgressPage } from './progress-page.js';
 import { LoginPage } from './login.js';
+import { useEffect } from 'react';
+import { getAuth, onAuthStateChanged } from 'firebase/auth';
 
 function App(props) {
+
+  useEffect(function(){
+    const auth = getAuth();
+    onAuthStateChanged(auth, (firebaseUser)=>{
+      if(firebaseUser) {
+        console.log("logged in as", firebaseUser.displayName);
+        console.log(firebaseUser);
+      } else {
+        console.log("logged out");
+      }
+    })
+
+  },[]);
+
   return (
     <div>
       {/* classname="home-exa"  */}
