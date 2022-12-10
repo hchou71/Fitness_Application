@@ -8,7 +8,8 @@ export function NewExercise(props) {
 
     // const db = getDatabase();
 
-    const currentUser = props.currentUser;
+    const currentUserId = props.currentUser.uid;
+    console.log(currentUserId);
 
     function handleAddClick(event) {
         setNumRows(numRows + 1);
@@ -38,7 +39,7 @@ export function NewExercise(props) {
         } else {
             console.log(inputArr);
             const db = getDatabase(); //"the database"
-            const UserRef = ref(db, ("Users/" + {currentUser} + "/past/" + Date.now()));
+            const UserRef = ref(db, ("Users/" + currentUserId + "/past/" + Date.now()));
             firebaseSet(UserRef, inputArr);
         }
     }
