@@ -37,7 +37,7 @@ function App(props) {
       return <Outlet />;
     }
   }
-  
+
   return (
     <div>
       {/* classname="home-exa"  */}
