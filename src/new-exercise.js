@@ -37,10 +37,10 @@ export function NewExercise(props) {
                 <Table numRows={numRows} />
                 <div className="row progress-row">
                     <div className="col-4">
-                        <button className="btn btn-primary" type="button" onClick={handleAddClick}>Add Row</button>
+                        <button className="btn btn-primary" type="button" onClick={handleAddClick}>Add Exercise</button>
                     </div>
                     <div className="col-4">
-                        <button className="btn btn-danger" type="button" onClick={handleDeleteClick}>Delete Row</button>
+                        <button className="btn btn-danger" type="button" onClick={handleDeleteClick}>Remove Exercise</button>
                     </div>
                     <div className="col-4">
                         <button className="btn btn-success" type="button">Submit</button>
@@ -66,13 +66,13 @@ function TableRow() {
     return (
         <div className="row progress-row">
             <div className="col-8">
-                <input type="text" className="form-control" placeholder="Exercise" aria-label="Exercise" />
+                <input type="text" className="form-control" placeholder="Exercise" aria-label="Exercise"/>
             </div>
             <div className="col-2">
-                <input type="number" className="form-control" placeholder="Sets" aria-label="Sets" min="0" />
+                <input type="number" className="form-control" placeholder="Sets" aria-label="Sets" min="0"/>
             </div>
             <div className="col-2">
-                <input type="number" className="form-control" placeholder="Reps" aria-label="Reps" min="0" />
+                <input type="number" className="form-control" placeholder="Reps" aria-label="Reps" min="0"/>
             </div>
         </div>
     );
