@@ -10,9 +10,7 @@ import { DetailsPage } from './exercise-details';
 import { PastExercises } from './past-exercises';
 import { ProgressPage } from './progress-page.js';
 import { Example } from './Navbar';
-import { getAuth, onAuthStateChanged } from 'firebase/auth';
 import { LoginPage } from './login.js';
-import { useEffect } from 'react';
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
 
 function App(props) {
