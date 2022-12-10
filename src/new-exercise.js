@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { getDatabase } from 'firebase/database';
+import { getDatabase, ref, set as firebaseSet, onValue, push as firebasePush } from 'firebase/database'; //realtime
+
 
 export function NewExercise(props) {
 
     const [numRows, setNumRows] = useState(1);
-    // const [workoutName, setWorkoutName] = useState({});
-    // const [rowObj, setRowObj] = useState(null);
+
     const db = getDatabase();
 
     function handleAddClick(event) {
@@ -18,21 +18,29 @@ export function NewExercise(props) {
         }
     }
 
-    // const handleWorkoutName = (event) => {
-    //     let name = event.target.value
-    //     setWorkoutName(name);
-    // }
-
-    // console.log(workoutName);
-    // console.log(rowObj);
 
     const handleSubmit = (event) => {
         event.preventDefault();
         const Length = event.target.length;
-        for (let i = 1; i < Length - 3; i++) {
-            console.log(event.target[i].value);
+        const inputArr = [];
+        let hasEmpty = false;
+        for (let i = 0; i < Length - 3; i++) {
+            if(event.target[i].value === "") {
+                hasEmpty = true;
+            } else {
+                inputArr.push(event.target[i].value);
+            }
+        }
+        if (hasEmpty) {
+            alert('Incomplete Form: Please Fill Out All Fields');
+        } else {
+            console.log(inputArr);
+            const db = getDatabase(); //"the database"
+            const UserRef = ref(db, "Users/billy8817/past/" + Date.now());
+            firebaseSet(UserRef, inputArr);
         }
     }
+
 
     return (
         <div className='back-main d-flex flex-column min-vh-100'>
@@ -52,10 +60,10 @@ export function NewExercise(props) {
                 <div className="row progress-row">
                     <div className="col-12">
                         <label htmlFor='workoutText'>Workout Name: </label>
-                        <input id='workoutText' type="text" className="form-control" placeholder="Workout Name" aria-label="Workout" /> {/*name='workout' onChange={handleWorkoutName} value={workoutName.workout} */}
+                        <input id='workoutText' type="text" className="form-control" placeholder="Workout Name" aria-label="Workout" /> 
                     </div>
                 </div>
-                <Table numRows={numRows} exercises={props.exercises} /> {/* setRowObj={setRowObj}*/}
+                <Table numRows={numRows} exercises={props.exercises} />
                 <div className="row progress-row">
                     <div className="col-4">
                         <button className="btn btn-primary" type="button" onClick={handleAddClick}>Add Exercise</button>
@@ -83,19 +91,7 @@ function Table(props) {
 }
 
 function TableRow(props) {
-    // const [workoutInput, setWorkoutInput] = useState({});
 
-    // const setRow = props.setRowObj;
-
-    // setRow(workoutInput);
-
-    // const handleChange = (event) => {
-    //     const name = event.target.name
-    //     const value = event.target.value
-    //     setWorkoutInput(values => ({
-    //         ...values, [name]: value
-    //     }))
-    // }
     let dummyData = props.exercises.map((exer, i) => {
         return <option key={i}>{exer.name}</option>
     })
@@ -103,16 +99,16 @@ function TableRow(props) {
     return (
         <div className="row progress-row">
             <div className="col-8">
-                <input type="text" className="form-control" placeholder="Exercise" aria-label="Exercise" list='pre-exer' /> {/* onChange={handleChange} name='exercise' value={workoutInput.exercise}*/}
+                <input type="text" className="form-control" placeholder="Exercise" aria-label="Exercise" list='pre-exer' /> 
                 <datalist id="pre-exer">
                     {dummyData}
                 </datalist>
             </div>
             <div className="col-2">
-                <input type="number" className="form-control" placeholder="Sets" aria-label="Sets" min="0" /> {/* onChange={handleChange} name='sets' value={workoutInput.sets}*/}
+                <input type="number" className="form-control" placeholder="Sets" aria-label="Sets" min="0" /> 
             </div>
             <div className="col-2">
-                <input type="number" className="form-control" placeholder="Reps" aria-label="Reps" min="0" /> {/* onChange={handleChange} name='reps' value={workoutInput.reps}*/}
+                <input type="number" className="form-control" placeholder="Reps" aria-label="Reps" min="0" />
             </div>
         </div>
     );
