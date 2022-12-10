@@ -22,7 +22,7 @@ function App(props) {
     onAuthStateChanged(auth, (firebaseUser) => {
       if(firebaseUser) {
         firebaseUser.userId = firebaseUser.uid;
-        firebaseUser.userName = firebaseUser.displayName;;
+        firebaseUser.userName = firebaseUser.displayName;
         setCurrentUser(firebaseUser);
         const db = getDatabase(); //"the database"
         const UserRef = ref(db, "Users");
