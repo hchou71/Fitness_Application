@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Routes, Route, Outlet, Navigate } from 'react-router-dom';
+import { Routes, Route, Outlet } from 'react-router-dom';
 import { NavBar } from './Navbar.js';
 import { Footer } from './Footer.js';
 import { HomePage } from './Home.js';
@@ -11,18 +11,32 @@ import { PastExercises } from './past-exercises';
 import { ProgressPage } from './progress-page.js';
 import { LoginPage } from './login.js';
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
+import { getDatabase, ref, set as firebaseSet, onValue, push as firebasePush } from 'firebase/database'; //realtime
 
 function App(props) {
 
   const [currentUser, setCurrentUser] = useState(null);
+  const userObj = {
+    "billy8817": {
+      name: "billy",
+      past: {
+        time1: ["Chest", "Bench Press", 3, 20],
+        time2: ["Back, lat pull", 3, 100]
+      }
+
+    }
+  };
 
   useEffect(() => {
     const auth = getAuth();
     onAuthStateChanged(auth, (firebaseUser) => {
-      if(firebaseUser) {
+      if (firebaseUser) {
         firebaseUser.userId = firebaseUser.uid;
         firebaseUser.userName = firebaseUser.displayName;
         setCurrentUser(firebaseUser);
+        const db = getDatabase(); //"the database"
+        const UserRef = ref(db, "Users");
+        firebaseSet(UserRef, userObj);
       } else {
         console.log("Logged Out");
         setCurrentUser(null);
@@ -30,12 +44,14 @@ function App(props) {
     })
   })
 
+  //console.log(currentUser);
+
   function RequireAuth() {
     if (currentUser === null) {
       return (
         <div>
           <h1 className="py-5">Please sign in to view this page.</h1>
-          <LoginPage currentUser={currentUser}/>
+          <LoginPage currentUser={currentUser} />
         </div>
       );
     } else {
@@ -46,15 +62,15 @@ function App(props) {
   return (
     <div>
       {/* classname="home-exa"  */}
-      <NavBar/>
+      <NavBar />
       <Routes>
         <Route element={<RequireAuth />} >
           <Route path="track-progress" element={<ProgressPage />} />
           <Route path="previous-workouts" element={<PastExercises />} />
-          <Route path="new-exercise" element={<NewExercise exercises={props.exercises}/>} />
+          <Route path="new-exercise" element={<NewExercise exercises={props.exercises} />} />
           <Route path="discussion" element={<PastWorkoutTest url={props.url} />} />
         </Route>
-        <Route path="login" element={<LoginPage currentUser={currentUser}/>} />
+        <Route path="login" element={<LoginPage currentUser={currentUser} />} />
         <Route path="" element={<HomePage />} />
         <Route path="search" element={<ExercisePage exercises={props.exercises} />} />
         <Route path="/:exercise" element={<DetailsPage exercises={props.exercises} />} />

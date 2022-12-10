@@ -11,7 +11,7 @@ export function ProgressPage() {
             </header>
 
             <main>
-                <h2>Fitness 340 emphasizes a strong importance of health and fitness with the aid of a fitness journal. We
+                <h2 className="p-5">Fitness 340 emphasizes a strong importance of health and fitness with the aid of a fitness journal. We
                     believe that our users
                     should have the right to input their workout data and to be able to easily go back and access these past
                     workouts as references.

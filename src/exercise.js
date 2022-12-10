@@ -29,7 +29,7 @@ export function ExercisePage(props) {
             </header>
             <main className="p-5 back-main">
                 <div className="exercise-body">
-                    <FilterBar exercises={exercises} sortByCallback={sortBy} />
+                    <FilterBar exercises={exercises} sortByMuscle={sortByMuscle} sortByCallback={sortBy} />
                     <ExerciseBody displayedExercises={displayedExercises} />
                 </div>
             </main>

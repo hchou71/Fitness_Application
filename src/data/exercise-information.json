@@ -2,7 +2,6 @@
     {
         "name": "Pullups",
         "img": "img/pullups.jpg",
-        "link": "",
         "muscleWorked": "Back",
         "equipment": "Pullup bar or something similar",
         "summary": "Pullups are an excellent compound back exercise for developing muslce. Pullups primarily utilize lats and biceps, with secondary muscles including deltoids, rhomboids, and core.",
@@ -11,82 +10,73 @@
     {
         "name": "Barbell Squat",
         "img": "img/barbell-squat.jpg",
-        "link": "",
         "muscleWorked": "Quads",
-        "equipment": "",
-        "summary": "",
-        "howTo": ""
+        "equipment": "Barbell",
+        "summary": "The squat is one of the primary compound exercises, meaning that you use more than one joint to perform the exercise. It places significant strain on the quads, hamstrings and glutes, making it one of the greatest “bang for your buck” exercises known to man. It also strengthens the joints, ligaments and tendons around the knee and hips. Since the back squat works so much of the body, performing it burns a heck of a lot of calories, aiding your weight loss pursuits. It also boosts your natural production of testosterone and growth hormones.",
+        "howTo": "If you’re a beginner, ensure you’ve got the movement pattern and range of motion nailed by first incorporating unweighted squats into your workouts. Then and only then should you progress to weighted variations. Take the bar out of the rack with it resting on your rear shoulder muscles. Take two big steps back and stand with your feet roughly shoulder-width apart, toes pointing slightly out. Keep your spine in alignment by looking at a spot on the floor about two metres in front of you, then “sit” back and down as if you’re aiming for a chair. Descend until your hip crease is below your knee. Keep your weight on your heels as you drive back up."
     },
     {
         "name": "Bench Press",
         "img": "img/bench-press.jpg",
-        "link": "",
         "muscleWorked": "Chest",
-        "equipment": "",
-        "summary": "",
-        "howTo": ""
+        "equipment": "Barbell, Flat Bench",
+        "summary": "A bench press is an exercise that can be used to strengthen the muscles of the upper body, including the pectorals, arms, and shoulders. Other benefits of adding bench presses to your weight-training regimen include increasing upper body strength, improving muscular endurance, and even preparing your upper body to do movements like pushups. They also can be an effective strengthening exercise for sports like sprinting, hockey, and football.",
+        "howTo": "Lie on your back on a flat bench. Grip a barbell with hands slightly wider than shoulder width. The bar should be directly over the shoulders. Press your feet firmly into the ground and keep your hips on the bench throughout the entire movement. Keep your core engaged and maintain a neutral spine position throughout the movement. Avoid arching your back. Slowly lift the bar or dumbbells off the rack, if using. Lower the bar to the chest, about nipple level, allowing elbows to bend out to the side, about 45 degrees away from the body. Stop lowering when your elbows are just below the bench. Press feet into the floor as you push the bar back up to return to starting position."
     },
     {
         "name": "Deadlift",
         "img": "img/deadlift.jpg",
-        "link": "",
         "muscleWorked": "Quads",
-        "equipment": "",
-        "summary": "",
-        "howTo": ""
+        "equipment": "Barbell",
+        "summary": "The deadlift is a great way to build strong legs and butt. In a deadlift, you lift the weight from the ground to thigh-level using primarily your leg and hip muscles, but with the assistance of most of the large muscle groups of your body. The deadlift is usually performed with a bar and plates or a fixed barbell, but you can also do it with dumbbells. It is a specialty of powerlifters that you shouldn't ignore in general fitness weight training. Make the deadlift part of your strength training workouts to build muscle and functional fitness.",
+        "howTo": "Position the feet shoulder-width apart (or not much more) with toes under the bar. The feet point straight ahead, or they can angle out slightly. Heels should stay flat on the surface. When you lift, the bar will travel close to the shins and may even graze them. Maintain a neutral spine position.Stabilize the abdominal muscles by bracing them. Squat down, bending at the knees. The form for descending to the bar is similar (but not identical) to the squat, with your back straight or arched slightly and not rounded at the shoulders or spine. Grasp the bar just outside the line of the knees with an overhand or mixed grip. Lift the bar by pushing upward with the legs from the knees. Breathe out on exertion. Be careful not to raise the hips first so the trunk moves forward and the back becomes rounded. Don’t try to haul the bar up with your arms. The arms stay extended under tension while gripping the bar as the legs push up. Think of the legs and shoulders moving upward in unison with the hips, the balancing point. The bar should almost graze the shins and rest around thigh level as you reach full height. Pull the shoulders back as much as possible without bending backward. Lower the bar to the floor with a reverse motion ensuring a straight back. Repeat for your desired number of repetitions."
     },
     {
         "name": "Dumbbell Lateral Raise",
         "img": "img/dumbbell-lateral-raise.jpg",
-        "link": "",
         "muscleWorked": "Shoulders",
-        "equipment": "",
-        "summary": "",
-        "howTo": ""
+        "equipment": "Dumbbells",
+        "summary": "The dumbbell lateral raise is an upper body isolation exercise for building shoulder strength and muscle. It's a staple strength training move and is a great option for accessory work on upper body training days. This exercise particularly focuses on the lateral or medial head of the deltoid, making them appear wider and more developed.",
+        "howTo": "Pick a couple of dumbbells and stand with a straight torso and the dumbbells by your side at arms length with the palms of the hand facing you. This will be your starting position. While maintaining the torso in a stationary position (no swinging), lift the dumbbells to your side with a slight bend on the elbow and the hands slightly tilted forward as if pouring water in a glass. Continue to go up until you arms are parallel to the floor. Exhale as you execute this movement and pause for a second at the top. Lower the dumbbells back down slowly to the starting position as you inhale. Repeat for the recommended amount of repetitions."
     },
     {
         "name": "Dumbbell Shoulder Press",
         "img": "img/dumbbell-shoulder-press.jpg",
-        "link": "",
         "muscleWorked": "Shoulders",
-        "equipment": "",
-        "summary": "",
-        "howTo": ""
+        "equipment": "Dumbbells",
+        "summary": "The dumbbell shoulder press—also known as the DB shoulder press—is an exercise that involves pressing weights vertically overhead. It works the same way as the overhead shoulder press except you use dumbbells instead of a barbell. The dumbbell shoulder press can be performed seated or standing, though most people find they can lift more weight when they perform it seated. ",
+        "howTo": "First, select your dumbbells. Don’t go overboard on the weight here, because this is an exercise that suddenly feels very tough halfway through a set. You almost want to feel like you’ve picked too light a weight for the first couple of reps. Opting for too heavy a weight can also mean you risk injury to your shoulders if your form gets sloppy as a result of the load. Hold the dumbbells by your shoulders with your palms facing forwards and your elbows out to the sides and bent at a 90° angle. Without leaning back, extend through your elbows to press the weights above your head. Then slowly return to the starting position."
     },
     {
         "name": "Standing Dumbbell Calf Raise",
         "img": "img/dumbbell-standing-calf-raise.jpg",
-        "link": "",
         "muscleWorked": "Calves",
-        "equipment": "",
-        "summary": "",
-        "howTo": ""
+        "equipment": "Dumbbells",
+        "summary": "The standing dumbbell calf raise is a popular exercise to target the calf muscles of the lower leg, and in particular the gastrocnemius muscles. It can be performed for time or for reps, either two dumbbells, or one if balance is a problem and you would like to use your free hand to hold a fixed object.",
+        "howTo": "Stand with your torso upright holding two dumbbells in your hands by your sides. Place the ball of the foot on a sturdy and stable wooden board (that is around 2-3 inches tall) while your heels extend off and touch the floor. This will be your starting position. With the toes pointing either straight (to hit all parts equally), inwards (for emphasis on the outer head) or outwards (for emphasis on the inner head), raise the heels off the floor as you exhale by contracting the calves. Hold the top contraction for a second. As you inhale, go back to the starting position by slowly lowering the heels. Repeat for the recommended amount of times."
     },
     {
         "name": "Incline Machine Press",
         "img": "img/incline-machine-press.jpg",
-        "link": "",
         "muscleWorked": "Chest",
-        "equipment": "",
-        "summary": "",
-        "howTo": ""
+        "equipment": "Incline Press Machine",
+        "summary": "The machine incline bench press is a variation of the barbell incline bench press used to strengthen the muscles of the chest. It will also indirectly target the muscles of the shoulders and triceps. One would use the incline machine bench press as a way to perform the pressing movement pattern with a focus on isolating the chest. One can better isolate certain muscle groups with a machine due to its fixed movement pattern. The machine incline bench press is best added towards the end of your chest workout if you are training for hypertrophy, after you’ve used other more compound variations to work your push muscles.",
+        "howTo": "Sit on the end of the incline bench and lie back with the handles just below shoulder height. The handles should mimic the position of the bar when benching. Position your palms on the handles, inhale, and set your shoulder blades together on the bench. Press the handles to extension as you exhale but keep the shoulder blades packed. Repeat for the desired number of repetitions."
     },
     {
         "name": "Leg Curls",
         "img": "img/leg-curls.jpg",
-        "link": "",
         "muscleWorked": "Hamstrings",
-        "equipment": "",
-        "summary": "",
-        "howTo": ""
+        "equipment": "Leg curl machine (some variations don't require any equipment)",
+        "summary": "Lying leg curls (also known in the short form, leg curls) is an isolation exercise that targets the back of the leg: the hamstrings and calf muscles. It can be performed in a variety of positions and makes an excellent addition to most any lower body strength training workout. Leg curls target the hamstrings (biceps femoris, semitendinosus, and semimembranosus) and calf muscles (gastrocnemius and soleus muscles). When lowering your feet back down, your buttocks (gluteus muscles), thighs (quadriceps), and front of the shins (tibialis anterior) are activated too.",
+        "howTo": "Lie face down on the lying leg curls machine, stretching your legs out fully. The roller pad should rest just above the heels, a few inches over your calves. Grasp the support handles on each side of the machine. Exhale and flex your knees, pulling your ankles as close to your buttocks as possible. Keep your hips firmly on the bench. Hold briefly. Inhale as you return your feet to the starting position in a slow and controlled movement."
     },
     {
         "name": "Leg Extensions",
         "img": "img/leg-extensions.jpg",
-        "link": "",
         "muscleWorked": "Quads",
-        "equipment": "",
-        "summary": "",
-        "howTo": ""
+        "equipment": "Leg Extensions Machine",
+        "summary": "The seated leg extension is an isolation exercise and one used to target the muscles of the quads. This exercise can be particularly hard on the knees. So, for those with prior knee issues, it may be beneficial to stick with other movements, preferably compound, to target your quads. The leg extension is a great exercise for quad development and may be beneficial to include in your workout routines if your goals are more aesthetics-driven. The leg extension can be utilized in both leg workouts and full body workouts.",
+        "howTo": "Select the desired resistance on the weight stack and insert the pin. Adjust the seat so that the knees are directly in line with the axis of the machine. Sit down and position your shins behind the pad at the base of the machine. Take a deep breath and extend your legs as you flex your quadriceps. As you lock out the knees, exhale to complete the repetition. Slowly lower your feet back to the starting position and repeat for the desired number of repetitions."
     }
 ]
