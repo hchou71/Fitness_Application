@@ -10,7 +10,6 @@ import { DetailsPage } from './exercise-details';
 import { PastExercises } from './past-exercises';
 import { ProgressPage } from './progress-page.js';
 import { LoginPage } from './login.js';
-import { Example } from './Navbar.js';
 
 function App(props) {
   return (
