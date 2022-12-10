@@ -1,6 +1,8 @@
 import React from 'react';
 import { StyledFirebaseAuth } from 'react-firebaseui';
 import { getAuth, EmailAuthProvider, GoogleAuthProvider} from 'firebase/auth';
+// import { useAuthState } from 'react-firebase-hooks/auth';
+import { Navigate } from 'react-router-dom';
 
 export function LoginPage(props) {
 
@@ -13,6 +15,9 @@ export function LoginPage(props) {
         signInFlow: 'popup',
         callbacks: {
             signInSuccessWithAuthResult: () => false
+            // {
+            //     return <Navigate to="" />
+            // }
         },
         credentialHelper: 'none'
     };
@@ -22,6 +27,9 @@ export function LoginPage(props) {
             <h1 className='header'>Fitness 340</h1>
 
             <StyledFirebaseAuth firebaseAuth={auth} uiConfig={uiConfigObj} />
+
+            {/* <LogInAction auth={auth} setUserIsLoggedInCallback={setUserIsLoggedIn}/> */}
+
             {/* <main className="login-content">
                 <div className="container">
                     <div className="d-flex login-page">
@@ -61,3 +69,24 @@ export function LoginPage(props) {
         </div>
     );
 }
+
+// function LogInAction(props) {
+//     const auth = props.auth;
+//     const setUserIsLoggedInCallback = props.setUserIsLoggedInCallback;
+//     const [user, loading, error] = useAuthState(auth);
+
+//     if (loading) {
+//         return <p>Loading...</p>;
+//     }
+
+//     if (error) {
+//         return <p>Error: {error}</p>;
+//     }
+
+//     if (user) {
+//         setUserIsLoggedInCallback(true);
+//         return <Navigate to="" />
+//     } else {
+//         return <p>Please Sign In.</p>
+//     }
+// }

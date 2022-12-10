@@ -2,8 +2,17 @@ import React from "react";
 import { Link } from 'react-router-dom';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import { getAuth, signOut } from 'firebase/auth';
 
 export function NavBar() {
+
+    const auth = getAuth();
+
+    function handleClick(event) {
+        signOut(auth)
+            .catch(err => console.log(err));
+    }
+
     return (
 
         <Navbar variant="dark" expand="lg">
@@ -16,6 +25,7 @@ export function NavBar() {
                         <Nav.Link as={Link} aria-label="Progress Page" to="track-progress">Progress Tracker</Nav.Link>
                         <Nav.Link as={Link} aria-label="Exercise Search Page" to="search">Exercise Searcher</Nav.Link>
                         <Nav.Link as={Link} aria-label="Discussion page" to="discussion">Discussion</Nav.Link>
+                        <div className="btn text-light" onClick={handleClick}>Sign Out</div>
                     </Nav>
                 </Navbar.Collapse>
             </div>
