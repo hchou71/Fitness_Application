@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 
+
 export function NewExercise(props) {
 
     const [numRows, setNumRows] = useState(1);
@@ -54,7 +55,7 @@ export function NewExercise(props) {
                         <input type="text" className="form-control" placeholder="Workout Name" aria-label="Workout" /> {/*name='workout' onChange={handleWorkoutName} value={workoutName.workout} */}
                     </div>
                 </div>
-                <Table numRows={numRows}/> {/* setRowObj={setRowObj}*/}
+                <Table numRows={numRows} exercises={props.exercises}/> {/* setRowObj={setRowObj}*/}
                 <div className="row progress-row">
                     <div className="col-4">
                         <button className="btn btn-primary" type="button" onClick={handleAddClick}>Add Exercise</button>
@@ -75,7 +76,7 @@ function Table(props) {
     const numRows = props.numRows;
 
     const allRows = [...Array(numRows)].map((e, i) => {
-        return <TableRow key={i} setRowObj={props.setRowObj}/>;
+        return <TableRow key={i} setRowObj={props.setRowObj} exercises={props.exercises}/>;
     })
 
     return allRows;
@@ -96,12 +97,17 @@ function TableRow(props) {
     //     }))
     // }
 
-    
+    let dummyData = props.exercises.map((exer) => {
+        return <option key={exer.tostring()}>{exer.name}</option>
+    })
 
     return (
         <div className="row progress-row">
             <div className="col-8">
-                <input type="text" className="form-control" placeholder="Exercise" aria-label="Exercise" /> {/* onChange={handleChange} name='exercise' value={workoutInput.exercise}*/}
+                <input type="text" className="form-control" placeholder="Exercise" aria-label="Exercise" list='pre-exer'/> {/* onChange={handleChange} name='exercise' value={workoutInput.exercise}*/}
+                <datalist id="pre-exer">
+                    {dummyData}
+                </datalist>
             </div>
             <div className="col-2">
                 <input type="number" className="form-control" placeholder="Sets" aria-label="Sets" min="0" /> {/* onChange={handleChange} name='sets' value={workoutInput.sets}*/}

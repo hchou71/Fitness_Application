@@ -51,7 +51,7 @@ function App(props) {
         <Route element={<RequireAuth />} >
           <Route path="track-progress" element={<ProgressPage />} />
           <Route path="previous-workouts" element={<PastExercises />} />
-          <Route path="new-exercise" element={<NewExercise />} />
+          <Route path="new-exercise" element={<NewExercise />} exercises={props.exercises}/>
           <Route path="discussion" element={<PastWorkoutTest url={props.url} />} />
         </Route>
         <Route path="login" element={<LoginPage currentUser={currentUser}/>} />
