@@ -43,7 +43,7 @@ export function NewExercise(props) {
             </header>
 
             <main>
-                <h2>Track your workout progress by entering the exercise you did and inputting the amount of sets and
+                <h2 className="py-3 px-5">Track your workout progress by entering the exercise you did and inputting the amount of sets and
                     repetitions for each exercise.</h2>
             </main>
 
