@@ -9,7 +9,6 @@ import { ExercisePage } from './exercise';
 import { DetailsPage } from './exercise-details';
 import { PastExercises } from './past-exercises';
 import { ProgressPage } from './progress-page.js';
-import { LoginPage } from './login';
 import { Example } from './Navbar';
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
 import { LoginPage } from './login.js';
@@ -24,9 +23,11 @@ function App(props) {
       if(firebaseUser) {
         firebaseUser.userId = firebaseUser.uid;
         firebaseUser.userName = firebaseUser.displayName;
+        console.log(auth.currentUser)
         setCurrentUser(firebaseUser);
       } else {
         console.log("Logged Out");
+        console.log(auth.currentUser);
       }
     })
   })

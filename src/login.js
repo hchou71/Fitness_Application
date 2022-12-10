@@ -14,9 +14,10 @@ export function LoginPage(props) {
         ],
         signInFlow: 'popup',
         callbacks: {
-            signInSuccessWithAuthResult: () => {
-                return <Navigate to="" />
-            }
+            signInSuccessWithAuthResult: () => false
+            // {
+            //     return <Navigate to="" />
+            // }
         },
         credentialHelper: 'none'
     };
