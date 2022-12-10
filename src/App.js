@@ -16,16 +16,6 @@ import { getDatabase, ref, set as firebaseSet, onValue, push as firebasePush } f
 function App(props) {
 
   const [currentUser, setCurrentUser] = useState(null);
-  const userObj = {
-    "billy8817": {
-      name: "billy",
-      past: {
-        time1: ["Chest", "Bench Press", 3, 20],
-        time2: ["Back", "lat pull", 3, 100]
-      }
-
-    }
-  };
 
   useEffect(() => {
     const auth = getAuth();
@@ -34,9 +24,6 @@ function App(props) {
         firebaseUser.userId = firebaseUser.uid;
         firebaseUser.userName = firebaseUser.displayName;
         setCurrentUser(firebaseUser);
-        const db = getDatabase(); //"the database"
-        const UserRef = ref(db, "Users");
-        firebaseSet(UserRef, userObj);
       } else {
         console.log("Logged Out");
         setCurrentUser(null);

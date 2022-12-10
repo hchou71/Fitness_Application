@@ -5,11 +5,7 @@ import { getDatabase, ref, set as firebaseSet, onValue, push as firebasePush } f
 export function NewExercise(props) {
 
     const [numRows, setNumRows] = useState(1);
-
-    // const db = getDatabase();
-
     const currentUserId = props.currentUser.uid;
-    console.log(currentUserId);
 
     function handleAddClick(event) {
         setNumRows(numRows + 1);
@@ -21,8 +17,7 @@ export function NewExercise(props) {
         }
     }
 
-
-    const handleSubmit = (event) => {
+    function handleSubmit(event) {
         event.preventDefault();
         const Length = event.target.length;
         const inputArr = [];
@@ -41,9 +36,9 @@ export function NewExercise(props) {
             const db = getDatabase(); //"the database"
             const UserRef = ref(db, ("Users/" + currentUserId + "/past/" + Date.now()));
             firebaseSet(UserRef, inputArr);
+            alert("Successfully Saved");
         }
     }
-
 
     return (
         <div className='back-main d-flex flex-column min-vh-100'>
@@ -57,7 +52,6 @@ export function NewExercise(props) {
                 <h2 className="py-3 px-5">Track your workout progress by entering the exercise you did and inputting the amount of sets and
                     repetitions for each exercise.</h2>
             </main>
-
 
             <form className="container form-container" onSubmit={handleSubmit}>
                 <div className="row progress-row">

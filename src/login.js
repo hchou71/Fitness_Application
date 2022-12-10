@@ -72,24 +72,3 @@ export function LoginPage(props) {
         </div>
     );
 }
-
-// function LogInAction(props) {
-//     const auth = props.auth;
-//     const setUserIsLoggedInCallback = props.setUserIsLoggedInCallback;
-//     const [user, loading, error] = useAuthState(auth);
-
-//     if (loading) {
-//         return <p>Loading...</p>;
-//     }
-
-//     if (error) {
-//         return <p>Error: {error}</p>;
-//     }
-
-//     if (user) {
-//         setUserIsLoggedInCallback(true);
-//         return <Navigate to="" />
-//     } else {
-//         return <p>Please Sign In.</p>
-//     }
-// }
