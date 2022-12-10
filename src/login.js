@@ -1,8 +1,7 @@
 import React from 'react';
 import { StyledFirebaseAuth } from 'react-firebaseui';
-import { getAuth, EmailAuthProvider, GoogleAuthProvider} from 'firebase/auth';
+import { getAuth, EmailAuthProvider, GoogleAuthProvider } from 'firebase/auth';
 // import { useAuthState } from 'react-firebase-hooks/auth';
-import { Navigate } from 'react-router-dom';
 
 export function LoginPage(props) {
 
@@ -15,9 +14,6 @@ export function LoginPage(props) {
         signInFlow: 'popup',
         callbacks: {
             signInSuccessWithAuthResult: () => false
-            // {
-            //     return <Navigate to="" />
-            // }
         },
         credentialHelper: 'none'
     };

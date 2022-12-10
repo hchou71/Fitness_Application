@@ -34,7 +34,12 @@ function App(props) {
 
   function RequireAuth() {
     if (currentUser === null) {
-      return <Navigate to="/login" />;
+      return (
+        <div>
+          <h1 className="py-5">Please sign in to view this page.</h1>
+          <LoginPage />
+        </div>
+      );
     } else {
       return <Outlet />;
     }
