@@ -21,7 +21,7 @@ function App(props) {
       name: "billy",
       past: {
         time1: ["Chest", "Bench Press", 3, 20],
-        time2: ["Back, lat pull", 3, 100]
+        time2: ["Back", "lat pull", 3, 100]
       }
 
     }
@@ -67,7 +67,7 @@ function App(props) {
         <Route element={<RequireAuth />} >
           <Route path="track-progress" element={<ProgressPage />} />
           <Route path="previous-workouts" element={<PastExercises />} />
-          <Route path="new-exercise" element={<NewExercise exercises={props.exercises} />} />
+          <Route path="new-exercise" element={<NewExercise exercises={props.exercises} currentUser={currentUser}/>} />
           <Route path="discussion" element={<PastWorkoutTest url={props.url} />} />
         </Route>
         <Route path="login" element={<LoginPage currentUser={currentUser} />} />
