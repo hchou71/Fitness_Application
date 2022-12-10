@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from 'react-router-dom';
-import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 
@@ -9,7 +8,7 @@ export function NavBar() {
 
         <Navbar variant="dark" expand="lg">
             <div className="container-fluid nav-container">
-                <Navbar.Brand as={Link} to="home">Fitness 340</Navbar.Brand>
+                <Navbar.Brand>Fitness 340</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto mb-2 mb-lg-0">
@@ -24,10 +23,9 @@ export function NavBar() {
 
     )
 
-
 }
 
-// export function Navbar(props) {
+// export function NavBar() {
 //     return (
 //         < nav className="navbar navbar-inverse navbar-expand-lg navbar-dark" >
 //             <div className="container-fluid">

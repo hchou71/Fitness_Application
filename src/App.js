@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Routes, Route, Outlet, Navigate } from 'react-router-dom';
-import { NavBar } from './Navbar';
-import { Footer } from './Footer';
-import { HomePage } from './Home';
+import { NavBar } from './Navbar.js';
+import { Footer } from './Footer.js';
+import { HomePage } from './Home.js';
 import { NewExercise } from './new-exercise.js';
 import { PastWorkoutTest } from './PastWorkoutTest';
 import { ExercisePage } from './exercise';
@@ -12,6 +12,7 @@ import { ProgressPage } from './progress-page.js';
 import { LoginPage } from './login';
 import { Example } from './Navbar';
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
+import { LoginPage } from './login.js';
 
 function App(props) {
 

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export function Footer(props) {
     return (
@@ -37,7 +38,7 @@ export function Footer(props) {
 
             <div className="footer-set text-center p-4" >
                 &copy; 2022 FITNESS 340:
-                <a className="text-reset fw-bold" href="#">fitness340.com</a>
+                <Link className="text-reset fw-bold" aria-label="Home Page" to=""> fitness340.com </Link>
             </div>
         </footer >
     )
