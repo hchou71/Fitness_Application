@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-
+import { getDatabase } from 'firebase/database';
 
 export function NewExercise(props) {
 
     const [numRows, setNumRows] = useState(1);
     // const [workoutName, setWorkoutName] = useState({});
     // const [rowObj, setRowObj] = useState(null);
-
+    const db = getDatabase();
 
     function handleAddClick(event) {
         setNumRows(numRows + 1);
@@ -51,7 +51,7 @@ export function NewExercise(props) {
             <form className="container form-container" onSubmit={handleSubmit}>
                 <div className="row progress-row">
                     <div className="col-12">
-                        <label for='workoutText'>Workout Name: </label>
+                        <label htmlFor='workoutText'>Workout Name: </label>
                         <input id='workoutText' type="text" className="form-control" placeholder="Workout Name" aria-label="Workout" /> {/*name='workout' onChange={handleWorkoutName} value={workoutName.workout} */}
                     </div>
                 </div>
