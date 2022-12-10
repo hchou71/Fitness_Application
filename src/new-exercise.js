@@ -7,7 +7,6 @@ export function NewExercise(props) {
     // const [workoutName, setWorkoutName] = useState({});
     // const [rowObj, setRowObj] = useState(null);
 
-    
 
     function handleAddClick(event) {
         setNumRows(numRows + 1);
@@ -96,9 +95,8 @@ function TableRow(props) {
     //         ...values, [name]: value
     //     }))
     // }
-
-    let dummyData = props.exercises.map((exer) => {
-        return <option key={exer.tostring()}>{exer.name}</option>
+    let dummyData = props.exercises.map((exer, i) => {
+        return <option key={i}>{exer.name}</option>
     })
 
     return (
