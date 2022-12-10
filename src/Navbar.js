@@ -8,7 +8,7 @@ export function NavBar() {
 
         <Navbar variant="dark" expand="lg">
             <div className="container-fluid nav-container">
-                <Navbar.Brand as={Link} to="home">Fitness 340</Navbar.Brand>
+                <Navbar.Brand>Fitness 340</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto mb-2 mb-lg-0">
