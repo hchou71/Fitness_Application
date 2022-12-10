@@ -105,6 +105,11 @@
   font-family: 'Helvetica', sans-serif;
 }
 
+.exercise-label {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2rem;
+}
+
 
 .save-to-profile {
   display: flex;
@@ -154,10 +159,15 @@
   font-size: 2rem;
 }
 
+.filter-bar .active {
+  font-weight: bold;
+}
+
 .exercise-title {
   text-align: left;
   font-size: 2rem;
   padding-left: 3rem;
+  padding-top: 2rem;
 }
 
 .card-container {
@@ -421,9 +431,6 @@
   border: solid gray 1px;
 }
 
-
-
-
 /* DISCUSSION STYLING END */
 
 /* Small mobile screens */
@@ -502,12 +509,14 @@
     height: 40%;
   }
 
+  .exercise-img {
+    display: none;
+  }
 
 }
 
 /* Large desktop screens*/
 @media (min-width:1025px) {
-
 
   .progress-pg {
     background-image: url('../public/img/journal-fitness.jpg');
@@ -664,6 +673,10 @@
 
   .post {
     width: 50vw;
+  }
+
+  .exercise-img {
+    display: block;
   }
 
 }
