@@ -1,21 +1,22 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { NavBar } from './Navbar';
-import { Footer } from './Footer';
-import { HomePage } from './Home';
+import { NavBar } from './Navbar.js';
+import { Footer } from './Footer.js';
+import { HomePage } from './Home.js';
 import { NewExercise } from './new-exercise.js';
 import { PastWorkoutTest } from './PastWorkoutTest';
 import { ExercisePage } from './exercise';
 import { DetailsPage } from './exercise-details';
 import { PastExercises } from './past-exercises';
 import { ProgressPage } from './progress-page.js';
-import { LoginPage } from './login';
-import { Example } from './Navbar';
+import { LoginPage } from './login.js';
+import { Example } from './Navbar.js';
 
 function App(props) {
   return (
     <div>
       {/* classname="home-exa"  */}
+      {/* <NavBar /> */}
       <NavBar />
 
       <Routes>
