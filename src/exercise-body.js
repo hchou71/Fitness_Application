@@ -24,11 +24,11 @@ export function ExerciseBody(props) {
 
 function exerciseCard(exerciseObj) {
 
-    const {name, img, link} = exerciseObj;
+    const {name, img} = exerciseObj;
 
     return (
         <div className="exercise-card" key={name}>
-            <Link to={link} target="_blank" rel="noreferrer">
+            <Link to={"/" + name} target="_blank" rel="noreferrer">
                 <p>{name}</p>
                 <img className="img-thumbnail" src={img} alt={name} />
             </Link>

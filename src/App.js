@@ -22,11 +22,9 @@ function App(props) {
       if(firebaseUser) {
         firebaseUser.userId = firebaseUser.uid;
         firebaseUser.userName = firebaseUser.displayName;
-        console.log(auth.currentUser)
         setCurrentUser(firebaseUser);
       } else {
         console.log("Logged Out");
-        console.log(auth.currentUser);
         setCurrentUser(null);
       }
     })
@@ -58,8 +56,8 @@ function App(props) {
         </Route>
         <Route path="login" element={<LoginPage currentUser={currentUser}/>} />
         <Route path="" element={<HomePage />} />
-        <Route path="exercise-details" element={<DetailsPage exerciseObj={props.exercises[0]} />} />
         <Route path="search" element={<ExercisePage exercises={props.exercises} />} />
+        <Route path="/:exercise" element={<DetailsPage exercises={props.exercises} />} />
       </Routes>
 
       <Footer />

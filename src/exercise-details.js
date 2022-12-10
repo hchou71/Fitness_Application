@@ -1,9 +1,19 @@
 import React from 'react';
+import { useParams } from 'react-router-dom';
 
 export function DetailsPage(props) {
 
-    const exerciseObj = props.exerciseObj;
+    const urlParams = useParams();
+    const currentExercise = urlParams.exercise;
+    const exercises = props.exercises;
+    const exercisesAsObject = {};
 
+    exercises.forEach((exerciseObj) => {
+        const name = exerciseObj.name;
+        exercisesAsObject[name] = exerciseObj;
+    });
+
+    const exerciseObj = exercisesAsObject[currentExercise];
     const { name, img, equipment, summary, howTo } = exerciseObj;
 
     return (
