@@ -549,14 +549,14 @@
   }
 
   .container-fluid>h1 {
-    font-size: 10rem;
+    font-size: 10vw;
     text-align: center;
     align-items: center;
     font-family: 'Bebas Neue', sans-serif;
   }
 
   .exer>h1 {
-    font-size: 10rem;
+    font-size: 10vw;
     text-align: center;
     align-items: center;
     font-family: 'Bebas Neue', sans-serif;

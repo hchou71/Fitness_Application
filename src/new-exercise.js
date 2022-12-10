@@ -3,6 +3,10 @@ import React, { useState } from 'react';
 export function NewExercise(props) {
 
     const [numRows, setNumRows] = useState(1);
+    // const [workoutName, setWorkoutName] = useState({});
+    // const [rowObj, setRowObj] = useState(null);
+
+    
 
     function handleAddClick(event) {
         setNumRows(numRows + 1);
@@ -11,6 +15,22 @@ export function NewExercise(props) {
     function handleDeleteClick(event) {
         if (numRows > 1) {
             setNumRows(numRows - 1);
+        }
+    }
+
+    // const handleWorkoutName = (event) => {
+    //     let name = event.target.value
+    //     setWorkoutName(name);
+    // }
+
+    // console.log(workoutName);
+    // console.log(rowObj);
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        const Length = event.target.length;
+        for(let i = 1; i < Length - 3; i++){
+            console.log(event.target[i].value);
         }
     }
 
@@ -28,13 +48,13 @@ export function NewExercise(props) {
             </main>
 
 
-            <form className="container form-container">
+            <form className="container form-container" onSubmit={handleSubmit}>
                 <div className="row progress-row">
                     <div className="col-12">
-                        <input type="text" className="form-control" placeholder="Workout Name" aria-label="Workout" />
+                        <input type="text" className="form-control" placeholder="Workout Name" aria-label="Workout" /> {/*name='workout' onChange={handleWorkoutName} value={workoutName.workout} */}
                     </div>
                 </div>
-                <Table numRows={numRows} />
+                <Table numRows={numRows}/> {/* setRowObj={setRowObj}*/}
                 <div className="row progress-row">
                     <div className="col-4">
                         <button className="btn btn-primary" type="button" onClick={handleAddClick}>Add Exercise</button>
@@ -43,7 +63,7 @@ export function NewExercise(props) {
                         <button className="btn btn-danger" type="button" onClick={handleDeleteClick}>Remove Exercise</button>
                     </div>
                     <div className="col-4">
-                        <button className="btn btn-success" type="button">Submit</button>
+                        <button className="btn btn-success" type="submit">Submit</button>
                     </div>
                 </div>
             </form>
@@ -55,24 +75,39 @@ function Table(props) {
     const numRows = props.numRows;
 
     const allRows = [...Array(numRows)].map((e, i) => {
-        return <TableRow key={i} />;
+        return <TableRow key={i} setRowObj={props.setRowObj}/>;
     })
 
     return allRows;
 }
 
-function TableRow() {
+function TableRow(props) {
+    // const [workoutInput, setWorkoutInput] = useState({});
+
+    // const setRow = props.setRowObj;
+
+    // setRow(workoutInput);
+
+    // const handleChange = (event) => {
+    //     const name = event.target.name
+    //     const value = event.target.value
+    //     setWorkoutInput(values => ({
+    //         ...values, [name]: value
+    //     }))
+    // }
+
+    
 
     return (
         <div className="row progress-row">
             <div className="col-8">
-                <input type="text" className="form-control" placeholder="Exercise" aria-label="Exercise"/>
+                <input type="text" className="form-control" placeholder="Exercise" aria-label="Exercise" /> {/* onChange={handleChange} name='exercise' value={workoutInput.exercise}*/}
             </div>
             <div className="col-2">
-                <input type="number" className="form-control" placeholder="Sets" aria-label="Sets" min="0"/>
+                <input type="number" className="form-control" placeholder="Sets" aria-label="Sets" min="0" /> {/* onChange={handleChange} name='sets' value={workoutInput.sets}*/}
             </div>
             <div className="col-2">
-                <input type="number" className="form-control" placeholder="Reps" aria-label="Reps" min="0"/>
+                <input type="number" className="form-control" placeholder="Reps" aria-label="Reps" min="0" /> {/* onChange={handleChange} name='reps' value={workoutInput.reps}*/}
             </div>
         </div>
     );
