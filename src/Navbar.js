@@ -11,6 +11,7 @@ export function NavBar() {
     function handleClick(event) {
         signOut(auth)
             .catch(err => console.log(err));
+        alert('Signing out. You will now be redirected to the home page.');
     }
 
     return (

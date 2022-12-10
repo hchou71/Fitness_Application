@@ -1,9 +1,16 @@
 import React from 'react';
 import { StyledFirebaseAuth } from 'react-firebaseui';
 import { getAuth, EmailAuthProvider, GoogleAuthProvider } from 'firebase/auth';
+import { Navigate } from 'react-router-dom';
 // import { useAuthState } from 'react-firebase-hooks/auth';
 
 export function LoginPage(props) {
+
+    const currentUser = props.currentUser;
+
+    if (currentUser != null) {
+        return <Navigate to="/" />
+    }
 
     const auth = getAuth();
     const uiConfigObj = {

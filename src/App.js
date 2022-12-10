@@ -9,7 +9,6 @@ import { ExercisePage } from './exercise';
 import { DetailsPage } from './exercise-details';
 import { PastExercises } from './past-exercises';
 import { ProgressPage } from './progress-page.js';
-import { Example } from './Navbar';
 import { LoginPage } from './login.js';
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
 
@@ -28,6 +27,7 @@ function App(props) {
       } else {
         console.log("Logged Out");
         console.log(auth.currentUser);
+        setCurrentUser(null);
       }
     })
   })
@@ -37,7 +37,7 @@ function App(props) {
       return (
         <div>
           <h1 className="py-5">Please sign in to view this page.</h1>
-          <LoginPage />
+          <LoginPage currentUser={currentUser}/>
         </div>
       );
     } else {
@@ -48,7 +48,7 @@ function App(props) {
   return (
     <div>
       {/* classname="home-exa"  */}
-      <NavBar />
+      <NavBar/>
       <Routes>
         <Route element={<RequireAuth />} >
           <Route path="track-progress" element={<ProgressPage />} />
@@ -56,7 +56,7 @@ function App(props) {
           <Route path="new-exercise" element={<NewExercise />} />
           <Route path="discussion" element={<PastWorkoutTest url={props.url} />} />
         </Route>
-        <Route path="login" element={<LoginPage />} />
+        <Route path="login" element={<LoginPage currentUser={currentUser}/>} />
         <Route path="" element={<HomePage />} />
         <Route path="exercise-details" element={<DetailsPage exerciseObj={props.exercises[0]} />} />
         <Route path="search" element={<ExercisePage exercises={props.exercises} />} />
