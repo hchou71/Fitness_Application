@@ -86,7 +86,8 @@
 
 /* exercise detail page */
 .exercise-img {
-  max-width: 100%;
+  max-width: 700px;
+  min-width: 400px;
   display: block;
   margin-left: auto;
   margin-right: auto;
