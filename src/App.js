@@ -16,7 +16,6 @@ function App(props) {
   return (
     <div>
       {/* classname="home-exa"  */}
-      {/* <NavBar /> */}
       <NavBar />
 
       <Routes>
