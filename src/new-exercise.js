@@ -41,6 +41,9 @@ export function NewExercise(props) {
             const db = getDatabase(); //"the database"
             const UserRef = ref(db, ("Users/" + currentUserId + "/past/" + Date.now()));
             firebaseSet(UserRef, inputArr);
+            alert('Form Submission Successful!');
+            const form = document.getElementById('exercise-form');
+            form.reset();
         }
     }
 
@@ -59,7 +62,7 @@ export function NewExercise(props) {
             </main>
 
 
-            <form className="container form-container" onSubmit={handleSubmit}>
+            <form className="container form-container" onSubmit={handleSubmit} id='exercise-form'>
                 <div className="row progress-row">
                     <div className="col-12">
                         <label htmlFor='workoutText'>Workout Name: </label>

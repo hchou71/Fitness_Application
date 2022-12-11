@@ -24,8 +24,6 @@ function App(props) {
         firebaseUser.userId = firebaseUser.uid;
         firebaseUser.userName = firebaseUser.displayName;
         setCurrentUser(firebaseUser);
-        const db = getDatabase(); //"the database"
-        const UserRef = ref(db, "Users");
       } else {
         console.log("Logged Out");
         setCurrentUser(null);
