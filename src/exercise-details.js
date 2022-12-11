@@ -1,5 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
+import { getDatabase, ref, set as firebaseSet, push as firebasePush } from 'firebase/database'; //realtime
+import { getAuth } from 'firebase/auth';
 
 export function DetailsPage(props) {
 
@@ -7,6 +9,8 @@ export function DetailsPage(props) {
     const currentExercise = urlParams.exercise;
     const exercises = props.exercises;
     const exercisesAsObject = {};
+    const auth = getAuth();
+    console.log(auth);
 
     exercises.forEach((exerciseObj) => {
         const name = exerciseObj.name;
@@ -15,6 +19,10 @@ export function DetailsPage(props) {
 
     const exerciseObj = exercisesAsObject[currentExercise];
     const { name, img, equipment, summary, howTo } = exerciseObj;
+    const currentUserId = auth.currentUser.uid;
+    console.log(currentUserId);
+    const db = getDatabase(); //"the database"
+    const UserRef = ref(db, ("Users/" + currentUserId + "/favorited-exercises"));
 
     let exerciseDescription;
 
@@ -35,7 +43,8 @@ export function DetailsPage(props) {
     }
 
     function handleClick() {
-        // (someArray).push(exerciseObj);
+        console.log(currentUserId);
+        firebaseSet(UserRef, currentExercise);
     }
 
     return (
@@ -56,3 +65,24 @@ export function DetailsPage(props) {
     );
 
 }
+
+// function LogInAction(props) {
+//     const auth = props.auth;
+//     const setUserIsLoggedInCallback = props.setUserIsLoggedInCallback;
+//     const [user, loading, error] = useAuthState(auth);
+
+//     if (loading) {
+//         return <p>Loading...</p>;
+//     }
+
+//     if (error) {
+//         return <p>Error: {error}</p>;
+//     }
+
+//     if (user) {
+//         setUserIsLoggedInCallback(true);
+//         return <Navigate to="" />
+//     } else {
+//         return <p>Please Sign In.</p>
+//     }
+// }

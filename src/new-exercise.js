@@ -5,11 +5,7 @@ import { getDatabase, ref, set as firebaseSet, onValue, push as firebasePush } f
 export function NewExercise(props) {
 
     const [numRows, setNumRows] = useState(1);
-
-    // const db = getDatabase();
-
     const currentUserId = props.currentUser.uid;
-    console.log(currentUserId);
 
     function handleAddClick(event) {
         setNumRows(numRows + 1);
@@ -21,8 +17,7 @@ export function NewExercise(props) {
         }
     }
 
-
-    const handleSubmit = (event) => {
+    function handleSubmit(event) {
         event.preventDefault();
         const Length = event.target.length;
         const inputArr = [];
@@ -46,7 +41,6 @@ export function NewExercise(props) {
             form.reset();
         }
     }
-
 
     return (
         <div className='back-main d-flex flex-column min-vh-100'>
