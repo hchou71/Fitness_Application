@@ -4,7 +4,6 @@ import { getDatabase, ref, set as firebaseSet, onValue, push as firebasePush } f
 import { getAuth } from 'firebase/auth';
 
 export function DetailsPage(props) {
-
     const urlParams = useParams();
     const currentExercise = urlParams.exercise;
     const exercises = props.exercises;
@@ -35,8 +34,6 @@ export function DetailsPage(props) {
             </div>
         );
     }
-
-
 
     function handleClick() {
         const user = props.currentUser;
