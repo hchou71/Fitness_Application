@@ -63,7 +63,7 @@ export function NewExercise(props) {
                         <input id='workoutText' type="text" className="form-control" placeholder="Workout Name" aria-label="Workout" />
                     </div>
                 </div>
-                <Table numRows={numRows} exercises={props.exercises} currentUserId={currentUserId} />
+                <Table numRows={numRows} exercises={props.exercises} currentUserId={currentUserId}/>
                 <div className="row progress-row">
                     <div className="col-4">
                         <button className="btn btn-primary" type="button" onClick={handleAddClick}>Add Exercise</button>
@@ -81,6 +81,7 @@ export function NewExercise(props) {
 }
 
 function Table(props) {
+
     const numRows = props.numRows;
 
     const allRows = [...Array(numRows)].map((e, i) => {
@@ -93,26 +94,24 @@ function Table(props) {
 function TableRow(props) {
 
     const db = getDatabase(); //"the database"
-    const FavRef = ref(db, ("Users/" + props.currentUserId + "/favorited-exercises"));
-    let dataArray = [];
-    onValue(FavRef, (snapshot) => {
+    const favRef = ref(db, ("Users/" + props.currentUserId + "/favorited-exercises"));
+    const dataArray = [];
+    onValue(favRef, (snapshot) => {
         const data = snapshot.val();
-        console.log(data)
         data.forEach((exercise) => {
             dataArray.push(exercise);
         })
         });
-    let dummyData = props.exercises.map((exer, i) => {
-        return <option key={i}>{exer.name}</option>
+    const favExercises = dataArray.map((exercise, i) => {
+        return <option key={i}>{exercise}</option>
     })
-    console.log(dummyData)
 
     return (
         <div className="row progress-row">
             <div className="col-8">
                 <input type="text" className="form-control" placeholder="Exercise" aria-label="Exercise" list='pre-exer' />
                 <datalist id="pre-exer">
-                    {dummyData}
+                    {favExercises}
                 </datalist>
             </div>
             <div className="col-2">

@@ -28,7 +28,6 @@ function exerciseCard(exerciseObj) {
 
     return (
         <div className="exercise-card" key={name}>
-            {/*  target="_blank" rel="noreferrer" */}
             <Link to={"/" + name}>
                 <p>{name}</p>
                 <img className="img-thumbnail" src={img} alt={name} />
