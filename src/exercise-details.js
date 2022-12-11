@@ -9,8 +9,6 @@ export function DetailsPage(props) {
     const currentExercise = urlParams.exercise;
     const exercises = props.exercises;
     const exercisesAsObject = {};
-    const auth = getAuth();
-    const currentUserId = auth.currentUser.uid;
 
     exercises.forEach((exerciseObj) => {
         const name = exerciseObj.name;
@@ -19,8 +17,6 @@ export function DetailsPage(props) {
 
     const exerciseObj = exercisesAsObject[currentExercise];
     const { name, img, equipment, summary, howTo } = exerciseObj;
-    const db = getDatabase(); //"the database"
-    const UserRef = ref(db, ("Users/" + currentUserId + "/favorited-exercises"));
 
     let exerciseDescription;
 
@@ -48,6 +44,8 @@ export function DetailsPage(props) {
     });
 
     function handleClick() {
+        const user = props.currentUser;
+        const db = getDatabase(); //"the database"
         let alreadyContains = false;
         favExercisesArray.forEach((favoritedExercise) => {
             if (favoritedExercise === currentExercise) {
