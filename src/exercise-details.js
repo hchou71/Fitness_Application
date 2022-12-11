@@ -4,8 +4,6 @@ import { getDatabase, ref, set as firebaseSet, onValue, push as firebasePush } f
 import { getAuth } from 'firebase/auth';
 
 export function DetailsPage(props) {
-    const db = getDatabase();
-    const currentUserId = props.currentUser.uid;
     const urlParams = useParams();
     const currentExercise = urlParams.exercise;
     const exercises = props.exercises;
