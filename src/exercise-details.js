@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { getDatabase, ref, set as firebaseSet, onValue, push as firebasePush } from 'firebase/database'; //realtime
-import { getAuth } from 'firebase/auth';
 
 export function DetailsPage(props) {
+
     const urlParams = useParams();
     const currentExercise = urlParams.exercise;
     const exercises = props.exercises;
@@ -35,17 +35,30 @@ export function DetailsPage(props) {
         );
     }
 
-    function handleClick() {
+    //Button switches depending on if exercise is already saved or not, needs debugging for when refreshing page
+
+    function getSavedExercises() {
         const user = props.currentUser;
         const db = getDatabase(); //"the database"
         const favExercisesRef = ref(db,  "Users/" + user.uid + '/favorited-exercises');
-        let favExercisesArray = [];
+        const favExercisesArray = [];
         onValue(favExercisesRef, (snapshot) => {
         const data = snapshot.val();
         data.forEach((exercise) => {
             favExercisesArray.push(exercise);
         })
         });
+        return [favExercisesArray, favExercisesRef];
+    }
+
+    let favExercisesArray = getSavedExercises();
+        
+    const [saved, setSaved] = useState(favExercisesArray.includes(currentExercise));
+
+    function handleSave() {
+        const favExercisesdata = getSavedExercises();
+        let favExercisesArray = favExercisesdata[0];
+        const favExercisesRef = favExercisesdata[1];
         let alreadyContains = false;
         favExercisesArray.forEach((favoritedExercise) => {
             if (favoritedExercise === currentExercise) {
@@ -54,19 +67,47 @@ export function DetailsPage(props) {
         });
         if (!alreadyContains) {
             favExercisesArray = [...favExercisesArray, currentExercise];
-            console.log(favExercisesArray);
             firebaseSet(favExercisesRef, favExercisesArray);
         }
+        setSaved(true);
+    }
+
+    function handleDelete() {
+        const favExercisesdata = getSavedExercises();
+        let favExercisesArray = favExercisesdata[0];
+        const favExercisesRef = favExercisesdata[1];
+        favExercisesArray = favExercisesArray.filter((exercise) => {
+            return exercise !== currentExercise;
+        });
+        firebaseSet(favExercisesRef, favExercisesArray);
+        setSaved(false);
+    }
+
+    let displayedButton;
+
+    if (!saved) {
+        displayedButton = (
+            <div className="save-to-profile btn button-col btn-lg my-5" onClick={handleSave}>
+                <div>
+                    <p>Save to Favorites</p>
+                    <span className="material-icons" aria-label="Save to Favorite">library_add</span>
+                </div>
+            </div>
+        );
+    } else {
+        displayedButton = (
+            <div className="save-to-profile btn btn-danger btn-lg my-5" onClick={handleDelete}>
+                <div>
+                    <p>Delete from Favorites</p>
+                    <span className="material-icons" aria-label="Delete from Favorites">bookmark_remove</span>
+                </div>
+            </div>
+        );
     }
 
     return (
         <main className="info-body d-flex flex-column min-vh-100">
-            <div className="save-to-profile btn button-col btn-lg my-5" onClick={handleClick}>
-                <div>
-                    <p>Save to Profile</p>
-                    <span className="material-icons" aria-label="Save to Profile">library_add</span>
-                </div>
-            </div>
+            {displayedButton}
 
             <div className='exer'>
                 <h1>{name}</h1>
@@ -77,24 +118,3 @@ export function DetailsPage(props) {
     );
 
 }
-
-// function LogInAction(props) {
-//     const auth = props.auth;
-//     const setUserIsLoggedInCallback = props.setUserIsLoggedInCallback;
-//     const [user, loading, error] = useAuthState(auth);
-
-//     if (loading) {
-//         return <p>Loading...</p>;
-//     }
-
-//     if (error) {
-//         return <p>Error: {error}</p>;
-//     }
-
-//     if (user) {
-//         setUserIsLoggedInCallback(true);
-//         return <Navigate to="" />
-//     } else {
-//         return <p>Please Sign In.</p>
-//     }
-// }
