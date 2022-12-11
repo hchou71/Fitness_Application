@@ -59,7 +59,7 @@ function App(props) {
         <Route path="login" element={<LoginPage currentUser={currentUser} />} />
         <Route path="" element={<HomePage />} />
         <Route path="search" element={<ExercisePage exercises={props.exercises} />} />
-        <Route path="/:exercise" element={<DetailsPage exercises={props.exercises} />} />
+        <Route path="/:exercise" element={<DetailsPage exercises={props.exercises} currentUser={currentUser}/>} />
       </Routes>
 
       <Footer />

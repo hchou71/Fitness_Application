@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import { getDatabase, ref, set as firebaseSet, push as firebasePush } from 'firebase/database'; //realtime
+import { getDatabase, ref, set as firebaseSet, onValue, push as firebasePush } from 'firebase/database'; //realtime
 import { getAuth } from 'firebase/auth';
 
 export function DetailsPage(props) {
@@ -9,8 +9,6 @@ export function DetailsPage(props) {
     const currentExercise = urlParams.exercise;
     const exercises = props.exercises;
     const exercisesAsObject = {};
-    const auth = getAuth();
-    console.log(auth);
 
     exercises.forEach((exerciseObj) => {
         const name = exerciseObj.name;
@@ -19,10 +17,6 @@ export function DetailsPage(props) {
 
     const exerciseObj = exercisesAsObject[currentExercise];
     const { name, img, equipment, summary, howTo } = exerciseObj;
-    const currentUserId = auth.currentUser.uid;
-    console.log(currentUserId);
-    const db = getDatabase(); //"the database"
-    const UserRef = ref(db, ("Users/" + currentUserId + "/favorited-exercises"));
 
     let exerciseDescription;
 
@@ -42,9 +36,27 @@ export function DetailsPage(props) {
         );
     }
 
+    const favExercisesRef = ref(db,  "Users/" + currentUserId + '/favorited-exercises');
+    let favExercisesArray = [];
+    onValue(favExercisesRef, (snapshot) => {
+    const data = snapshot.val();
+    favExercisesArray.push(data);
+    });
+
     function handleClick() {
-        console.log(currentUserId);
-        firebaseSet(UserRef, currentExercise);
+        const user = props.currentUser;
+        const db = getDatabase(); //"the database"
+        let alreadyContains = false;
+        favExercisesArray.forEach((favoritedExercise) => {
+            if (favoritedExercise === currentExercise) {
+                alreadyContains = true;
+            }
+        });
+        if (!alreadyContains) {
+            favExercisesArray = [...favExercisesArray, currentExercise];
+            console.log(favExercisesArray);
+            firebaseSet(favExercisesRef, favExercisesArray);
+        }
     }
 
     return (
