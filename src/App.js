@@ -52,10 +52,9 @@ function App(props) {
       <NavBar />
       <Routes>
         <Route element={<RequireAuth />} >
-          <Route path="track-progress" element={<ProgressPage />} />
-          <Route path="previous-workouts" element={<PastExercises />} />
-          <Route path="new-exercise" element={<NewExercise exercises={props.exercises} currentUser={currentUser}/>} />
-          <Route path="discussion" element={<PastWorkoutTest url={props.url} />} />
+          <Route path="track-progress" element={<ProgressPage currentUser={currentUser} />} />
+          <Route path="previous-workouts" element={<PastExercises currentUser={currentUser} />} />
+          <Route path="new-exercise" element={<NewExercise exercises={props.exercises} currentUser={currentUser} />} />
         </Route>
         <Route path="login" element={<LoginPage currentUser={currentUser} />} />
         <Route path="" element={<HomePage />} />

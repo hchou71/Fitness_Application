@@ -6,7 +6,7 @@ export function PastWorkoutList(props) {
   return (
     <section className="past-content">
       <div className="container-lg container-sm">
-        <PastWorkoutCard url={props.url}/>
+        <PastWorkoutCard currentUser={props.currentUser} />
       </div>
     </section>
   )

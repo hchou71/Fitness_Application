@@ -1,7 +1,33 @@
 import React from 'react';
 import { Link, Outlet } from 'react-router-dom';
+import { getDatabase, ref, set as firebaseSet, onValue, push as firebasePush } from 'firebase/database'; //realtime
 
-export function ProgressPage() {
+
+export function ProgressPage(props) {
+
+
+    function handleClick(event) {
+        const currentUser = props.currentUser;
+        const db = getDatabase();
+        const userRef = ref(db, "Users/");
+        onValue(userRef, (snapshot) => {
+            const data = snapshot.val();
+
+            if (currentUser.uid in data) {
+
+            } else {
+                alert('You must submit a form to view past workouts!')
+            }
+        })
+        // db.child("Users").equalTo(currentUser.uid.once('value', snapshot => {
+        //     if (snapshot.exists()) {
+        //         console.log('yes!');
+        //     }
+        // }))
+
+
+    }
+
     return (
         <div className='back-main d-flex flex-column min-vh-100'>
             <header className="fitness-track-pg">
@@ -36,7 +62,7 @@ export function ProgressPage() {
                                     <p className="card-text">Forgot what you worked out earlier this week? Can't remember a killer
                                         workout you had in the past?
                                         View your previous workouts with our easy to use workout viewer.</p>
-                                    <Link to="/previous-workouts" className="btn btn-primary" role="button">View</Link>
+                                    <Link to="/previous-workouts" className="btn btn-primary" role="button" onClick={handleClick}>View</Link>
                                 </div>
                             </div>
                         </div>
