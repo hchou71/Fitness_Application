@@ -36,16 +36,17 @@ export function DetailsPage(props) {
         );
     }
 
-    const favExercisesRef = ref(db,  "Users/" + currentUserId + '/favorited-exercises');
-    let favExercisesArray = [];
-    onValue(favExercisesRef, (snapshot) => {
-    const data = snapshot.val();
-    favExercisesArray.push(data);
-    });
+
 
     function handleClick() {
         const user = props.currentUser;
         const db = getDatabase(); //"the database"
+        const favExercisesRef = ref(db,  "Users/" + user.uid + '/favorited-exercises');
+        let favExercisesArray = [];
+        onValue(favExercisesRef, (snapshot) => {
+        const data = snapshot.val();
+        favExercisesArray.push(data);
+        });
         let alreadyContains = false;
         favExercisesArray.forEach((favoritedExercise) => {
             if (favoritedExercise === currentExercise) {
