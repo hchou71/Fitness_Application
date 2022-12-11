@@ -60,10 +60,10 @@ export function NewExercise(props) {
                 <div className="row progress-row">
                     <div className="col-12">
                         <label htmlFor='workoutText'>Workout Name: </label>
-                        <input id='workoutText' type="text" className="form-control" placeholder="Workout Name" aria-label="Workout" /> 
+                        <input id='workoutText' type="text" className="form-control" placeholder="Workout Name" aria-label="Workout" />
                     </div>
                 </div>
-                <Table numRows={numRows} exercises={props.exercises} />
+                <Table numRows={numRows} exercises={props.exercises} currentUserId={currentUserId} />
                 <div className="row progress-row">
                     <div className="col-4">
                         <button className="btn btn-primary" type="button" onClick={handleAddClick}>Add Exercise</button>
@@ -84,7 +84,7 @@ function Table(props) {
     const numRows = props.numRows;
 
     const allRows = [...Array(numRows)].map((e, i) => {
-        return <TableRow key={i} setRowObj={props.setRowObj} exercises={props.exercises} />;
+        return <TableRow key={i} setRowObj={props.setRowObj} exercises={props.exercises} currentUserId={props.currentUserId} />;
     })
 
     return allRows;
@@ -92,20 +92,31 @@ function Table(props) {
 
 function TableRow(props) {
 
+    const db = getDatabase(); //"the database"
+    const FavRef = ref(db, ("Users/" + props.currentUserId + "/favorited-exercises"));
+    let dataArray = [];
+    onValue(FavRef, (snapshot) => {
+        const data = snapshot.val();
+        console.log(data)
+        data.forEach((exercise) => {
+            dataArray.push(exercise);
+        })
+        });
     let dummyData = props.exercises.map((exer, i) => {
         return <option key={i}>{exer.name}</option>
     })
+    console.log(dummyData)
 
     return (
         <div className="row progress-row">
             <div className="col-8">
-                <input type="text" className="form-control" placeholder="Exercise" aria-label="Exercise" list='pre-exer' /> 
+                <input type="text" className="form-control" placeholder="Exercise" aria-label="Exercise" list='pre-exer' />
                 <datalist id="pre-exer">
                     {dummyData}
                 </datalist>
             </div>
             <div className="col-2">
-                <input type="number" className="form-control" placeholder="Sets" aria-label="Sets" min="0" /> 
+                <input type="number" className="form-control" placeholder="Sets" aria-label="Sets" min="0" />
             </div>
             <div className="col-2">
                 <input type="number" className="form-control" placeholder="Reps" aria-label="Reps" min="0" />
