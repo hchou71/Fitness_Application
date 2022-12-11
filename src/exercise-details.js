@@ -4,8 +4,6 @@ import { getDatabase, ref, set as firebaseSet, onValue, push as firebasePush } f
 import { getAuth } from 'firebase/auth';
 
 export function DetailsPage(props) {
-    const db = getDatabase();
-    const currentUserId = props.currentUser.uid;
     const urlParams = useParams();
     const currentExercise = urlParams.exercise;
     const exercises = props.exercises;
@@ -36,17 +34,6 @@ export function DetailsPage(props) {
             </div>
         );
     }
-
-<<<<<<< HEAD
-    const favExercisesRef = ref(db, "Users/" + currentUserId + '/favorited-exercises');
-    let favExercisesArray = [];
-    onValue(favExercisesRef, (snapshot) => {
-        const data = snapshot.val();
-        favExercisesArray.push(data);
-    });
-=======
-
->>>>>>> 41cb5b70569444dd4672e6bebb496a3232a7dff8
 
     function handleClick() {
         const user = props.currentUser;
