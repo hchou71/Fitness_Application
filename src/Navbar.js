@@ -25,7 +25,6 @@ export function NavBar() {
                         <Nav.Link as={Link} aria-label="Home Page" to="">Home</Nav.Link>
                         <Nav.Link as={Link} aria-label="Progress Page" to="track-progress">Progress Tracker</Nav.Link>
                         <Nav.Link as={Link} aria-label="Exercise Search Page" to="search">Exercise Searcher</Nav.Link>
-                        <Nav.Link as={Link} aria-label="Discussion page" to="discussion">Discussion</Nav.Link>
                         <Link to="/login" className="btn text-light" onClick={handleClick}>Sign Out</Link>
                     </Nav>
                 </Navbar.Collapse>
