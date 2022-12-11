@@ -45,7 +45,9 @@ export function DetailsPage(props) {
         let favExercisesArray = [];
         onValue(favExercisesRef, (snapshot) => {
         const data = snapshot.val();
-        favExercisesArray.push(data);
+        data.forEach((exercise) => {
+            favExercisesArray.push(exercise);
+        })
         });
         let alreadyContains = false;
         favExercisesArray.forEach((favoritedExercise) => {
