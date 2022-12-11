@@ -12,7 +12,7 @@ export function ProgressPage(props) {
         const userRef = ref(db, "Users/");
         onValue(userRef, (snapshot) => {
             const data = snapshot.val();
-
+            console.log(data);
             if (currentUser.uid in data) {
 
             } else {
