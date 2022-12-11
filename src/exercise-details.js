@@ -37,27 +37,17 @@ export function DetailsPage(props) {
         );
     }
 
-<<<<<<< HEAD
-    const favExercisesRef = ref(db, "Users/" + currentUserId + '/favorited-exercises');
-    let favExercisesArray = [];
-    onValue(favExercisesRef, (snapshot) => {
-        const data = snapshot.val();
-        favExercisesArray.push(data);
-    });
-=======
-
->>>>>>> 41cb5b70569444dd4672e6bebb496a3232a7dff8
 
     function handleClick() {
         const user = props.currentUser;
         const db = getDatabase(); //"the database"
-        const favExercisesRef = ref(db,  "Users/" + user.uid + '/favorited-exercises');
+        const favExercisesRef = ref(db, "Users/" + user.uid + '/favorited-exercises');
         let favExercisesArray = [];
         onValue(favExercisesRef, (snapshot) => {
-        const data = snapshot.val();
-        data.forEach((exercise) => {
-            favExercisesArray.push(exercise);
-        })
+            const data = snapshot.val();
+            data.forEach((exercise) => {
+                favExercisesArray.push(exercise);
+            })
         });
         let alreadyContains = false;
         favExercisesArray.forEach((favoritedExercise) => {

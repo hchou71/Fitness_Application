@@ -14,7 +14,7 @@ export function PastWorkoutList(props) {
       let form = data[i];
       return <PastWorkoutCard form={form} />
     }
-  })
+  });
   return (
     <section className="past-content">
       <div className="container-lg container-sm">
