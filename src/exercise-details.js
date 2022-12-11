@@ -9,8 +9,6 @@ export function DetailsPage(props) {
     const currentExercise = urlParams.exercise;
     const exercises = props.exercises;
     const exercisesAsObject = {};
-    const auth = getAuth();
-    console.log(auth);
 
     exercises.forEach((exerciseObj) => {
         const name = exerciseObj.name;
@@ -19,10 +17,6 @@ export function DetailsPage(props) {
 
     const exerciseObj = exercisesAsObject[currentExercise];
     const { name, img, equipment, summary, howTo } = exerciseObj;
-    const currentUserId = auth.currentUser.uid;
-    console.log(currentUserId);
-    const db = getDatabase(); //"the database"
-    const UserRef = ref(db, ("Users/" + currentUserId + "/favorited-exercises"));
 
     let exerciseDescription;
 
@@ -43,7 +37,9 @@ export function DetailsPage(props) {
     }
 
     function handleClick() {
-        console.log(currentUserId);
+        const user = props.currentUser;
+        const db = getDatabase(); //"the database"
+        const UserRef = ref(db, ("Users/" + user.uid + "/favorited-exercises"));
         firebaseSet(UserRef, currentExercise);
     }
 
