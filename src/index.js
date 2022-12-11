@@ -8,7 +8,7 @@ import 'whatwg-fetch';
 import { initializeApp } from "firebase/app";
 
 import SAMPLE_EXERCISES from './data/exercise-information.json';
-const SAMPLE_PAST = '../public/past-workout.json';
+// const SAMPLE_PAST = '../public/past-workout.json';
 
 const firebaseConfig = {
   apiKey: "AIzaSyC5Iqu90H8p42XbyLWaZhSxZhSr3oXq1W4",
@@ -26,7 +26,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
     <React.StrictMode>
-      <App exercises={SAMPLE_EXERCISES} url={SAMPLE_PAST}/>
+      <App exercises={SAMPLE_EXERCISES} /> {/*url={SAMPLE_PAST}*/}
     </React.StrictMode>
   </BrowserRouter>
 );

@@ -1,4 +1,5 @@
 import React from 'react';
+import { PastWorkoutList } from './PastWorkoutList';
 
 function Header(props) {
     return (
@@ -16,29 +17,9 @@ export function PastExercises(props) {
             <Header />
             <main>
                 <h2>View your previous workouts that you logged here!</h2>
-                <section className="past-content">
-                    <div className="container-lg container-sm">
-                        <div className="row progress-row">
-                            <div className="col-past-content">
-                                <p className="workout-desc">Back and Biceps Workout</p>
-                                <button type="button" className="btn collapsible">View</button>
-                            </div>
-                        </div>
-                        <div className="row progress-row">
-                            <div className="col-past-content">
-                                <p className="workout-desc">Chest and Triceps Workout</p>
-                                <button type="button" className="btn collapsible">View</button>
-                            </div>
-                        </div>
-                        <div className="row progress-row">
-                            <div className="col-past-content">
-                                <p className="workout-desc">Legs and Abs Workout</p>
-                                <button type="button" className="btn collapsible">View</button>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+                <PastWorkoutList currentUser={props.currentUser} />
             </main>
+
         </div>
     )
 }

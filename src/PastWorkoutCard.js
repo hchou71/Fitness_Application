@@ -1,8 +1,15 @@
 import React from "react";
+import { getDatabase, ref, set as firebaseSet, onValue, push as firebasePush } from 'firebase/database'; //realtime
 
-const URL = '/past-workout.JSON';
+const URL = 'https://project-fitness-application-default-rtdb.firebaseio.com/';
+
+
 
 export function PastWorkoutCard(props) {
+  const db = getDatabase();
+  const currentUser = props.currentUser;
+  const userRef = ref(db, "Users/" + currentUser.uid + "past")
+
   function GetWorkouts() {
     fetch(URL)
       .then(resp => resp.json())
@@ -11,7 +18,7 @@ export function PastWorkoutCard(props) {
   }
   GetWorkouts();
 
-  return(
+  return (
     <div className="row progress-row">
       <div className="col-past-content">
         <p className="workout-desc">Back and Biceps Workout</p>
