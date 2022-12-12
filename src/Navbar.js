@@ -34,34 +34,3 @@ export function NavBar() {
     )
 
 }
-
-// export function NavBar() {
-//     return (
-//         < nav className="navbar navbar-inverse navbar-expand-lg navbar-dark" >
-//             <div className="container-fluid">
-//                 <Link className="navbar-brand" href="#">Fitness 340</Link>
-//                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
-//                     data-bs-target="#myNavbar" aria-controls="myNavbar" aria-expanded="false"
-//                     aria-label="Toggle navigation">
-//                     <span className="navbar-toggler-icon"></span>
-//                 </button>
-//                 <div className=" navbar-collapse collapse" id="myNavbar">
-//                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-//                         <li className="nav-item ">
-//                             <Link className="nav-link" aria-label="Home Page" to="">Home</Link>
-//                         </li>
-//                         <li className="nav-item ">
-//                             <Link className="nav-link" aria-label="Progress Page" to="track-progress">Progress Tracker</Link>
-//                         </li>
-//                         <li className="nav-item">
-//                             <Link className="nav-link" aria-label="Exercise Search Page" to="search">Exercise Searcher</Link>
-//                         </li>
-//                         <li className="nav-item">
-//                             <Link className="nav-link" aria-label="Discussion page" to="discussion">Discussion</Link>
-//                         </li>
-//                     </ul>
-//                 </div>
-//             </div>
-//         </nav >
-//     )
-// }

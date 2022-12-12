@@ -12,18 +12,12 @@ export function ProgressPage(props) {
         const userRef = ref(db, "Users/");
         onValue(userRef, (snapshot) => {
             const data = snapshot.val();
-            console.log(data);
             if (currentUser.uid in data) {
 
             } else {
                 alert('You must submit a form to view past workouts!')
             }
         })
-        // db.child("Users").equalTo(currentUser.uid.once('value', snapshot => {
-        //     if (snapshot.exists()) {
-        //         console.log('yes!');
-        //     }
-        // }))
 
 
     }

@@ -29,7 +29,6 @@ function App(props) {
     })
   })
 
-  //console.log(currentUser);
 
   function RequireAuth() {
     if (currentUser === null) {
@@ -46,7 +45,6 @@ function App(props) {
 
   return (
     <div>
-      {/* classname="home-exa"  */}
       <NavBar />
       <Routes>
         <Route element={<RequireAuth />} >

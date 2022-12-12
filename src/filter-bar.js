@@ -1,10 +1,6 @@
 import React from 'react';
 
 export function FilterBar(props) {
-    
-    // const bodyPartArray = [...new Set(props.exercises.reduce((all, current) => {
-    //     return all.concat([current.muscleWorked, current.secondaryMuscles]);
-    //   }, []))].sort();
 
     const sortByMuscle = props.sortByMuscle;
 

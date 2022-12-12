@@ -32,7 +32,6 @@ export function NewExercise(props) {
         if (hasEmpty) {
             alert('Incomplete Form: Please Fill Out All Fields');
         } else {
-            console.log(inputArr);
             const db = getDatabase(); //"the database"
             const UserRef = ref(db, ("Users/" + currentUserId + "/past/" + Date.now()));
             firebaseSet(UserRef, inputArr);

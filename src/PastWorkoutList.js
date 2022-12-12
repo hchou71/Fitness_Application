@@ -6,19 +6,6 @@ import { PastWorkoutModal } from "./pastWorkoutModal";
 export function PastWorkoutList(props) {
   const [past, setPast] = useState([]);
 
-  // onValue(userRef, (snapshot) => {
-  //   const data = snapshot.val();
-  //   console.log(data);
-  //   const cards = Object.keys(data);
-  //     const objArray = cards.map((keyString) => {
-  //       const theMessageObj = data[keyString];
-  //       setPast(theMessageObj);
-  //       console.log(theMessageObj);
-  //       theMessageObj.key = keyString;
-  //       return theMessageObj;
-  //     })
-  //   console.log(past);
-  // })
   useEffect(() => {
 
     const db = getDatabase();

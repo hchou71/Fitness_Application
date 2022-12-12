@@ -16,8 +16,7 @@ export function PastWorkoutModal(props) {
     };
 
     const workouts = names.map((element, i) => {
-        console.log(names[i]);
-        return <Workouts name={names[i]} set={sets[i]} rep={reps[i]} />
+        return <Workouts key={i} name={names[i]} set={sets[i]} rep={reps[i]} />
     })
 
     return (

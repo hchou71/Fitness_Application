@@ -26,7 +26,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
     <React.StrictMode>
-      <App exercises={SAMPLE_EXERCISES} /> {/*url={SAMPLE_PAST}*/}
+      <App exercises={SAMPLE_EXERCISES} />
     </React.StrictMode>
   </BrowserRouter>
 );
