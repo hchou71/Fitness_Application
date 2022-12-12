@@ -7,7 +7,7 @@ export function PastExercises(props) {
         <div className='back-main d-flex flex-column min-vh-100'>
             <PastWorkoutHeader />
             <main>
-                <h2>View your previous workouts that you logged here!</h2>
+                <h2 className="px-5 pt-3">View your previous workouts that you logged here!</h2>
                 <section className="past-content">
                     <div className="container-lg container-sm">
                         <PastWorkoutList currentUser={props.currentUser} />

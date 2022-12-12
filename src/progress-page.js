@@ -1,26 +1,32 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, Outlet } from 'react-router-dom';
-import { getDatabase, ref, set as firebaseSet, onValue, push as firebasePush } from 'firebase/database'; //realtime
+import { getDatabase, ref, onValue } from 'firebase/database'; //realtime
 
 
 export function ProgressPage(props) {
 
+    const [viewButton, setViewButton] = useState(null);
 
-    function handleClick(event) {
+    useEffect(() => {
+
         const currentUser = props.currentUser;
         const db = getDatabase();
         const userRef = ref(db, "Users/");
+
+        function handleClick(event) {
+            alert('You must submit a form to view past workouts!');
+        }
+
         onValue(userRef, (snapshot) => {
             const data = snapshot.val();
             if (currentUser.uid in data) {
-
+                setViewButton(<Link to="/previous-workouts" className="btn btn-primary" role="button">View</Link>);
             } else {
-                alert('You must submit a form to view past workouts!')
+                setViewButton(<div className="btn btn-primary" role="button" onClick={handleClick}>View</div>);
             }
         })
 
-
-    }
+    });
 
     return (
         <div className='back-main d-flex flex-column min-vh-100'>
@@ -56,7 +62,7 @@ export function ProgressPage(props) {
                                     <p className="card-text">Forgot what you worked out earlier this week? Can't remember a killer
                                         workout you had in the past?
                                         View your previous workouts with our easy to use workout viewer.</p>
-                                    <Link to="/previous-workouts" className="btn btn-primary" role="button" onClick={handleClick}>View</Link>
+                                    {viewButton}
                                 </div>
                             </div>
                         </div>

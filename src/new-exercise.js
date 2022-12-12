@@ -102,16 +102,18 @@ function TableRow(props) {
 
         onValue(favRef, (snapshot) => {
             const data = snapshot.val();
-            data.forEach((exercise) => {
-                dataArray.push(exercise);
-            })
+            if (data !== null) {
+                data.forEach((exercise) => {
+                    dataArray.push(exercise);
+                })
+            }
             const favExercises = dataArray.map((exercise, i) => {
                 return <option key={i}>{exercise}</option>
             })
             setFavExercisesList(favExercises);
         });
 
-    }, [])
+    })
 
     return (
         <div className="row progress-row">

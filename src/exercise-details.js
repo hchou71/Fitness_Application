@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useParams } from 'react-router-dom';
 import { getDatabase, ref, set as firebaseSet, onValue } from 'firebase/database'; //realtime
 
@@ -22,7 +22,7 @@ export function DetailsPage(props) {
     if (howTo === "") {
         exerciseDescription = (
             <div className="py-3">
-                <p><em>No Info</em></p>
+                <p>No Info</p>
             </div>
         );
     } else {
@@ -35,14 +35,14 @@ export function DetailsPage(props) {
         );
     }
 
-    let favExercises = [];
-    const [saved, setSaved] = useState(favExercises.includes(currentExercise));
+    const favExercises = useRef([]);
+    const [saved, setSaved] = useState(favExercises.current.includes(currentExercise));
+    const user = props.currentUser;
+    const db = getDatabase(); //"the database"
+    const favExercisesRef = ref(db,  "Users/" + user.uid + '/favorited-exercises');
 
     useEffect(() => {
 
-        const user = props.currentUser;
-        const db = getDatabase(); //"the database"
-        const favExercisesRef = ref(db,  "Users/" + user.uid + '/favorited-exercises');
         const favExercisesArray = [];
 
         onValue(favExercisesRef, (snapshot) => {
@@ -52,29 +52,21 @@ export function DetailsPage(props) {
                     favExercisesArray.push(exercise);
                 })
             }
-            favExercises = favExercisesArray;
-            if (favExercises.includes(currentExercise)) {
+            favExercises.current = favExercisesArray;
+            if (favExercises.current.includes(currentExercise)) {
                 setSaved(true);
             }
         });
 
-    }, []);
+    });
 
     function handleSave() {
-        const user = props.currentUser;
-        const db = getDatabase(); //"the database"
-        const favExercisesRef = ref(db,  "Users/" + user.uid + '/favorited-exercises');
-        if (!favExercises.includes(currentExercise)) {
-            const favExercisesArray = [...favExercises, currentExercise];
-            firebaseSet(favExercisesRef, favExercisesArray);
-        }
+        const favExercisesArray = [...favExercises.current, currentExercise];
+        firebaseSet(favExercisesRef, favExercisesArray);
         setSaved(true);
     }
 
     function handleDelete() {
-        const user = props.currentUser;
-        const db = getDatabase(); //"the database"
-        const favExercisesRef = ref(db,  "Users/" + user.uid + '/favorited-exercises');
         const updatedExercises = [];
         onValue(favExercisesRef, (snapshot) => {
             const data = snapshot.val();

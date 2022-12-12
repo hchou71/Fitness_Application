@@ -26,9 +26,9 @@ export function PastWorkoutList(props) {
     })
 
 
-  }, [])
+  })
 
-  const PastList = past.map((element, i) => {
+  const PastList = past.slice(0).reverse().map((element, i) => {
     const post = (
       <PastWorkoutCard
         key={i}
