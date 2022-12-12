@@ -113,7 +113,7 @@ function TableRow(props) {
             setFavExercisesList(favExercises);
         });
 
-    })
+    }, [props.currentUserId])
 
     return (
         <div className="row progress-row">

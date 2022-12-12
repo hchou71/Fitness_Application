@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { PastWorkoutCard } from "./PastWorkoutCard";
 import { getDatabase, ref, onValue } from 'firebase/database'; //realtime
-import { PastWorkoutModal } from "./pastWorkoutModal";
 
 export function PastWorkoutList(props) {
   const [past, setPast] = useState([]);
@@ -24,9 +23,7 @@ export function PastWorkoutList(props) {
       })
       setPast(objArray);
     })
-
-
-  })
+  }, [props.currentUser])
 
   const PastList = past.slice(0).reverse().map((element, i) => {
     const post = (

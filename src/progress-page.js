@@ -26,7 +26,7 @@ export function ProgressPage(props) {
             }
         })
 
-    });
+    }, [props.currentUser]);
 
     return (
         <div className='back-main d-flex flex-column min-vh-100'>
