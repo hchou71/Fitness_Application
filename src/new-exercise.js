@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { getDatabase, ref, set as firebaseSet, onValue, push as firebasePush } from 'firebase/database'; //realtime
+import React, { useEffect, useState } from 'react';
+import { getDatabase, ref, set as firebaseSet, onValue} from 'firebase/database'; //realtime
 
 
 export function NewExercise(props) {
@@ -84,7 +84,7 @@ function Table(props) {
     const numRows = props.numRows;
 
     const allRows = [...Array(numRows)].map((e, i) => {
-        return <TableRow key={i} setRowObj={props.setRowObj} exercises={props.exercises} currentUserId={props.currentUserId} />;
+        return <TableRow key={i} setRowObj={props.setRowObj} exercises={props.exercises} currentUserId={props.currentUserId}/>;
     })
 
     return allRows;
@@ -92,25 +92,33 @@ function Table(props) {
 
 function TableRow(props) {
 
-    const db = getDatabase(); //"the database"
-    const favRef = ref(db, ("Users/" + props.currentUserId + "/favorited-exercises"));
-    const dataArray = [];
-    onValue(favRef, (snapshot) => {
-        const data = snapshot.val();
-        data.forEach((exercise) => {
-            dataArray.push(exercise);
-        })
+    const [favExercisesList, setFavExercisesList] = useState(null);
+
+    useEffect(() => {
+
+        const db = getDatabase(); //"the database"
+        const favRef = ref(db, ("Users/" + props.currentUserId + "/favorited-exercises"));
+        const dataArray = [];
+
+        onValue(favRef, (snapshot) => {
+            const data = snapshot.val();
+            data.forEach((exercise) => {
+                dataArray.push(exercise);
+            })
+            const favExercises = dataArray.map((exercise, i) => {
+                return <option key={i}>{exercise}</option>
+            })
+            setFavExercisesList(favExercises);
         });
-    const favExercises = dataArray.map((exercise, i) => {
-        return <option key={i}>{exercise}</option>
-    })
+
+    }, [])
 
     return (
         <div className="row progress-row">
             <div className="col-8">
                 <input type="text" className="form-control" placeholder="Exercise" aria-label="Exercise" list='pre-exer' />
                 <datalist id="pre-exer">
-                    {favExercises}
+                    {favExercisesList}
                 </datalist>
             </div>
             <div className="col-2">

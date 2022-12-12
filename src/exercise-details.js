@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { getDatabase, ref, set as firebaseSet, onValue } from 'firebase/database'; //realtime
 
@@ -35,48 +35,56 @@ export function DetailsPage(props) {
         );
     }
 
-    //Button switches depending on if exercise is already saved or not, needs debugging for when refreshing page
+    let favExercises = [];
+    const [saved, setSaved] = useState(favExercises.includes(currentExercise));
 
-    function getSavedExercises() {
+    useEffect(() => {
+
         const user = props.currentUser;
         const db = getDatabase(); //"the database"
-        const favExercisesRef = ref(db, "Users/" + user.uid + '/favorited-exercises');
+        const favExercisesRef = ref(db,  "Users/" + user.uid + '/favorited-exercises');
         const favExercisesArray = [];
+
         onValue(favExercisesRef, (snapshot) => {
             const data = snapshot.val();
-            data.forEach((exercise) => {
-                favExercisesArray.push(exercise);
-            })
-        });
-        return [favExercisesArray, favExercisesRef];
-    }
-
-    let favExercisesArray = getSavedExercises();
-
-    const [saved, setSaved] = useState(favExercisesArray.includes(currentExercise));
-
-    function handleSave() {
-        const favExercisesdata = getSavedExercises();
-        let favExercisesArray = favExercisesdata[0];
-        const favExercisesRef = favExercisesdata[1];
-        let alreadyContains = false;
-        favExercisesArray.forEach((favoritedExercise) => {
-            if (favoritedExercise === currentExercise) {
-                alreadyContains = true;
+            if (data !== null) {
+                data.forEach((exercise) => {
+                    favExercisesArray.push(exercise);
+                })
+            }
+            favExercises = favExercisesArray;
+            if (favExercises.includes(currentExercise)) {
+                setSaved(true);
             }
         });
-        if (!alreadyContains) {
-            favExercisesArray = [...favExercisesArray, currentExercise];
+
+    }, []);
+
+    function handleSave() {
+        const user = props.currentUser;
+        const db = getDatabase(); //"the database"
+        const favExercisesRef = ref(db,  "Users/" + user.uid + '/favorited-exercises');
+        if (!favExercises.includes(currentExercise)) {
+            const favExercisesArray = [...favExercises, currentExercise];
             firebaseSet(favExercisesRef, favExercisesArray);
         }
         setSaved(true);
     }
 
     function handleDelete() {
-        const favExercisesdata = getSavedExercises();
-        let favExercisesArray = favExercisesdata[0];
-        const favExercisesRef = favExercisesdata[1];
-        favExercisesArray = favExercisesArray.filter((exercise) => {
+        const user = props.currentUser;
+        const db = getDatabase(); //"the database"
+        const favExercisesRef = ref(db,  "Users/" + user.uid + '/favorited-exercises');
+        const updatedExercises = [];
+        onValue(favExercisesRef, (snapshot) => {
+            const data = snapshot.val();
+            if (data !== null) {
+                data.forEach((exercise) => {
+                    updatedExercises.push(exercise);
+                })
+            }
+        });
+        const favExercisesArray = updatedExercises.filter((exercise) => {
             return exercise !== currentExercise;
         });
         firebaseSet(favExercisesRef, favExercisesArray);

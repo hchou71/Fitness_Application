@@ -51,11 +51,11 @@ function App(props) {
           <Route path="track-progress" element={<ProgressPage currentUser={currentUser} />} />
           <Route path="previous-workouts" element={<PastExercises currentUser={currentUser} />} />
           <Route path="new-exercise" element={<NewExercise exercises={props.exercises} currentUser={currentUser} />} />
+          <Route path="/:exercise" element={<DetailsPage exercises={props.exercises} currentUser={currentUser} />} />
         </Route>
         <Route path="login" element={<LoginPage currentUser={currentUser} />} />
         <Route path="" element={<HomePage />} />
         <Route path="search" element={<ExercisePage exercises={props.exercises} />} />
-        <Route path="/:exercise" element={<DetailsPage exercises={props.exercises} currentUser={currentUser} />} />
       </Routes>
 
       <Footer />
