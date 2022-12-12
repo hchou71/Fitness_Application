@@ -1,12 +1,12 @@
 import React from 'react';
-import { Header } from './Header';
+import { HomeHeader } from './Header';
 import { Link } from 'react-router-dom';
 
 export function HomePage() {
     return (
         <div className='home-main d-flex flex-column min-vh-100'>
             <header className="home-header">
-                <Header />
+                <HomeHeader />
             </header >
 
             <main className="home-main mt-5">

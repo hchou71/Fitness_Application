@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { getDatabase, ref, set as firebaseSet, onValue, push as firebasePush } from 'firebase/database'; //realtime
+import { getDatabase, ref, set as firebaseSet, onValue } from 'firebase/database'; //realtime
 
 export function DetailsPage(props) {
 
@@ -35,22 +35,13 @@ export function DetailsPage(props) {
         );
     }
 
-<<<<<<< HEAD
-
-    function handleClick() {
-        const user = props.currentUser;
-        const db = getDatabase(); //"the database"
-        const favExercisesRef = ref(db, "Users/" + user.uid + '/favorited-exercises');
-        let favExercisesArray = [];
-=======
     //Button switches depending on if exercise is already saved or not, needs debugging for when refreshing page
 
     function getSavedExercises() {
         const user = props.currentUser;
         const db = getDatabase(); //"the database"
-        const favExercisesRef = ref(db,  "Users/" + user.uid + '/favorited-exercises');
+        const favExercisesRef = ref(db, "Users/" + user.uid + '/favorited-exercises');
         const favExercisesArray = [];
->>>>>>> 3bc8e11c2c9911328078d8c7762dbb4f9347533c
         onValue(favExercisesRef, (snapshot) => {
             const data = snapshot.val();
             data.forEach((exercise) => {
@@ -61,7 +52,7 @@ export function DetailsPage(props) {
     }
 
     let favExercisesArray = getSavedExercises();
-        
+
     const [saved, setSaved] = useState(favExercisesArray.includes(currentExercise));
 
     function handleSave() {

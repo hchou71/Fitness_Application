@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { PastWorkoutCard } from "./PastWorkoutCard";
-import { getDatabase, ref, set as firebaseSet, onValue, push as firebasePush } from 'firebase/database'; //realtime
+import { getDatabase, ref, onValue } from 'firebase/database'; //realtime
+import { PastWorkoutModal } from "./pastWorkoutModal";
 
 export function PastWorkoutList(props) {
   const [past, setPast] = useState([]);
-
-
 
   // onValue(userRef, (snapshot) => {
   //   const data = snapshot.val();

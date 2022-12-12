@@ -1,15 +1,21 @@
 import React from "react";
-import { getDatabase, ref, set as firebaseSet, onValue, push as firebasePush } from 'firebase/database'; //realtime
-
-
-
+import { PastWorkoutModal } from "./pastWorkoutModal";
 
 export function PastWorkoutCard(props) {
   const title = props.stuff[0];
   const name = props.stuff[1];
   const set = props.stuff[2];
   const reps = props.stuff[3];
-  console.log(props.stuff);
+  // console.log(props.stuff);
+  const [modalShow, setModalShow] = React.useState(false);
+
+  function handleClick() {
+    setModalShow(true);
+  }
+
+  function handleHide() {
+    setModalShow(false);
+  }
 
   return (
     <div className="row progress-row">
@@ -18,7 +24,8 @@ export function PastWorkoutCard(props) {
         <p className="workout-desc">Name: {name}</p>
         <p className="workout-desc">Sets: {set}</p>
         <p className="workout-desc">Reps: {reps}</p>
-        <button type="button" className="btn collapsible">View</button>
+        <button type="button" className="btn collapsible" onClick={handleClick}>View</button>
+        <PastWorkoutModal show={modalShow} onHide={handleHide} stuff={props.stuff} />
       </div>
     </div>
   )
