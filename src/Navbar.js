@@ -14,6 +14,13 @@ export function NavBar() {
         alert('Signing out. You will now be redirected to the home page.');
     }
 
+    let displayedButton;
+    if (auth.currentUser) {
+        displayedButton = <Link to="/login" className="btn text-light" onClick={handleClick}>Sign Out</Link>;
+    } else {
+        displayedButton = <Link to="/login" className="btn text-light">Log In</Link>;
+    }
+
     return (
 
         <Navbar variant="dark" expand="lg">
@@ -25,7 +32,7 @@ export function NavBar() {
                         <Nav.Link as={Link} aria-label="Home Page" to="">Home</Nav.Link>
                         <Nav.Link as={Link} aria-label="Progress Page" to="track-progress">Progress Tracker</Nav.Link>
                         <Nav.Link as={Link} aria-label="Exercise Search Page" to="search">Exercise Searcher</Nav.Link>
-                        <Link to="/login" className="btn text-light" onClick={handleClick}>Sign Out</Link>
+                        {displayedButton};
                     </Nav>
                 </Navbar.Collapse>
             </div>

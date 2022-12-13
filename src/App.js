@@ -23,7 +23,6 @@ function App(props) {
         firebaseUser.userName = firebaseUser.displayName;
         setCurrentUser(firebaseUser);
       } else {
-        console.log("Logged Out");
         setCurrentUser(null);
       }
     })
