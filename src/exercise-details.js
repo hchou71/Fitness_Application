@@ -64,6 +64,7 @@ export function DetailsPage(props) {
         const favExercisesArray = [...favExercises.current, currentExercise];
         firebaseSet(favExercisesRef, favExercisesArray);
         setSaved(true);
+        alert('You can now view your saved exercise and autofill it into the workout logger!')
     }
 
     function handleDelete() {
