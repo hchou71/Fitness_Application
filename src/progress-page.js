@@ -19,7 +19,7 @@ export function ProgressPage(props) {
 
         onValue(userRef, (snapshot) => {
             const data = snapshot.val();
-            if (data[currentUser.uid].past) {
+            if (currentUser.uid in data && data[currentUser.uid].past) {
                 setViewButton(<Link to="/previous-workouts" className="btn btn-primary" role="button">View</Link>);
             } else {
                 setViewButton(<div className="btn btn-primary" role="button" onClick={handleClick}>View</div>);
