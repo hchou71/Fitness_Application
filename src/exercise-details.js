@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useParams } from 'react-router-dom';
-import { getDatabase, ref, set as firebaseSet, onValue } from 'firebase/database'; //realtime
+import { getDatabase, ref, set as firebaseSet, onValue } from 'firebase/database'; //real time
 
 export function DetailsPage(props) {
 

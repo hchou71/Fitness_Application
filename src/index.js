@@ -8,7 +8,6 @@ import 'whatwg-fetch';
 import { initializeApp } from "firebase/app";
 
 import SAMPLE_EXERCISES from './data/exercise-information.json';
-// const SAMPLE_PAST = '../public/past-workout.json';
 
 const firebaseConfig = {
   apiKey: "AIzaSyC5Iqu90H8p42XbyLWaZhSxZhSr3oXq1W4",
