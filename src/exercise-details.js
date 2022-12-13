@@ -5,8 +5,8 @@ import { getDatabase, ref, set as firebaseSet, onValue } from 'firebase/database
 export function DetailsPage(props) {
 
     const urlParams = useParams();
-    const currentExercise = urlParams.exercise;
     const exercises = props.exercises;
+    const currentExercise = urlParams.exercise;
     const exercisesAsObject = {};
 
     exercises.forEach((exerciseObj) => {
@@ -111,7 +111,7 @@ export function DetailsPage(props) {
 
             <div className='exer'>
                 <h1>{name}</h1>
-                <img className="py-3 exercise-img" src={img} alt={name} />
+                <img className="py-3 exercise-img" src={"/" + img} alt={name} />
                 {exerciseDescription}
             </div>
         </main>

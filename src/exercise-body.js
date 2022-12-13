@@ -28,7 +28,7 @@ function exerciseCard(exerciseObj) {
 
     return (
         <div className="exercise-card" key={name}>
-            <Link to={"/" + name}>
+            <Link to={"/exercises/" + name}>
                 <p>{name}</p>
                 <img className="img-thumbnail" src={img} alt={name} />
             </Link>

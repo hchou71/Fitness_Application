@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Routes, Route, Outlet } from 'react-router-dom';
+import { Routes, Route, Outlet, Navigate } from 'react-router-dom';
 import { NavBar } from './Navbar.js';
 import { Footer } from './Footer.js';
 import { HomePage } from './Home.js';
@@ -51,11 +51,12 @@ function App(props) {
           <Route path="track-progress" element={<ProgressPage currentUser={currentUser} />} />
           <Route path="previous-workouts" element={<PastExercises currentUser={currentUser} />} />
           <Route path="new-exercise" element={<NewExercise exercises={props.exercises} currentUser={currentUser} />} />
-          <Route path="/:exercise" element={<DetailsPage exercises={props.exercises} currentUser={currentUser} />} />
+          <Route path="exercises/:exercise" element={<DetailsPage exercises={props.exercises} currentUser={currentUser} />} />
         </Route>
         <Route path="login" element={<LoginPage currentUser={currentUser} />} />
         <Route path="" element={<HomePage />} />
         <Route path="search" element={<ExercisePage exercises={props.exercises} />} />
+        <Route path="*" element={<Navigate to="/" />} />
       </Routes>
 
       <Footer />
